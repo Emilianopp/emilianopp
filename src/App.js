@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React , {useState,useRef} from 'react';
+import { Container, Navbar,Nav,NavDropdown, Form,Carousel } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './custom.css'
+import Navigation from './Navigation';
+import Main from './Main'
+import Footer from './Footer'
+const App = () => {
+  // const [todos,setTodos] =  useState([])
+  // const todoref = useRef()
+  // function handle(e){
+  //   const name = todoref.current.value
+  //   console.log(name)
+  //   if (name === '') return
+  //   setTodos(prevTodos => [...prevTodos,name])
 
-function App() {
+  // }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+      <div class="cointainer-fluid">
+        <Navigation />
+        <Main />
+        <Footer />
+
+      </div>
+    
+  )
 }
 
 export default App;
