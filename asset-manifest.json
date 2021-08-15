@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/emilianopp/static/css/main.54de45b9.chunk.css",
+    "main.js": "/emilianopp/static/js/main.3fbd6850.chunk.js",
+    "main.js.map": "/emilianopp/static/js/main.3fbd6850.chunk.js.map",
+    "runtime-main.js": "/emilianopp/static/js/runtime-main.8294c448.js",
+    "runtime-main.js.map": "/emilianopp/static/js/runtime-main.8294c448.js.map",
+    "static/css/2.da1eef19.chunk.css": "/emilianopp/static/css/2.da1eef19.chunk.css",
+    "static/js/2.351a94cf.chunk.js": "/emilianopp/static/js/2.351a94cf.chunk.js",
+    "static/js/2.351a94cf.chunk.js.map": "/emilianopp/static/js/2.351a94cf.chunk.js.map",
+    "static/js/3.be774a3b.chunk.js": "/emilianopp/static/js/3.be774a3b.chunk.js",
+    "static/js/3.be774a3b.chunk.js.map": "/emilianopp/static/js/3.be774a3b.chunk.js.map",
+    "index.html": "/emilianopp/index.html",
+    "static/css/2.da1eef19.chunk.css.map": "/emilianopp/static/css/2.da1eef19.chunk.css.map",
+    "static/css/main.54de45b9.chunk.css.map": "/emilianopp/static/css/main.54de45b9.chunk.css.map",
+    "static/js/2.351a94cf.chunk.js.LICENSE.txt": "/emilianopp/static/js/2.351a94cf.chunk.js.LICENSE.txt",
+    "static/media/elephant.f0e6320d.png": "/emilianopp/static/media/elephant.f0e6320d.png",
+    "static/media/me.0acede99.png": "/emilianopp/static/media/me.0acede99.png",
+    "static/media/western.19ad6a7e.png": "/emilianopp/static/media/western.19ad6a7e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8294c448.js",
+    "static/css/2.da1eef19.chunk.css",
+    "static/js/2.351a94cf.chunk.js",
+    "static/css/main.54de45b9.chunk.css",
+    "static/js/main.3fbd6850.chunk.js"
+  ]
+}
