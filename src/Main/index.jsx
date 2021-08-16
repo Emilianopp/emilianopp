@@ -13,17 +13,16 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import Skills from './Skills'
 import Slides from "./slides";
-
+import  Body_animation  from './Body_animation';
 
 export default function Main() {
   return (
     <div className="text_body">
+      
      <Container fluid>
-        <Slides />
+      <Body_animation />
         </Container>
-      <Container fluid>
-        <Skills />
-      </Container>
+      
     </div>
   );
 }

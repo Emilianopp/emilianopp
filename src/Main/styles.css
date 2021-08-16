@@ -13,7 +13,7 @@
 }
 
 .Skills_body{
-    padding:0% 20%;
+    padding:0% 0%;
 }
 
 .slide_text{
@@ -26,8 +26,9 @@
     /* margin-left: 20%;
     margin-right:  20%; */
     margin-bottom: 0;
-    margin-top: 1%;
+    margin-top: 3%;
 }
+
 .icons{
     width: 96px;
     height: 96px;
