@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import me from "./me.png";
-import western from "./western.png";
+
 import {
   Container,
   Navbar,
@@ -14,7 +14,7 @@ import {
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useMediaQuery } from "react-responsive";
-import { Spring } from "react-spring";
+
 export default function Slides() {
 
 

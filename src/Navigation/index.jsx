@@ -2,7 +2,7 @@ import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../custom.css";
 import "./styles.css";
-import logo from "./elephant.png";
+import logo from "../media/elephant.png";
 export default function Navigation() {
   return (
     <div className="Navigation">

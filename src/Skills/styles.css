@@ -25,7 +25,7 @@
     /* margin-right: 30%; */
     /* margin-left: 20%;
     margin-right:  20%; */
-    margin-bottom: 0;
+
     margin-top: 3%;
 }
 
@@ -71,7 +71,7 @@
     color: black;
   }
   .tech_skills{
-      margin-top: 5%;
+      margin-top: 0%;
       
       color: rgb(100, 101, 102);
   }
@@ -121,7 +121,7 @@
     font-size: 30px;
     font-family: 'Ubuntu', sans-serif;
     color: rgb(100, 101, 102);
-    padding-top: 15%;
+    
 }
  
 @media (max-width: 1366px) {
@@ -159,5 +159,6 @@
     font-size: 20px;
     margin-bottom: 10px;
 }
+
    
 }

@@ -62,9 +62,9 @@ export default function Skills() {
   return (
     <div className="Skills_body">
       <Container  >
-       
+      <h1 className="tech_skills"> Technical Skills </h1>
+
         <Row className='justify-content-center'>
-        <h1 className="tech_skills"> Technical Skills </h1>
        
           {/* =======================================================================================
               ===================================== GENERAL PURPOSE LANGUAGES =======================
