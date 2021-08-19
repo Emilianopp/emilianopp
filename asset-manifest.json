@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/emilianopp/static/css/main.8bcf2528.chunk.css",
-    "main.js": "/emilianopp/static/js/main.a4db78bd.chunk.js",
-    "main.js.map": "/emilianopp/static/js/main.a4db78bd.chunk.js.map",
+    "main.js": "/emilianopp/static/js/main.1ff43b1b.chunk.js",
+    "main.js.map": "/emilianopp/static/js/main.1ff43b1b.chunk.js.map",
     "runtime-main.js": "/emilianopp/static/js/runtime-main.a30ee6bb.js",
     "runtime-main.js.map": "/emilianopp/static/js/runtime-main.a30ee6bb.js.map",
     "static/css/2.da1eef19.chunk.css": "/emilianopp/static/css/2.da1eef19.chunk.css",
@@ -29,6 +29,6 @@
     "static/css/2.da1eef19.chunk.css",
     "static/js/2.8286cb57.chunk.js",
     "static/css/main.8bcf2528.chunk.css",
-    "static/js/main.a4db78bd.chunk.js"
+    "static/js/main.1ff43b1b.chunk.js"
   ]
 }
