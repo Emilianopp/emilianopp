@@ -10,24 +10,25 @@ import BasicTimeline from './timeline';
 import Animated_slides from  './Animation/Animation_slides.jsx';
 
 import Animated_skills from  './Animation/Animation_skills';
-
+import { HashRouter as Router,Route,Switch,Link,Redirect } from 'react-router-dom';
+import Home_page from './Home_page';
+import Projects from './projects';
 const App = () => {
 
   return (
-    
-      <div class="cointainer-fluid">
-        
-        <Navigation />
-        
-        <Container fluid>
-        <Animated_slides />
-        <BasicTimeline/>
-        <Animated_skills/>
-      </Container>
-        
-        <Footer />
-        
-      </div>
+    <>
+    <div className = "app">
+    <Router basename="/" >
+      <Switch>
+     
+     <Route exact path = "/home" component = {Home_page}></Route>
+      <Route exact path = "/projects" component = {Projects}></Route>
+
+      <Redirect to = "/home" ></Redirect>
+     </Switch>
+    </Router>
+    </div>
+      </>
       
     
   )

@@ -47,7 +47,7 @@ function Right_content(direction_year, content, year) {
   }
 }
 
-export default function Animated_timeline(
+export default function Animated_timeline_mobile(
   direction_year,
   direction,
   icon,
@@ -64,7 +64,7 @@ export default function Animated_timeline(
 
   if (year === "1999") {
     return (
-      <div data-aos={animation_dir} data-aos-anchor-placement="top-bottom">
+      <div data-aos={animation_dir} data-aos-anchor-placement="top-center">
         <h1 className = "timeline_header">Personal Timeline</h1>
         <TimelineItem className="time_item">
           <TimelineContent className="time_content">

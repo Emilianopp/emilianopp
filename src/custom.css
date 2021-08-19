@@ -2,5 +2,11 @@
 
 .page-wrapper {
    min-width: 10px;
+   
+  
+}
+.app{
    font-family: 'Ubuntu', sans-serif;
+   
+   color : rgb(100, 101, 102);
 }

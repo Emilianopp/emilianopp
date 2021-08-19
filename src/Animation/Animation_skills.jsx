@@ -13,21 +13,27 @@ export default function Animated_skills() {
   const isTabletOrMobile = useMediaQuery({ maxWidth: 1000 });
 
   useEffect(() => {
+    if(isTabletOrMobile){
+      Aos.init({ duration: 2000 });
+
+    }
+    else{
     Aos.init({ duration: 2000 });
+    }
   }, []);
 
   return (
     <div>
       {isDesktopOrLaptop && (
         <>
-          <div data-aos="fade-up" data-aos-anchor-placement="top-center">
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <Skills />
           </div>
         </>
       )}
       {isTabletOrMobile && (
         <>
-          <div data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <Skills />
           </div>
         </>

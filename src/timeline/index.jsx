@@ -10,26 +10,52 @@ import './timeline.css'
 import ChildFriendlyOutlinedIcon from '@material-ui/icons/ChildFriendlyOutlined';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
+import Animated_timeline_mobile from '../Animation/animated_timeline_mobile';
+import { useMediaQuery } from "react-responsive";
+
 export default function BasicTimeline() {
   const icon_style = { fontSize: '50' ,color : 'black' };
+  const isDesktopOrLaptop = useMediaQuery({ minWidth: 1000 });
+  const isTabletOrMobile = useMediaQuery({ maxWidth: 1000 });
   return (
+    <>
+  { isDesktopOrLaptop &&
     <Timeline className={"timeline"} >
-      {/* {Animated_timeline("right",<ChildFriendlyOutlinedIcon style={icon_style}  />)}  */}
-      {/* <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot className= "timeline_dot " color = '#c3e3e6'><ChildFriendlyOutlinedIcon style={{ fontSize: '50' ,color : 'black' }}  /></TimelineDot>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>hi</TimelineContent>
-      </TimelineItem> */}
-     
-    {Animated_timeline("right", <ChildFriendlyOutlinedIcon/>,"Born in Mexico City","1999")}
 
-    {Animated_timeline("left", <img src= "https://image.flaticon.com/icons/png/512/3159/3159868.png" width = "25" height = "25" />,"Moved to Canada","2010")}
-    {Animated_timeline("right", <LibraryBooksIcon/>,"Started at Western","2017-present")}
-    {Animated_timeline("left", <BusinessCenterIcon/>,"Sunlife Actuarial Co-op","2020")}
-  
-      
+     {/* Mexico */}
+    {Animated_timeline("right_year","right", <ChildFriendlyOutlinedIcon/>,"Born in Mexico City","1999")}
+    {/*Canada  */}
+    {Animated_timeline("left_year","left", <img src= "https://image.flaticon.com/icons/png/512/3159/3159868.png" width = "25" height = "25" />,"Moved to Canada","2010")}
+  {/* Western */}
+    {Animated_timeline("right_year","right", <LibraryBooksIcon/>,"Started at Western","2017-present")}
+    {/* Sunlife */}
+    {Animated_timeline("left_year","left", <BusinessCenterIcon/>,"Sunlife Actuarial co-op","May -  Decebmber 2020")}
+    {/* Devops */}
+    {Animated_timeline("right_year","right", <img src= "https://cdn.iconscout.com/icon/premium/png-512-thumb/devops-1596557-1355335.png" width = "25" height = "25" />,"Sunlife DevOps co-op","January -May 2021")}
+    {/* Camila lab */}
+    {Animated_timeline("left_year","left", <BusinessCenterIcon/>,"Western Data Science Research Co-op","May 2020 - Present",true)}
+
     </Timeline>
+}
+{ isTabletOrMobile &&
+    <Timeline className={"timeline"} >
+
+     {/* Mexico */}
+    {Animated_timeline_mobile("right_year","right", <ChildFriendlyOutlinedIcon/>,"Born in Mexico City","1999")}
+    {/*Canada  */}
+    {Animated_timeline_mobile("left_year","left", <img src= "https://image.flaticon.com/icons/png/512/3159/3159868.png" width = "25" height = "25" />,"Moved to Canada","2010")}
+  {/* Western */}
+    {Animated_timeline_mobile("right_year","right", <LibraryBooksIcon/>,"Started at Western","2017-present")}
+    {/* Sunlife */}
+    {Animated_timeline_mobile("left_year","left", <BusinessCenterIcon/>,"Sunlife Actuarial co-op","May -  Decebmber 2020")}
+    {/* Devops */}
+    {Animated_timeline_mobile("right_year","right", <img src= "https://cdn.iconscout.com/icon/premium/png-512-thumb/devops-1596557-1355335.png" width = "25" height = "25" />,"Sunlife DevOps co-op","January -May 2021")}
+    {/* Camila lab */}
+    {Animated_timeline_mobile("left_year","left", <BusinessCenterIcon/>,"Western Data Science Research Co-op","May 2020 - Present",true)}
+
+    </Timeline>
+}
+</>
+
   );
 }
