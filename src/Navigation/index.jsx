@@ -25,10 +25,18 @@ export default function Navigation() {
               <Link to="/home" style={{ textDecoration: "none" }}>
                 <Nav.Link href="#link">Home</Nav.Link>
               </Link>
+              
+              <Link to="/resume" style={{ textDecoration: "none" }}>
               <Nav.Link href="#link">Resume</Nav.Link>
+              </Link>
               <Link to="/projects" style={{ textDecoration: "none" }}>
               <Nav.Link className="border-left pl-2 ml-auto" href="#link">
                 Projects
+              </Nav.Link>
+              </Link>
+              <Link to="/stats" style={{ textDecoration: "none" }}>
+              <Nav.Link className="border-left pl-2 ml-auto" href="#link">
+                Statistics
               </Nav.Link>
               </Link>
             </Nav>

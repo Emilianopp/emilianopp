@@ -13,6 +13,8 @@ import Animated_skills from  './Animation/Animation_skills';
 import { HashRouter as Router,Route,Switch,Link,Redirect } from 'react-router-dom';
 import Home_page from './Home_page';
 import Projects from './projects';
+import Resume from './Resume';
+import  Stats from './stats'
 const App = () => {
 
   return (
@@ -23,6 +25,8 @@ const App = () => {
      
      <Route exact path = "/home" component = {Home_page}></Route>
       <Route exact path = "/projects" component = {Projects}></Route>
+      <Route exact path = "/resume" component = {Resume}></Route>
+      <Route exact path = "/stats" component = {Stats}></Route>
 
       <Redirect to = "/home" ></Redirect>
      </Switch>
