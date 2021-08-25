@@ -1,9 +1,13 @@
 # Decision trees 
 [View in Github Repository](https://github.com/Emilianopp/Stats/tree/master/Trees)
 ### Now these are cool 
+
 ### The Decision trees are a bit of a different beast 
+
 ### Unlike generalised linear models which often have a defined link and loss function , 
-### Decision trees are a recursevely optimized model through a criteria the most popular being gini index, although entropy is also popular 
+
+### Decision trees are a recursevely optimized model through a criteria the most popular being gini
+index, although entropy is also popular 
 
 
 
@@ -31,7 +35,10 @@ df.to_numpy().T.sort(axis = 0)
 
 ```
 
-#### Source of binary tree visualization implementation: <https://stackoverflow.com/questions/34012886/print-binary-tree-level-by-level-in-python>
+#### Source of binary tree visualization implementation:
+
+ <https://stackoverflow.com/questions/34012886/print-binary-tree-level-by-level-in-python>
+
 #### I had to edit Tree implementation as well as print algorithm to fit it with the purpose of the task
 
 
@@ -148,8 +155,11 @@ def gini(p):
 ```
 
 #### Calculate the gini purity for each branch split
+
 ### ![png](https://github.com/Emilianopp/Stats/blob/master/Trees/latex1.PNG?raw=true)
+
 ### in english this gives you a score of how seggreagated the data is 
+
 ### if you have a pure set this will yield zero, hence why the lower the better the split is
 
 
@@ -214,6 +224,7 @@ def split_df(df,where):
 ```
 
 #### Most basic Descicion tree algorithm. 
+
 #### leafs are only created when gini impurity is zero for a split
 
 
