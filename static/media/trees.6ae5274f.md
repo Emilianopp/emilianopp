@@ -1,12 +1,14 @@
 # Decision trees 
+
 [View in Github Repository](https://github.com/Emilianopp/Stats/tree/master/Trees)
-### Now these are cool 
 
-### The Decision trees are a bit of a different beast 
+#### Now these are cool 
 
-### Unlike generalised linear models which often have a defined link and loss function , 
+#### The Decision trees are a bit of a different beast 
 
-### Decision trees are a recursevely optimized model through a criteria the most popular being gini
+#### Unlike generalised linear models which often have a defined link and loss function , 
+
+#### Decision trees are a recursevely optimized model through a criteria the most popular being gini
 index, although entropy is also popular 
 
 
@@ -35,11 +37,11 @@ df.to_numpy().T.sort(axis = 0)
 
 ```
 
-#### Source of binary tree visualization implementation:
+##### Source of binary tree visualization implementation:
 
  <https://stackoverflow.com/questions/34012886/print-binary-tree-level-by-level-in-python>
 
-#### I had to edit Tree implementation as well as print algorithm to fit it with the purpose of the task
+##### I had to edit Tree implementation as well as print algorithm to fit it with the purpose of the task
 
 
 ```python
@@ -145,7 +147,7 @@ class Node:
 
 ```
 
-#### Create gini purity evaluation criteria
+##### Create gini purity evaluation criteria
 
 
 ```python
@@ -154,13 +156,13 @@ def gini(p):
     return (1 -p_sum)
 ```
 
-#### Calculate the gini purity for each branch split
+##### Calculate the gini purity for each branch split
 
-### ![png](https://github.com/Emilianopp/Stats/blob/master/Trees/latex1.PNG?raw=true)
+#### ![png](https://github.com/Emilianopp/Stats/blob/master/Trees/latex1.PNG?raw=true)
 
-### in english this gives you a score of how seggreagated the data is 
+#### in english this gives you a score of how seggreagated the data is 
 
-### if you have a pure set this will yield zero, hence why the lower the better the split is
+#### if you have a pure set this will yield zero, hence why the lower the better the split is
 
 
 
@@ -223,9 +225,9 @@ def split_df(df,where):
     return df_high,df_low
 ```
 
-#### Most basic Descicion tree algorithm. 
+##### Most basic Descicion tree algorithm. 
 
-#### leafs are only created when gini impurity is zero for a split
+##### leafs are only created when gini impurity is zero for a split
 
 
 
@@ -286,7 +288,7 @@ def build_tree(df,target,root = None,max_depth=None,depth = 1):
 
 ```
 
-#### For display simplicity we will display a tree with a depth of 4
+##### For display simplicity we will display a tree with a depth of 4
 
 
 ```python
