@@ -1,0 +1,2 @@
+(this.webpackJsonpemilianopp=this.webpackJsonpemilianopp||[]).push([[6],{217:function(i,p,e){"use strict";e.r(p),p.default=e.p+"static/media/resume.6f60c1bf.md"}}]);
+//# sourceMappingURL=6.145443ab.chunk.js.map
