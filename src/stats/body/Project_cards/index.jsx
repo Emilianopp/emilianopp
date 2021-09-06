@@ -6,22 +6,16 @@ import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import "./projects_cards.scss";
 import Terms from "./markdown_parser";
 import Markdown_parser from "./markdown_parser";
-import { Document , Page} from "react-pdf";
 
 function Create_img(logo,card_title,md) {
   const [selected, select] = useState(true);
   const icon_style = { fontSize: "50", color: "inherit", padding: "0 0" };
-  const [pageNumber, setPageNumber] = useState(1);
-  const [numPages, setNumPages] = useState(null);
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
   if (selected) {
     return (
       <Col xs={12} lg={{ span: 4, order: "last" }} className="main_col">
         <Card className="main_card">
           <Card.Body>
-            <Card.Img
+            <Card.Img 
               variant="top"
               src={logo}
             />
@@ -62,7 +56,7 @@ function Create_img(logo,card_title,md) {
         </Col>
         <Col xs={10} lg={{ order: "first", span: 11 }} className="main_col">
           {/* <div className="markdown"> */}
-            <Document className="markdown" onLoadSuccess={onDocumentLoadSuccess} file= {`../../../markdown/${md} `} />
+            <Markdown_parser className="markdown" path={md} />
           {/* </div> */}
         </Col>
       </>

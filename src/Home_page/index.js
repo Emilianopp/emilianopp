@@ -11,11 +11,17 @@ import Animated_slides from  '../Animation/Animation_slides.jsx';
 
 import Animated_skills from  '../Animation/Animation_skills';
 import { Home } from '@material-ui/icons';
+import { Helmet } from 'react-helmet';
 
 export default function Home_page(){
 
   return (
-    
+    <>
+    <Helmet>
+    <meta charSet="utf-8" />
+    <title>Emilianopp</title>
+
+</Helmet>
       <div class="cointainer-fluid">
         <Navigation />
         
@@ -28,7 +34,7 @@ export default function Home_page(){
         <Footer />
         
       </div>
-      
+      </>
     
   )
 }

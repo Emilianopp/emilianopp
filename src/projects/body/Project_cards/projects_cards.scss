@@ -12,6 +12,7 @@
   }
   & .markdown{
     height: 600px;
+    color: black;
     overflow-y: auto;
     &::-webkit-scrollbar {
       width: 10px;
@@ -27,6 +28,9 @@
     
   }
   & .main_card {
+    // width: auto;
+    // max-width: 300px;
+    // max-height: 300px;
     & .icon_col {
       & .card_button {
          padding-left: 70px !important;
@@ -54,8 +58,10 @@
   }
 }
 
-.card-img-overlay {
-  padding: 0;
+.card-img, .card-img-bottom, .card-img-top{
+  // padding: 0;
+
+
 }
 // .MuiIconButton-root{
 //     padding: 0!important;

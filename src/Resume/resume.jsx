@@ -33,28 +33,14 @@ export default function Resume_html() {
     </ul>
     </Col>
     <Col lg = {2} className = "date_tag">
-    September 2017 – Present
+    Sept 2017 – Present
     </Col >
     </Row>
 
 
 
     
-{/* CERTIFICATIONS ===================================== */}
-    <Row >
-        <h2> Certifications </h2>
-        <Col lg ={10}>
-        <ul>
-            <li> Actuarial Exam FM; Financial Mathematics</li>
-      
-            
-           
-      
-            <li> Actuarial Exam FM; Financial Mathematics</li>
-            </ul>
-            </Col>
-
-    </Row>
+{/* Technical Skills ===================================== */}
 
 
     <Row className = "resume_row">
@@ -96,11 +82,11 @@ export default function Resume_html() {
         
             <ul>
         
-            <li>Built a Twitter API that would accurately predict and tweet traffic at the Western Recreation Centre</li>
+            <li>Used a Recurrent Neural Network to accurately model Western recreation centre's hourly traffic data </li>
            
         
         
-            <li> Conducted surveys in order to collect data to evaluate the biggest factors impacting student mental health</li>
+            <li> Collected Student volunteered data to obtain insight on the biggest factors impacting student mental health</li>
            
        
 
@@ -121,11 +107,62 @@ export default function Resume_html() {
     
         <Row className = "resume_row">
             <h2 className="work"> Work Experience </h2>
-             
-        {/* Actuarial ======================== */}
-            <Col lg = {10} > Actuarial CO-OP ALM, Sun Life Financial – Waterloo, ON  
+         {/* LAB ====================================================== */}
+
+    <Col lg = {10} > Data Science Research Intern Western University, London On
             </Col>
-                <Col lg = {2} className = "date_tag"> May 2020 – Present
+                <Col lg = {2} className = "date_tag"> May 2021 – Present
+            </Col>
+            <Col lg = {10}>
+            <ul>
+                <li className="list_bullet">
+                Used python's Snakemake to create an RNA sequence clustering pipeline 
+                </li>
+                <li>
+                Pipeline was used to compare RNA sequence clustering methodologies such as; Giniclust,Backspin,Seurat and SC3  
+                </li>
+                <li>
+                Final comparison and analysis was published as a Master student's thesis 
+                </li>
+                <li>
+                Published developed software as an R package used to Preprocess, Cluster, Visualize and Compare RNA sequence data 
+                </li>
+             
+
+            </ul>
+        </Col>    
+       
+
+{/* DevOPS ====================================================== */}
+
+            <Col lg = {10} > DevOps Engineer CO-OP Sunlife, Toronto On  
+            </Col>
+                <Col lg = {2} className = "date_tag"> Jan 2021 – April 2021
+            </Col>
+            <Col lg = {10}>
+            <ul>
+                <li className="list_bullet">
+                Built a scripted Jenkins Pipeline that ensured safe implementation of changes to our Postgres and Miscrosoft SQL databases
+                </li>
+                <li>
+                Worked alongside various organization managers to structure a Pipeline best suited for their independent needs 
+                </li>
+                <li>
+                Used Jira, Git, SNOW, Ansible and Artifactory REST API to implement changes as well as document Pipeline results and executions
+                </li>
+                <li>
+                Educated various organization members on updated workflow procedures by giving a general presentation and one-on-one demos 
+                </li>
+             
+
+            </ul>
+            </Col>
+              
+           
+ {/* Actuarial ======================== */}
+ <Col lg = {10} > Actuarial CO-OP ALM, Sun Life Financial – Waterloo, ON  
+            </Col>
+                <Col lg = {2} className = "date_tag"> May 2020 – Dec 2020
             </Col>
             <Col lg = {10}>
             <ul>
@@ -149,11 +186,12 @@ export default function Resume_html() {
             </ul>
             </Col>
             </Row>
-{/* SPANISH ====================================================== */}
-        <Row>
+
+        {/* SPANISH ====================================================== */}
+    <Row>
             <Col lg = {10} > Beginners Spanish Conversation Teaching Assistant, Western University  
             </Col>
-                <Col lg = {2} className = "date_tag"> May 2020 – Present
+                <Col lg = {2} className = "date_tag"> Sept 2018 – Dec 2018
             </Col>
             <Col lg = {10}>
             <ul>
@@ -171,59 +209,7 @@ export default function Resume_html() {
             </Col>
             </Row>
         <Row>
-{/* DevOPS ====================================================== */}
-
-            <Col lg = {10} > DevOps Engineer CO-OP Sunlife, Toronto On  
-            </Col>
-                <Col lg = {2} className = "date_tag"> May 2020 – Present
-            </Col>
-            <Col lg = {10}>
-            <ul>
-                <li className="list_bullet">
-                Built a scripted Jenkins Pipeline that automates safe implementation of changes into Postgres and Miscrosoft SQL databases
-                </li>
-                <li>
-                Worked alongside various organization managers to structure a Pipeline best suited for their independent needs 
-                </li>
-                <li>
-                Used Jira, Git, SNOW, Ansible and Artifactory REST API to execute tasks as well as track and document progression of Pipeline
-                </li>
-                <li>
-                Educated various organization members on updated workflow procedures through verbal and written communication 
-                </li>
-             
-
-            </ul>
-            </Col>
-{/* LAB ====================================================== */}
-
-<Col lg = {10} > Data Science Research Intern Western University, London On
-            </Col>
-                <Col lg = {2} className = "date_tag"> May 2020 – Present
-            </Col>
-            <Col lg = {10}>
-            <ul>
-                <li className="list_bullet">
-                Created a python Snakemake pipeline to generate RNA sequence clustering analysis 
-                </li>
-                <li>
-                Conducted analysis comparing RNA sequence clustering methods such as; Giniclust,Backspin,Seurat and SC3  
-                </li>
-                <li>
-                Produced Visual analysis that was used within a research thesis poster
-                </li>
-                <li>
-                Published an R package used to Preprocess, Cluster, Visualize and Compare RNA sequence data 
-                </li>
-             
-
-            </ul>
-            </Col>
-            
-        
-   
-           
-
+            {/* ++++++++++++++++++++++++++++CLOSING DIV BELOW++++++++++++++++++++++++++++++++++++ */}
     </Row>
 
 {/* EDUCATION ===================================== */}

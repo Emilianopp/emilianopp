@@ -1,3 +1,8 @@
+
+
+![png](/emilianopp/static/media/img/latex1.PNG)
+<img src="/emilianopp/static/media/latex1.PNG" >
+
 ```python
 import numpy as np
 import pandas as pd
@@ -7,11 +12,9 @@ import seaborn as sns
 np.random.seed(100)
 ```
 
+![png](/emilianopp/static/media/img/latex1.PNG)
 
-![png](./img/linear/latex1.png)
-  
-
-#### Create Random data from a sequence by adding a random factor 
+Create Random data from a sequence by adding a random factor 
 
 
 ```python
@@ -23,7 +26,7 @@ plt.show()
 ```
 
 
-![png](./img/linear/img/output_5_0.png)
+![png](output_3_0.png)
 
 
 ### Create a regression model
@@ -48,13 +51,10 @@ plt.show()
 ```
 
 
-![png](./img/linear/img/output_9_0.png)
+![png](output_7_0.png)
 
 
-# Multivariate Regression
-
-### $\widehat{Y} = \sum{\widehat{\beta}_j x_{ij}}$ 
-#### Now this is the same just with more variables so we'll reproduce the sample but now in 4 dimensions
+![png](./img/latex2.PNG)
 
 
 ```python
@@ -70,17 +70,11 @@ plt.show()
 ```
 
 
-![png](./img/linear/img/output_12_0.png)
+![png](output_9_0.png)
 
-#### Above we can see the distributions of the generated data, seems like the data is as expected
-#### Now again we will take the loss function and derive it 
-#### Loss function of
 
-### $ \frac{\sum{(Y_i - \widehat{Y}_i)}}{N}$
-#### Loss function of  
- ### $ \frac{\sum{(Y_i - (\sum{\widehat{\beta}_j x_{ij}}))}}{N}$
+![png](./img/latex3.PNG)
 
-### ${{\hat {\boldsymbol {\beta }}}=(X^{\top }X)^{-1}X^{\top }Y}$
 
 ```python
 #create x matrix 
@@ -98,13 +92,7 @@ Y_hat= x0+x1+x2
 
 ```
 
-#### Now due to us not being able to clearly see the results, we will use a more mathematical approach
-#### R2 which is simply a way to "score" how  well we did
-
-### $ SS_{\text{tot}}=\sum _{i}(y_{i}-{\bar {y}})^{2}$
-### $SS_{\text{res}}=\sum _{i}(y_{i}-\widehat{y}_i)^{2}$
-### $R^{2}=1-{SS_{\rm {res}} \over SS_{\rm {tot}}}$
-#### Lets see
+![png](./img/latex4.PNG)
 
 
 ```python
@@ -120,19 +108,7 @@ print("R squared is ", np.round(R2,3))
 #### We did pretty well!
 
 
-# Logistic Regression
-
-#### Now lets the define the logistic model 
-#### Now assuming a linear relashionship between the predictors and the log odds we get
-### $\ln{\frac {p}{1-p}}=\beta _{0}+\sum{{\beta}_j x_{j}}$
-
-#### Re arange to solve for p= $P(Y) = 1$
-### $p={\frac {1}{1+e^{-(\beta _{0}+\sum{{\beta}_j x_{j}})}}}$
-
-#### A more genereal representation 
-### $h_{\theta }(X)={\frac {1}{1+e^{-\theta ^{T}X}}}$
-
-### Lets checkout the generated data
+![png](./img/latex5.PNG)
 
 
 ```python
@@ -144,9 +120,7 @@ def predict_sigmoid(x,beta):
     return sigmoid(z)
 ```
 
-#### The loss function is derived using Maximum likelihood 
-#### Below we have the log likelihood( we can use either one but log is much easier to work with)
-#### $ - \frac{1}{n}\sum {y_{i} \ln h_{\theta }(x_{i})+{(1-y_i)}\ln(1-h_{\theta }(x_i)) }$
+![png](./img/latex6.PNG)
 
 
 ```python
@@ -158,8 +132,7 @@ def logistic_loss(y,h):
     return logistic_loss
 ```
 
-#### Now basic gradient descent using betas as our sequancially updated parameter
-#### ${\beta} _{n+1}= {\beta} _{n}-\gamma \nabla F({\beta} _{n})$
+![png](./img/latex7.PNG)
 #### Here $\gamma$ is our learning rate or how fast we jump around the curve and $\nabla F({\beta} _{n})$ is the gradient of our loss function evaluated at the current value of $\beta$ this simple algorithm allows us to find a minimum in our loss function 
 #### See simple stuff
 
@@ -225,10 +198,10 @@ plt.show()
 ```
 
 
-![png](./img/linear/img/output_32_0.png)
+![png](output_27_0.png)
 
 
-#### Now we know the true regression coefficients $\beta_1 = 3$ and $\beta_2 = -2$
+#### now we know the true regression coefficients $\beta_1 = 3$ and $\beta_2 = -2$
 #### but lets solve for the using the logistic model 
 
 
@@ -255,7 +228,7 @@ plt.plot(loss_list)
 
 
 
-![png](./img/linear/img/output_35_2.png)
+![png](output_30_2.png)
 
 
 
@@ -273,15 +246,12 @@ plt.show()
 ```
 
 
-![png](./img/linear/img/output_37_0.png)
+![png](C:/Users/Emiliano/Documents/Git/emilianopp/src/markdown/img/output_32_0.png)
 
+<img source = 'C:/Users/Emiliano/Documents/Git/emilianopp/src/markdown/img/output_32_0.png' />
+![latex1](/assets/latex1.PNG)
 
-#### Since we know the true values of beta we cacn do a direct comparison of the model efficiancy 
-#### in which we see we did a good job of prediction beta_0 and beta_1 but not sucha good job with beta_2
-#### a more genereal and useful approach would be to use a Likelihood ratio test but for I will save that for when I do model evaluations
-#### We could tweak the learning rate and try and optimizez for this specific problem, but for now this fulfills the objective of the example. 
-
-
-```python
-
-```
+Since we know the true values of beta we cacn do a direct comparison of the model efficiancy 
+in which we see we did a good job of prediction beta_0 and beta_1 but not sucha good job with beta_2
+a more genereal and useful approach would be to use a Likelihood ratio test but for I will save that for when I do model evaluations
+We could tweak the learning rate and try and optimizez for this specific problem, but for now this fulfills the objective of the example. 

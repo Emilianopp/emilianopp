@@ -27,6 +27,8 @@
     
   }
   & .main_card {
+    width: auto;
+    max-width: 400px;
     & .icon_col {
       & .card_button {
          padding-left: 70px !important;
@@ -60,3 +62,7 @@
 // .MuiIconButton-root{
 //     padding: 0!important;
 // }
+.card_image{
+width: auto;
+max-width:400px;
+}

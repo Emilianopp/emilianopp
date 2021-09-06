@@ -13,6 +13,7 @@ import {
   Popover,
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Disclaimer_tools from "../Disclaimer/disclaimer_tools"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPython, faStar } from "@fortawesome/free-brands-svg-icons";
 import "./styles.css";
@@ -62,7 +63,7 @@ export default function Skills() {
   return (
     <div className="Skills_body">
       <Container  >
-      <h1 className="tech_skills"> Technical Skills </h1>
+      <Col><h1 className="tech_skills"> Technical Skills <Disclaimer_tools className = 'icon_disc' /></h1></Col>
 
         <Row className='justify-content-center'>
        
@@ -98,9 +99,9 @@ export default function Skills() {
               {/* Bash */}
               {Create_icon(
                 "https://www.pikpng.com/pngl/b/537-5376074_blog-logo-bash-script-logo-clipart.png",
-                4,
+                3,
                 "During my co-op at Sunlife as a Devops Engineer I developed skills for bash scripting. I’ve used bash to build multi-step pipelines that communicate with various software over varying conditions. ",
-                "Bash"
+                "Bash/Shell"
               )}
             </Row>
             <Row className='justify-content-center'>
@@ -130,7 +131,7 @@ export default function Skills() {
             <Row className='justify-content-center'>
               {/* Jenkins */}
               {Create_icon(
-                "https://wiki.jenkins.io/download/attachments/2916393/headshot.png?version=1&modificationDate=1302753947000&api=v2",
+                "https://www.jenkins.io/images/logos/guadalajara/guadalajara256.png",
                 4,
                 "I used Jenkins during my time at Sunlife to build our SQL pipeline. Ive used Jenkins to build general Jenkins jobs as well as scripted Groovy pipeline. I’ve used Jenkins in my personal endeavours as well as the workplace.",
                 "Jenkins"

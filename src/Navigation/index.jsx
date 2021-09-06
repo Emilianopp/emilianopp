@@ -34,11 +34,7 @@ export default function Navigation() {
                 Projects
               </Nav.Link>
               </Link>
-              <Link to="/stats" style={{ textDecoration: "none" }}>
-              <Nav.Link className="border-left pl-2 ml-auto" href="#link">
-                Statistics
-              </Nav.Link>
-              </Link>
+             
             </Nav>
           </Navbar.Collapse>
         </Container>

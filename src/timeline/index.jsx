@@ -29,7 +29,7 @@ export default function BasicTimeline() {
   {/* Western */}
     {Animated_timeline("right_year","right", <LibraryBooksIcon/>,"Started at Western","2017-present")}
     {/* Sunlife */}
-    {Animated_timeline("left_year","left", <BusinessCenterIcon/>,"Sunlife Actuarial co-op","May -  Decebmber 2020")}
+    {Animated_timeline("left_year","left", <BusinessCenterIcon/>,"Sunlife Actuarial co-op","May -  December 2020")}
     {/* Devops */}
     {Animated_timeline("right_year","right", <img src= "https://cdn.iconscout.com/icon/premium/png-512-thumb/devops-1596557-1355335.png" width = "25" height = "25" />,"Sunlife DevOps co-op","January -May 2021")}
     {/* Camila lab */}
