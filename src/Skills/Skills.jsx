@@ -88,6 +88,7 @@ export default function Skills() {
                 "Excel VBA"
               )}
             </Row>
+            
             <Row className='justify-content-center'>
               {/* R */}
               {Create_icon(
