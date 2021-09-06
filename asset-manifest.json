@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/emilianopp/static/css/main.208492df.chunk.css",
-    "main.js": "/emilianopp/static/js/main.9a1639c2.chunk.js",
-    "main.js.map": "/emilianopp/static/js/main.9a1639c2.chunk.js.map",
+    "main.css": "/emilianopp/static/css/main.04f7f4d4.chunk.css",
+    "main.js": "/emilianopp/static/js/main.771b0b98.chunk.js",
+    "main.js.map": "/emilianopp/static/js/main.771b0b98.chunk.js.map",
     "runtime-main.js": "/emilianopp/static/js/runtime-main.1b5bf704.js",
     "runtime-main.js.map": "/emilianopp/static/js/runtime-main.1b5bf704.js.map",
     "static/css/2.da1eef19.chunk.css": "/emilianopp/static/css/2.da1eef19.chunk.css",
-    "static/js/2.73558822.chunk.js": "/emilianopp/static/js/2.73558822.chunk.js",
-    "static/js/2.73558822.chunk.js.map": "/emilianopp/static/js/2.73558822.chunk.js.map",
+    "static/js/2.3c6d00ff.chunk.js": "/emilianopp/static/js/2.3c6d00ff.chunk.js",
+    "static/js/2.3c6d00ff.chunk.js.map": "/emilianopp/static/js/2.3c6d00ff.chunk.js.map",
     "static/js/3.8c7033ca.chunk.js": "/emilianopp/static/js/3.8c7033ca.chunk.js",
     "static/js/3.8c7033ca.chunk.js.map": "/emilianopp/static/js/3.8c7033ca.chunk.js.map",
     "static/js/4.7adcda3e.chunk.js": "/emilianopp/static/js/4.7adcda3e.chunk.js",
@@ -32,8 +32,8 @@
     "static/js/13.f025b838.chunk.js.map": "/emilianopp/static/js/13.f025b838.chunk.js.map",
     "index.html": "/emilianopp/index.html",
     "static/css/2.da1eef19.chunk.css.map": "/emilianopp/static/css/2.da1eef19.chunk.css.map",
-    "static/css/main.208492df.chunk.css.map": "/emilianopp/static/css/main.208492df.chunk.css.map",
-    "static/js/2.73558822.chunk.js.LICENSE.txt": "/emilianopp/static/js/2.73558822.chunk.js.LICENSE.txt",
+    "static/css/main.04f7f4d4.chunk.css.map": "/emilianopp/static/css/main.04f7f4d4.chunk.css.map",
+    "static/js/2.3c6d00ff.chunk.js.LICENSE.txt": "/emilianopp/static/js/2.3c6d00ff.chunk.js.LICENSE.txt",
     "static/media/R-python.7ad05e42.png": "/emilianopp/static/media/R-python.7ad05e42.png",
     "static/media/R-python.a4f53b1c.png": "/emilianopp/static/media/R-python.a4f53b1c.png",
     "static/media/elephant.f0e6320d.png": "/emilianopp/static/media/elephant.f0e6320d.png",
@@ -41,7 +41,7 @@
     "static/media/linear.md": "/emilianopp/static/media/linear.833740b6.md",
     "static/media/me.0acede99.png": "/emilianopp/static/media/me.0acede99.png",
     "static/media/nets.md": "/emilianopp/static/media/nets.5e7e3bbf.md",
-    "static/media/nets.cdbd8232.png": "/emilianopp/static/media/nets.cdbd8232.png",
+    "static/media/nets.a3e8c6fd.png": "/emilianopp/static/media/nets.a3e8c6fd.png",
     "static/media/pygame.29206671.png": "/emilianopp/static/media/pygame.29206671.png",
     "static/media/python.2352cac0.png": "/emilianopp/static/media/python.2352cac0.png",
     "static/media/react.f3e576ba.png": "/emilianopp/static/media/react.f3e576ba.png",
@@ -59,8 +59,8 @@
   "entrypoints": [
     "static/js/runtime-main.1b5bf704.js",
     "static/css/2.da1eef19.chunk.css",
-    "static/js/2.73558822.chunk.js",
-    "static/css/main.208492df.chunk.css",
-    "static/js/main.9a1639c2.chunk.js"
+    "static/js/2.3c6d00ff.chunk.js",
+    "static/css/main.04f7f4d4.chunk.css",
+    "static/js/main.771b0b98.chunk.js"
   ]
 }
