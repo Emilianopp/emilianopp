@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/emilianopp/static/css/main.04f7f4d4.chunk.css",
-    "main.js": "/emilianopp/static/js/main.771b0b98.chunk.js",
-    "main.js.map": "/emilianopp/static/js/main.771b0b98.chunk.js.map",
-    "runtime-main.js": "/emilianopp/static/js/runtime-main.1b5bf704.js",
-    "runtime-main.js.map": "/emilianopp/static/js/runtime-main.1b5bf704.js.map",
+    "main.js": "/emilianopp/static/js/main.fd11e61c.chunk.js",
+    "main.js.map": "/emilianopp/static/js/main.fd11e61c.chunk.js.map",
+    "runtime-main.js": "/emilianopp/static/js/runtime-main.b97644c7.js",
+    "runtime-main.js.map": "/emilianopp/static/js/runtime-main.b97644c7.js.map",
     "static/css/2.da1eef19.chunk.css": "/emilianopp/static/css/2.da1eef19.chunk.css",
     "static/js/2.3c6d00ff.chunk.js": "/emilianopp/static/js/2.3c6d00ff.chunk.js",
     "static/js/2.3c6d00ff.chunk.js.map": "/emilianopp/static/js/2.3c6d00ff.chunk.js.map",
@@ -12,8 +12,8 @@
     "static/js/3.8c7033ca.chunk.js.map": "/emilianopp/static/js/3.8c7033ca.chunk.js.map",
     "static/js/4.7adcda3e.chunk.js": "/emilianopp/static/js/4.7adcda3e.chunk.js",
     "static/js/4.7adcda3e.chunk.js.map": "/emilianopp/static/js/4.7adcda3e.chunk.js.map",
-    "static/js/5.aca56b92.chunk.js": "/emilianopp/static/js/5.aca56b92.chunk.js",
-    "static/js/5.aca56b92.chunk.js.map": "/emilianopp/static/js/5.aca56b92.chunk.js.map",
+    "static/js/5.bdfd4786.chunk.js": "/emilianopp/static/js/5.bdfd4786.chunk.js",
+    "static/js/5.bdfd4786.chunk.js.map": "/emilianopp/static/js/5.bdfd4786.chunk.js.map",
     "static/js/6.745e1344.chunk.js": "/emilianopp/static/js/6.745e1344.chunk.js",
     "static/js/6.745e1344.chunk.js.map": "/emilianopp/static/js/6.745e1344.chunk.js.map",
     "static/js/7.89d589bb.chunk.js": "/emilianopp/static/js/7.89d589bb.chunk.js",
@@ -38,7 +38,7 @@
     "static/media/R-python.a4f53b1c.png": "/emilianopp/static/media/R-python.a4f53b1c.png",
     "static/media/elephant.f0e6320d.png": "/emilianopp/static/media/elephant.f0e6320d.png",
     "static/media/game.md": "/emilianopp/static/media/game.ae15466c.md",
-    "static/media/linear.md": "/emilianopp/static/media/linear.833740b6.md",
+    "static/media/linear.md": "/emilianopp/static/media/linear.2484e40d.md",
     "static/media/me.0acede99.png": "/emilianopp/static/media/me.0acede99.png",
     "static/media/nets.md": "/emilianopp/static/media/nets.5e7e3bbf.md",
     "static/media/nets.a3e8c6fd.png": "/emilianopp/static/media/nets.a3e8c6fd.png",
@@ -57,10 +57,10 @@
     "static/media/workshop.md": "/emilianopp/static/media/workshop.cc6d28c2.md"
   },
   "entrypoints": [
-    "static/js/runtime-main.1b5bf704.js",
+    "static/js/runtime-main.b97644c7.js",
     "static/css/2.da1eef19.chunk.css",
     "static/js/2.3c6d00ff.chunk.js",
     "static/css/main.04f7f4d4.chunk.css",
-    "static/js/main.771b0b98.chunk.js"
+    "static/js/main.fd11e61c.chunk.js"
   ]
 }
