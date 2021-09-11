@@ -2,9 +2,11 @@
 import React from 'react'
 import { Col,Container, Nav, Navbar, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import Footer from '../Footer'
 import "./resume.scss"
 export default function Resume_html() {
     return (
+        <>
 <Container className = "resume_container">
 <Row>
     <Col  className = "header_col">
@@ -61,7 +63,7 @@ export default function Resume_html() {
        
 
         
-            <li> Substantial proficiency of Statistical concepts such as; descriptive and inferential statistics, model building and validation, statistical Significance as well as Sampling methodology
+            <li> Substantial proficiency of Statistical concepts such as; descriptive and inferential statistics, model building and validation, statistical significance as well as sampling methodology
             </li>
             </ul>
             </dl>
@@ -109,7 +111,7 @@ export default function Resume_html() {
             <h2 className="work"> Work Experience </h2>
          {/* LAB ====================================================== */}
 
-    <Col lg = {10} > Data Science Research Intern Western University, London On
+    <Col lg = {10} > Data Science Research Intern - Western University, London On
             </Col>
                 <Col lg = {2} className = "date_tag"> May 2021 – Present
             </Col>
@@ -135,7 +137,7 @@ export default function Resume_html() {
 
 {/* DevOPS ====================================================== */}
 
-            <Col lg = {10} > DevOps Engineer CO-OP Sunlife, Toronto On  
+            <Col lg = {10} > DevOps Engineer CO-OP - Sun Life, Toronto On  
             </Col>
                 <Col lg = {2} className = "date_tag"> Jan 2021 – April 2021
             </Col>
@@ -160,7 +162,7 @@ export default function Resume_html() {
               
            
  {/* Actuarial ======================== */}
- <Col lg = {10} > Actuarial CO-OP ALM, Sun Life Financial – Waterloo, ON  
+ <Col lg = {10} > Actuarial ALM CO-OP - Sun Life Financial, Waterloo ON  
             </Col>
                 <Col lg = {2} className = "date_tag"> May 2020 – Dec 2020
             </Col>
@@ -189,7 +191,7 @@ export default function Resume_html() {
 
         {/* SPANISH ====================================================== */}
     <Row>
-            <Col lg = {10} > Beginners Spanish Conversation Teaching Assistant, Western University  
+            <Col lg = {10} > Beginners Spanish Conversation Teaching Assistant - Western University, London On 
             </Col>
                 <Col lg = {2} className = "date_tag"> Sept 2018 – Dec 2018
             </Col>
@@ -269,14 +271,16 @@ export default function Resume_html() {
                     
                         <ul>
                     <li>
-                    Organized and led an introduction data analytics with python workshop presented to 50+ students
+                    Organized and led an introduction to data analytics Python workshop presented to 50+ students
                     </li>
                     </ul>
             </Col>
             <Col lg = {2} className = "date_tag">
             </Col >
 </Row>
-
+<Footer />
         </Container>
+            
+            </>
     )
 }

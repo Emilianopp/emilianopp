@@ -17,10 +17,10 @@ export default function Footer() {
             <Nav.Link href="#link">
                 <div className='footer_links'>
                 <a href="https://github.com/Emilianopp" className = 'test'> 
-                <FontAwesomeIcon icon={faGithub} size = '2x' ></FontAwesomeIcon>
+                <FontAwesomeIcon className = 'icons' icon={faGithub} size = '2x' ></FontAwesomeIcon>
                 </a>
                 <a href="https://www.linkedin.com/in/emilianopenaloza-19176b15b/" className = 'test'>
-                <FontAwesomeIcon icon={faLinkedin} size = '2x'></FontAwesomeIcon>
+                <FontAwesomeIcon className = 'icons' icon={faLinkedin} size = '2x'></FontAwesomeIcon>
                 </a>
                 </div>
                 </Nav.Link>
