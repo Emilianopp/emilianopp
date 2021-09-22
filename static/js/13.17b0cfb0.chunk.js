@@ -1,0 +1,2 @@
+(this.webpackJsonpemilianopp=this.webpackJsonpemilianopp||[]).push([[13],{223:function(p,i,s){"use strict";s.r(i),i.default=s.p+"static/media/workshop.cc6d28c2.md"}}]);
+//# sourceMappingURL=13.17b0cfb0.chunk.js.map
