@@ -20,7 +20,7 @@ export default function Resume_html() {
 {/* EDUCATION ===================================== */}
     <Row className = "resume_row">      
     <h2> Education </h2>
-    <Col lg = {10} > Double Major in Honours Financial Modelling and Data Science, Western University 
+    <Col lg = {10} > Honours Data Science, Western University 
             </Col>
                 <Col lg = {2} className = "date_tag"> 
             </Col>
