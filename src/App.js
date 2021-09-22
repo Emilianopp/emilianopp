@@ -21,8 +21,7 @@ const App = () => {
   return (
     <>
     <div className = "app">
-      test hi
-    {/* <Router basename="/" >
+    <Router basename="/" >
       <Switch>
      
      
@@ -33,7 +32,7 @@ const App = () => {
 
       <Redirect to = "/home" ></Redirect>
      </Switch>
-    </Router> */}
+    </Router>
     </div>
       </>
       
