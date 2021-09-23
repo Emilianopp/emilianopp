@@ -1,5 +1,7 @@
 # Nueral Network From Scratch
 
+[View in Github Repository](https://github.com/Emilianopp/Stats/blob/master/Nueral%20Nets/nets.ipynb)
+
 This project was is a way for me to learn the inner workings of neural networks.
 
 I hope that by implementing them from scratch, I am better suited to utilize framekworks such as Keras or Pytorch.
@@ -248,7 +250,7 @@ plot_loss(loss_lr_higher,increase_lr_model)
 ```
 
 
-[![svg](output_15_0.svg)](https://raw.githubusercontent.com/Emilianopp/Stats/c3394a6f42ed8ea3ca19b3397694e303ac74ee02/Nueral%20Nets/markdown/output_15_0.svg)
+![png](https://github.com/Emilianopp/Stats/blob/master/Nueral%20Nets/markdown/output_15_0.png?raw=true)
 
 
 Seems like we are getting lower and lower but still very jumpy and not really converging 
@@ -267,7 +269,7 @@ plot_loss(high_decay_loss,high_decay_model)
 ```
 
 
-[![svg](output_18_0.svg)](https://raw.githubusercontent.com/Emilianopp/Stats/c3394a6f42ed8ea3ca19b3397694e303ac74ee02/Nueral%20Nets/markdown/output_18_0.svg)
+![png](https://github.com/Emilianopp/Stats/blob/master/Nueral%20Nets/markdown/output_18_0.png?raw=true)
 
 
 Seems like we have a pretty good loss and accuracy score here 
@@ -286,12 +288,8 @@ sns.scatterplot(X[:,0], X[:,1],hue = y,style =y_hat )
 plt.show()
 ```
 
-    C:\Users\Emiliano\Anaconda3\lib\site-packages\seaborn\_decorators.py:43: FutureWarning: Pass the following variables as keyword args: x, y. From version 0.12, the only valid positional argument will be `data`, and passing other arguments without an explicit keyword will result in an error or misinterpretation.
-      FutureWarning
-    
 
-
-[![svg](output_20_1.svg)](https://raw.githubusercontent.com/Emilianopp/Stats/c3394a6f42ed8ea3ca19b3397694e303ac74ee02/Nueral%20Nets/markdown/output_20_1.svg)
+[![png](https://github.com/Emilianopp/Stats/blob/master/Nueral%20Nets/markdown/output_20_1.png?raw=true)
 
 
 Now overall I am pretty happy with the results of this experiment as it has helped me gain a much deeper understanding of nueral networks and their inner workins.

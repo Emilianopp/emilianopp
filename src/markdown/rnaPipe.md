@@ -1,5 +1,7 @@
 # MRNA_pipe
 
+[View in Github Repository](https://github.com/desouzalab/MRNA_pipe)
+
 ## This Repository belongs to the RNA Sequence Pipeline for DR.Camila de Souza's Laboratory 
 
 ## This Pipeline follows the following sequential structure 
