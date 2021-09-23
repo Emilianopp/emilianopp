@@ -1,4 +1,4 @@
-# Decision trees 
+# Decision Trees From Scratch
 
 [View in Github Repository](https://github.com/Emilianopp/Stats/tree/master/Trees)
 

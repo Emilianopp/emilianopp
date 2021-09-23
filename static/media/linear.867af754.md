@@ -204,7 +204,7 @@ plt.show()
 ![png](https://github.com/Emilianopp/Stats/blob/master/Linear_Models/img/output_37_0.png?raw=true)
 
 
-#### now we know the true regression coefficients $\beta_1 = 3$ and $\beta_2 = -2$
+#### now we know the true regression coefficients Beta1 = 3 and Beta2 = -2
 #### but lets solve for the using the logistic model 
 
 
