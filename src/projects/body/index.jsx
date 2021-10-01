@@ -100,7 +100,7 @@ export default function Body() {
           
           <Row> 
           {Project_cards(r_python,'RNA Sequence Pipeline','rnaPipe.md')}
-          {Project_cards(py,'Data Science Requirement Analysis','data_req.md')}
+          {Project_cards(py,'Data Science Requirements','data_req.md')}
           {Project_cards(tensor,' Recreation Centre Traffic Analysis ','traffic.md')}
           
            </Row>
