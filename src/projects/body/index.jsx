@@ -100,12 +100,12 @@ export default function Body() {
           
           <Row> 
           {Project_cards(r_python,'RNA Sequence Pipeline','rnaPipe.md')}
-          {/* {Project_cards(game,'Data Science Qualification Analysis','data_req.md')} */}
+          {Project_cards(py,'Data Science Requirement Analysis','data_req.md')}
           {Project_cards(tensor,' Recreation Centre Traffic Analysis ','traffic.md')}
-          {Project_cards(py,'Western Python Workshop','workshop.md')} 
+          
            </Row>
            <Row>
-           
+           {Project_cards(py,'Western Python Workshop','workshop.md')} 
            {/* {Project_cards(r_python,'Student Mental Health Analysis','test.md')} */}
            {Project_cards(game,'Pygame Space Invaders Clone','game.md')}
            {Project_cards(react,'Personal Site','web.md')}
