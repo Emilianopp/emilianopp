@@ -12,6 +12,7 @@ import tree from './Project_cards/card_logos/tree_web.png'
 import game from './Project_cards/card_logos/pygame.png'
 import tensor from './Project_cards/card_logos/tensor.png'
 import nets from './Project_cards/card_logos/nets.png'
+import data_rec from './Project_cards/card_logos/data_rec.png'
 
 import react from './Project_cards/card_logos/react.png'
 import py from './Project_cards/card_logos/python.png'
@@ -100,7 +101,7 @@ export default function Body() {
           
           <Row> 
           {Project_cards(r_python,'RNA Sequence Pipeline','rnaPipe.md')}
-          {Project_cards(py,'Data Science Requirements','data_req.md')}
+          {Project_cards(data_rec,'Data Science Requirements','data_rec.md')}
           {Project_cards(tensor,' Recreation Centre Traffic Analysis ','traffic.md')}
           
            </Row>
