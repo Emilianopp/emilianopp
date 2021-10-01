@@ -98,7 +98,7 @@ export default function Body() {
       </Row>
       <TabPanel value={value} index={0}>
       
-          
+          {/* =========================================== PICTURE DIMENSIONS ARE 400X400 PX ============================================================ */}
           <Row> 
           {Project_cards(r_python,'RNA Sequence Pipeline','rnaPipe.md')}
           {Project_cards(data_rec,'Data Science Requirements','data_rec.md')}
