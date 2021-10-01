@@ -1,0 +1,2 @@
+(this.webpackJsonpemilianopp=this.webpackJsonpemilianopp||[]).push([[12],{222:function(i,p,a){"use strict";a.r(p),p.default=a.p+"static/media/trees.8af0409a.md"}}]);
+//# sourceMappingURL=12.fa008161.chunk.js.map
