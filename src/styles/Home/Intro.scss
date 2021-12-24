@@ -1,0 +1,43 @@
+@import "../master.scss";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+.intro {
+    min-width: 0;
+  max-width: 100%;
+  height: 100vh;
+  padding: 0% !important;
+  background: $prim-green;
+  color: var(--color-white);
+  font-family: Roboto;
+  display: flex;
+  align-items: center;
+}
+.intro .img-row .intro-img {
+  position: relative;
+  padding: 0px;
+  border-radius: 50%;
+  border: 10px solid $prim-grey;
+  width: 400px;
+  height: auto;
+  margin: auto;
+}
+.img-row {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+.typewriter {
+  color: $prim-cultured;
+  font-size: 25px;
+
+  font-weight: bold;
+}
+.cursor {
+  color: $prim-grey;
+  font-size: 25px;
+
+  font-weight: bold;
+}

@@ -1,0 +1,14 @@
+@import "../master.scss";
+@import "bootstrap/scss/functions"; 
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+.about{ 
+
+    display: block;
+    background-color: $prim-green;
+	position: absolute;
+	top: var(--bodyPaddingTop);
+	left: 0;
+	right: 0;
+}

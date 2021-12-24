@@ -1,0 +1,31 @@
+
+
+@import '/src/styles/master.scss';
+.home_page{
+    max-width: 100%;
+    padding: 0%!important;
+   
+}
+#page-content-wrapper {
+   padding: 0%;
+}
+.project-cards{
+  min-width: 0;
+  max-width: 100%;
+  height: 100vh;
+  padding: 0% !important;
+  background: $prim-green;
+  color: var(--color-white);
+  font-family: Roboto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.row{
+    --bs-gutter-x: 0;
+    padding: 0%!important;
+}
+.Cards{
+    
+    width: 100%;
+}
