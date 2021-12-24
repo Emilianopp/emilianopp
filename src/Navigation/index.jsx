@@ -1,44 +1,19 @@
-import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../custom.css";
-import "./styles.css";
-import logo from "../media/elephant.png";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link,
-  Redirect,
-} from "react-router-dom";
-
+import { ProSidebar,SidebarHeader, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+import 'react-pro-sidebar/dist/css/styles.css';
+import 'styles/Navigation/navigation.scss'
 export default function Navigation() {
   return (
-    <div className="Navigation">
-      <Navbar bg="light" expand="lg">
-        <Container className="Header">
-          <Navbar.Brand href="#home">
-            <img src={logo} className="logo" />
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Link to="/home" style={{ textDecoration: "none" }}>
-                <Nav.Link href="#link">Home</Nav.Link>
-              </Link>
-              
-              <Link to="/resume" style={{ textDecoration: "none" }}>
-              <Nav.Link href="#link">Resume</Nav.Link>
-              </Link>
-              <Link to="/projects" style={{ textDecoration: "none" }}>
-              <Nav.Link className="border-left pl-2 ml-auto" href="#link">
-                Projects
-              </Nav.Link>
-              </Link>
-             
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </div>
+<ProSidebar>
+<SidebarHeader>
+   Emiliano Penaloza
+  </SidebarHeader>
+  <Menu iconShape="square">
+    <MenuItem >Dashboard</MenuItem>
+    <SubMenu title="Components" >
+      <MenuItem>Component 1</MenuItem>
+      <MenuItem>Component 2</MenuItem>
+    </SubMenu>
+  </Menu>
+</ProSidebar>
   );
 }
