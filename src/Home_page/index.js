@@ -1,42 +1,40 @@
-import React , {useState,useRef} from 'react';
-import { Container, Navbar,Nav,NavDropdown, Form,Carousel,Row,Col } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import '../custom.css'
-import Navigation from '../Navigation';
-
-import Footer from '../Footer'
-import BasicTimeline from '../timeline';
-
-import Animated_slides from  '../Animation/Animation_slides.jsx';
-
-import Animated_skills from  '../Animation/Animation_skills';
-import { Home } from '@material-ui/icons';
-import { Helmet } from 'react-helmet';
-
-export default function Home_page(){
-
+import Intro from "./Intro/Intro";
+import React from "react";
+import Navigation from "../Navigation";
+import "styles/Home/home_page.scss";
+import { Row, Col, Container } from "react-bootstrap";
+import SlidingCards from "./SlidingCards/SlidingCards";
+import ProjCard from "./SlidingCards/ProjCard";
+function Home_page() {
   return (
     <>
-    <Helmet>
-    <meta charSet="utf-8" />
-    <title>Emilianopp</title>
+      <Container className="home_page" fluid>
+        <Row>
+          <Col md={2} xl={2} id="sidebar-wrapper">
+            <Navigation />
+          </Col>
 
-</Helmet>
-      <div class="cointainer-fluid">
-        <Navigation />
-        
-        <Container fluid>
-        <Animated_slides />
-        <BasicTimeline/>
-        <Animated_skills/>
+          <Col xl={10} md={10} id="page-content-wrapper">
+            <Row>
+              <Intro />
+            </Row>
+            <Row>
+              <Container className="project-cards">
+                <Row className = "Cards">
+                  <Col  xl = {8} md = {8}>
+                  
+
+                    <SlidingCards />
+                  </Col>
+                 </Row>
+                
+              </Container>
+            </Row>
+          </Col>
+        </Row>
       </Container>
-        
-        <Footer />
-        
-      </div>
-      </>
-    
-  )
+    </>
+  );
 }
 
-
+export default Home_page;

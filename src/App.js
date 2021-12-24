@@ -8,6 +8,8 @@ import { HashRouter as Router,Route,Switch,Link,Redirect } from 'react-router-do
 import Home_page from './Home_page';
 import Projects from './projects';
 import Resume from './Resume';
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+
 
 const App = () => {
 
