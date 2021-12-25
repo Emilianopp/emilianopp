@@ -1,3 +1,40 @@
-.Project-card-content{
-        border-radius: 10;
+@import "styles/master.scss";
+.Project-card-content {
+  width: 100%;
+  background-color: $prim-blue !important;
+  color: $prim-cultured !important;
+  border-radius: 10px;
+  position: relative;
+  border-bottom: 6px solid $prim-grey;
+  border-right: 6px solid $prim-grey;
+  transition: all 500ms ease;
+}
+.Project-card-content:hover {
+  transform: scale(1.03);
+  transition: all 500ms ease;
+  padding: 5px;
+}
+
+.Outer-Project-card-content {
+  margin: auto;
+  width: 80%;
+  transform: skew(-18deg);
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+.Outer-Project-card-content:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom-right-radius: 8px;
+  height: 92%;
+  width: 100%; /* or 100px */
+  border-bottom: 1px solid magenta;
+  border-right: 1px solid magenta;
+}
+
+.unskew-Project-card-content {
+  padding-left: 10px;
+  transform: skew(18deg);
 }
