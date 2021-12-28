@@ -8,7 +8,7 @@ import TimelineOppositeContent from "@material-ui/lab/TimelineContent";
 import content from "config/content.json";
 import { withStyles } from "@material-ui/styles";
 import "styles/Home/timeline.scss";
-import { config } from "process";
+
 
 export default function PersonalTimeline() {
   const TimelineItemBetter = withStyles({
@@ -23,25 +23,25 @@ export default function PersonalTimeline() {
       {content.timeline["timelineContent"].map((item, i) => (
         <>
           <TimelineItemBetter>
-            <TimelineOppositeContent color="text.secondary">
-              <div className="left-text">{item.when}</div>
+            <TimelineOppositeContent color={`${content.textColor}`}>
+              <div className="left-text" style = {{color : `${content.textColor}`}}>{item.when}</div>
             </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineDot />
-              <TimelineConnector />
+            <TimelineSeparator >
+              <TimelineDot variant="outlined" style = {{borderColor : "#fffc5cfa"}} />
+              <TimelineConnector style = {{backgroundColor: '#A9B4C2', opacity : "80%"}}/>
             </TimelineSeparator>
-            <TimelineContent>{item.what}</TimelineContent>
+            <TimelineContent style = {{color : `${content.textColor}`}}> {item.what}</TimelineContent>
           </TimelineItemBetter>
         </>
       ))}
       <TimelineItemBetter>
-        <TimelineOppositeContent color="text.secondary">
-          <div className="left-text">{content.timeline.timelineLast.when}</div>
+        <TimelineOppositeContent color= {`${content.textColor}`}>
+          <div className="left-text" style = {{color : `${content.textColor}`}}>{content.timeline.timelineLast.when}</div>
         </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot />
+        <TimelineSeparator >
+          <TimelineDot style = {{borderColor : "#fffc5cfa"}} variant="outlined"/>
         </TimelineSeparator>
-        <TimelineContent>{content.timeline.timelineLast.what}</TimelineContent>
+        <TimelineContent style = {{color : content.textColor}}>{content.timeline.timelineLast.what}</TimelineContent>
       </TimelineItemBetter>
     </Timeline>
   );
