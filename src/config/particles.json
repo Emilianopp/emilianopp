@@ -3,11 +3,11 @@
       "color": {
           "value": ""
       },
-      "image": "",
+    
       "position": "",
       "repeat": "",
       "size": "",
-      "opacity": 1
+      "opacity": ".5"
   },
   "backgroundMask": {
       "cover": {
