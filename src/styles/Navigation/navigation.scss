@@ -1,5 +1,56 @@
-
-@import '/src/styles/master.scss';
+@import "/src/styles/master.scss";
 $sidebar-width: 100% !default;
+$sidebar-bg-color: #05455c;
+.sticky-container {
+  height: 100vh;
+  z-index: 5;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+}
+.sidebar {
+  align-items: center;
 
-@import '~react-pro-sidebar/dist/scss/styles.scss';
+  background-color: #05455c;
+  width: 100%;
+  height: 100vh;
+}
+.header-side {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.elephant{ 
+
+
+    width: 25vh;
+}
+
+.links-side {
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+}
+.text-inner {
+  position: relative;
+  padding-left: 30px;
+  float: left;
+  color: $prim-cultured;
+  font-size: 25px;
+}
+a {
+  color: $prim-cultured;
+  &:hover {
+    color: $prim-magenta;
+    
+    
+  }
+}
+a:link {
+  text-decoration: none;
+}
+a:hover{
+    
+}
+
+@import "~react-pro-sidebar/dist/scss/styles.scss";

@@ -1,0 +1,24 @@
+@import "styles/master.scss";
+
+svg{ 
+    width: 100%;
+    height: 100%;
+}
+
+
+.circle {
+        height: 12px;
+        width: 12px;
+        padding-top:10px;
+        background-color: $prim-magenta!important;
+        border-radius: 50%;
+        text-align: center;
+        margin-right: 5px;
+        margin-top: 5px;
+        border: 1px solid black;
+        opacity: 90%;
+        float: left;
+
+    }
+
+

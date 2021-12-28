@@ -28,4 +28,32 @@
 .Cards{
     
     width: 100%;
+   
 }
+.Projects-header{
+    color: $prim-cultured;
+    padding-left: 30px;
+    font-size: 50px;
+    position: relative;
+    padding-bottom: 10px;
+    z-index: 2;
+}
+.header-padder{
+    padding-left: 30px;
+}
+.Projects-header:after {
+
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-left: 30px;
+    height: 70%;
+    z-index: 1;
+    border-radius: 1%;
+    width: 20%;
+    border-left: 5px solid $prim-magenta;
+    border-bottom: 5px solid $prim-magenta;
+    opacity: 100%;
+    
+  }
