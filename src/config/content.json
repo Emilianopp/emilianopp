@@ -1,0 +1,73 @@
+{
+  "textColor": "#EEF1EF",
+  "typewriter": [
+    "I'm a",
+    " Data Science Student",
+    " Software Developer",
+    " Machine Learning Enthusiast"
+  ],
+  "timeline": {
+    "timelineContent": [
+      { "what": "Born Mexico", "when": "Feb, 1999" },
+      { "what": "Arrived in Canada", "when": "Aug, 2010" },
+      { "what": "Started Western University", "when": "Sept, 2017" },
+      { "what": "Sun Life Financial Co-op", "when": "May, 2020 - May 2021" }
+    ],
+    "timelineLast": {
+      "what": "Data Science Reserach Intern(NSERC USRA)",
+      "when": "May 2021 - Sept 2021"
+    }
+  },
+  "Skills": [
+    {
+      "id": "1",
+      "title": "Ml",
+      "tools": [
+        { "name": "Pytorch", "rating": 3 },
+        { "name": "Tensorflow", "rating": 3 },
+        { "name": "Sklearn", "rating": 4 },
+        { "name": "Pandas", "rating": 5 },
+        { "name": "Numpy/Pandas", "rating": 5 },
+        { "name": "MatplotLib", "rating": 4 }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "DevOps",
+      "tools": [
+        { "name": "Jenkins", "rating": 4 },
+        { "name": "Git", "rating": 5 },
+        { "name": "Ansible", "rating": 3 }
+      ]
+    },
+
+    {
+      "id": "3",
+      "title": "Web",
+      "tools": [
+        { "name": "React.js", "rating": 4 },
+        { "name": "Flask", "rating": 4 },
+        { "name": "Express", "rating": 2 }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Databases",
+      "tools": [
+        { "name": "MongoDB", "rating": 4 },
+        { "name": "PostgreSQL", "rating": 4 }
+      ]
+    }
+  ],
+  "Navigation": [
+    { "name": "ABOUT", "ref": "#about" },
+    { "name": "PROJECTS", "ref": "#proj" },
+    { "name": "RESUME", "ref": "https://drive.google.com/file/d/1ajKPlPZhd5TCystHEnR85691BkY1t6TD/view?usp=sharing" },
+    { "name": "CONTACT", "ref": "#contact" },
+    { "name": "SKILLQUERY", "ref": "https://skillquery.com/" }
+  ],
+  "contact": [{ "name": "Github", "link": "https://github.com/Emilianopp" },{ "name": "LinkedIn", "link": "https://www.linkedin.com/in/emilianopenaloza-19176b15b/" }
+    ],
+    "email" : "epenaloz@uwo.ca"
+
+}

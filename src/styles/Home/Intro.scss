@@ -1,0 +1,78 @@
+@import "../master.scss";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+.intro {
+  min-width: 0;
+  max-width: 100%;
+  height: 100vh;
+  padding: 0% !important;
+  background: $prim-green;
+  color: var(--color-white);
+  font-family: 'Open Sans', sans-serif!important;
+  display: flex;
+  align-items: center;
+}
+.intro .img-row .intro-img {
+  position: relative;
+  padding: 0px;
+  border-radius: 50%;
+  border: 3px solid $prim-green;
+  width: 400px;
+  height: auto;
+  margin-left: 10%
+  
+}
+.typewritter-row{
+  padding-top: 10px;
+  display: flex;
+  position: relative;
+}
+
+.name-row{
+  margin: auto;
+  width: 100%;
+  opacity: 100%;
+}
+
+.lastname{
+  padding-left: 15px;
+  color: $prim-magenta;
+}
+
+.name{ 
+  display: flex;
+  float: left;
+  text-align: left;
+  font-size: 40px;
+  position: relative;
+  color: $prim-cultured;
+  font-weight: bold;
+  opacity: 100%;
+}
+
+.type-col{
+  display: flex;
+
+  align-items: center;
+}
+.img-row {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+.typewriter {
+  color: $prim-cultured;
+  font-size: 25px;
+  opacity: 70%;
+
+  font-weight: bold;
+}
+.cursor {
+  color: $prim-grey;
+  font-size: 25px;
+
+  font-weight: bold;
+}
