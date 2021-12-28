@@ -5,7 +5,7 @@ import { Row, Col, Container } from "react-bootstrap";
 import SlidingCards from "./SlidingCards/SlidingCards";
 import PersonalTimeline from "./TimeLine/Timeline";
 import Skills from "./Skills/Skills";
-import Contact from "Home_page/Contact/Contact.jsx"
+import Contact from "components/Home_page/Contact/Contact.jsx"
 function Home_page() {
   return (
     <>
