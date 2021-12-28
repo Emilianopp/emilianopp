@@ -1,4 +1,4 @@
-{
+{"name": "emilianopp",
   "compilerOptions": {
     "target": "es5",
     "baseUrl": "src",

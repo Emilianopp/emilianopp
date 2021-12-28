@@ -1,14 +1,7 @@
-import React , {useState,useRef} from 'react';
-import { Container, Navbar,Nav,NavDropdown, Form,Carousel,Row,Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './custom.css'
-import Navigation from './components/Navigation';
-
 import { HashRouter as Router,Route,Switch,Link,Redirect } from 'react-router-dom';
 import Home_page from './components/Home_page';
-
-/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-
 
 const App = () => {
 
