@@ -27,8 +27,8 @@
         { "name": "Tensorflow", "rating": 3 },
         { "name": "Sklearn", "rating": 4 },
         { "name": "Pandas", "rating": 5 },
-        { "name": "Numpy/Pandas", "rating": 5 },
-        { "name": "MatplotLib", "rating": 4 }
+        { "name": "Numpy", "rating": 5 },
+        { "name": "Matplotlib", "rating": 4 }
       ]
     },
     {
@@ -47,7 +47,7 @@
       "tools": [
         { "name": "React.js", "rating": 4 },
         { "name": "Flask", "rating": 4 },
-        { "name": "Express", "rating": 2 }
+        { "name": "Express", "rating": 3 }
       ]
     },
     {
