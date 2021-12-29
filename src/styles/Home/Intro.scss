@@ -33,7 +33,7 @@
 .name-row{
   margin: auto;
   width: 100%;
-  opacity: 100%;
+  
 }
 
 .lastname{
@@ -49,7 +49,7 @@
   position: relative;
   color: $prim-cultured;
   font-weight: bold;
-  opacity: 100%;
+  
 }
 
 .type-col{
@@ -66,7 +66,7 @@
 .typewriter {
   color: $prim-cultured;
   font-size: 25px;
-  opacity: 70%;
+  opacity: .7;
 
   font-weight: bold;
 }

@@ -27,7 +27,7 @@ class Intro extends React.Component {
           style={{
             zIndex: 0,
             position: "absolute",
-            opacity: "20%",
+            opacity: ".2",
             height: "100vh",
             width: "100%",
           }}

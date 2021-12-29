@@ -11,7 +11,7 @@
   z-index: 10000;
   
   transition: all 500ms ease;
-  opacity: 100%;
+  
 }
 .MuiTab-textColorPrimary.Mui-selected{
   color: $prim-magenta!important;
@@ -80,7 +80,7 @@
 
   // border-bottom: 2px solid $prim-magenta;
   border-right: 2px solid $prim-magenta;
-  opacity: 100%;
+  
 }
 
 .slides{
