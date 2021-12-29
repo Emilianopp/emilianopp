@@ -13,6 +13,9 @@
   font-family: 'Open Sans', sans-serif!important;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  position: relative;
+  
 }
 .intro .img-row .intro-img {
   position: relative;
@@ -75,4 +78,46 @@
   font-size: 25px;
 
   font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .intro .img-row .intro-img {
+    position: relative;
+    padding: 0px;
+    border-radius: 50%;
+    border: 3px solid $prim-green;
+    max-width: 250px;
+    height: auto;
+    margin-left: 0%
+    
+  }
+  .name{ 
+    display:unset;
+    float:none;
+    text-align: center;
+    font-size: 30px;
+    
+    position:relative;
+    color: $prim-cultured;
+    font-weight: bold;
+  }
+  .name-row{
+    
+  }
+  .typewritter-row{
+    padding-top: 10px;
+    display: flex;
+    position: relative;
+    width: 100%;
+  }
+
+.type-col{
+  display:inline;
+
+  align-items: center;
+}
+.lastname{
+  padding-left: 0px;
+  color: $prim-magenta;
+}
 }

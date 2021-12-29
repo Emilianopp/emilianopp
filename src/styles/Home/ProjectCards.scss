@@ -90,6 +90,58 @@
 
 .unskew-Project-card-content {
   padding-left: 10px;
-  transform: skew(18deg);
+  transform: skew(0deg);
+}
+
+@media only screen and (max-width: 600px) {
+  .unskew-Project-card-content {
+    padding-left: 0px;
+    transform: skew(0deg);
+  }
+
+  .media{
+    transform: skew(0deg);
+    position: relative;
+    z-index: -1;
+    height: auto;
+    
+  }
+  .card-content{ 
+    margin: 10px;
+    position: relative;
+    z-index: 999;
+    height: 100%;
+  
+  }
+  .Outer-Project-card-content {
+    margin: auto;
+    width: 80%;
+    z-index: -1;
+    position:relative;
+    transform: skew(0deg);
+    padding-bottom: 10px;
+    padding-right: 10px;
+    position: relative;
+    z-index: 99999;
+   
+  }
+
+  .Outer-Project-card-content:after {
+
+    content: "";
+    
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom-right-radius: 8px;
+    height: 80%;
+    width: 90%;
+    z-index: 1;
+  
+    // border-bottom: 2px solid $prim-magenta;
+    border-right: 2px solid $prim-magenta;
+    
+  }
+
 }
 

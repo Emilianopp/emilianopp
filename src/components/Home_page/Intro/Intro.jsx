@@ -18,7 +18,7 @@ class Intro extends React.Component {
             position: "absolute",
             backgroundImage: background,
           }}
-          width="100wh"
+          width="auto"
           height="100vh"
           options={particlesOptions}
         />
@@ -29,45 +29,47 @@ class Intro extends React.Component {
             position: "absolute",
             opacity: ".2",
             height: "100vh",
-            width: "100%",
+            width: '100vw',
           }}
         />
 
         <Row xl={{ offset: 6 }} className="img-row">
-          <Col>
+          <Col md = {6} xs={12}>
             <img className="intro-img" src={me} />
           </Col>
-          <Col className="type-col">
-          <div className= "wrap">
-            <Row className="name-row"><h1 className="name"><div >EMILIANO</div> <div className= "lastname"> PENALOZA</div></h1></Row>
-           
-            <Row className="typewritter-row">
-              
-              <Typewriter
-                className="typewriter"
-                options={{
-                  loop: true,
-                  wrapperClassName: "typewriter",
-                  cursorClassName: "cursor",
-                }}
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString(im)
-                    .pauseFor(300)
-                    .typeString(student)
-                    .pauseFor(900)
-                    .deleteChars(student.length)
-                    .typeString(developer)
-                    .pauseFor(900)
-                    .deleteChars(developer.length)
-                    .typeString(ml)
-                    .deleteAll()
-                    .start();
-                }}
-              />
-            </Row>
+          <Col md = {6} xs = {12} className="type-col">
+            <div className="wrap">
+              <Row className="name-row">
+                <h1 className="name">
+                  <div>EMILIANO</div> <div className="lastname"> PENALOZA</div>
+                </h1>
+              </Row>
+
+              <Row className="typewritter-row">
+                <Typewriter
+                  className="typewriter"
+                  options={{
+                    loop: true,
+                    wrapperClassName: "typewriter",
+                    cursorClassName: "cursor",
+                  }}
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString(im)
+                      .pauseFor(300)
+                      .typeString(student)
+                      .pauseFor(900)
+                      .deleteChars(student.length)
+                      .typeString(developer)
+                      .pauseFor(900)
+                      .deleteChars(developer.length)
+                      .typeString(ml)
+                      .deleteAll()
+                      .start();
+                  }}
+                />
+              </Row>
             </div>
-            
           </Col>
         </Row>
       </Container>

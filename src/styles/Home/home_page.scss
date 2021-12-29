@@ -2,12 +2,13 @@
 
 @import '/src/styles/master.scss';
 .home_page{
-    max-width: 100%;
+    max-width: 100%!important;
     padding: 0%!important;
-   
+    
 }
 #page-content-wrapper {
    padding: 0%;
+   max-width: 100vw;
 }
 .project-cards{
   min-width: 0;
@@ -26,7 +27,7 @@
     padding: 0%!important;
 }
 .Cards{
-    
+    position: relative;
     width: 100%;
    
 }
@@ -40,6 +41,7 @@
 }
 .header-padder{
     padding-left: 30px;
+    padding-bottom: 30px;
 }
 .Projects-header:after {
 
@@ -56,4 +58,21 @@
     border-bottom: 5px solid $prim-magenta;
     
     
+  }
+  @media only screen and (max-width: 600px) {
+    .Cards {
+      max-width: 100%;
+    
+      width: auto;
+    }
+    .project-cards{
+        height: 100%;
+    }
+    .row{
+      
+  }
+  .header-padder{
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
   }

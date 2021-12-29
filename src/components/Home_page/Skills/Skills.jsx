@@ -5,8 +5,7 @@ import Box from "@mui/material/Box";
 import TabContext from "@material-ui/lab/TabContext";
 import TabPanel from "@material-ui/lab/TabPanel";
 import content from "config/content.json";
-import { Container } from "@mui/material";
-import { Col, Row } from "react-bootstrap";
+import { Container,Col, Row } from "react-bootstrap";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import "styles/Home/skills.scss";
 
@@ -79,7 +78,7 @@ export default function Skills() {
                       .map((tech) => (
                         
                           <Row style = {{padding: "0px"}}>
-                            <Col xs={6} xl={6} md={6} style={{color: `${content.textColor}`}}>
+                            <Col style = {{margin: "0px"} } xs={6} xl={6} md={6} style={{color: `${content.textColor}`}}>
                               {tech.name}
                             </Col>
                             <Col xs={6} xl={6} md={6}>
