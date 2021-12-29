@@ -62,8 +62,8 @@
   "Navigation": [
     { "name": "ABOUT", "ref": "#about" },
     { "name": "PROJECTS", "ref": "#proj" },
-    { "name": "RESUME", "ref": "https://drive.google.com/file/d/1ajKPlPZhd5TCystHEnR85691BkY1t6TD/view?usp=sharing" },
     { "name": "CONTACT", "ref": "#contact" },
+    { "name": "RESUME", "ref": "https://drive.google.com/file/d/1ajKPlPZhd5TCystHEnR85691BkY1t6TD/view?usp=sharing" },
     { "name": "SKILLQUERY", "ref": "https://skillquery.com/" }
   ],
   "contact": [{ "name": "Github", "link": "https://github.com/Emilianopp" },{ "name": "LinkedIn", "link": "https://www.linkedin.com/in/emilianopenaloza-19176b15b/" }
