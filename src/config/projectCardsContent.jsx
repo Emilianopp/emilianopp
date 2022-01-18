@@ -3,6 +3,7 @@ import { ReactComponent as SQ } from "assets/sq.svg";
 import { ReactComponent as rna } from "assets/Rna.svg";
 import { ReactComponent as ml } from "assets/ml.svg";
 import { ReactComponent as rec } from "assets/rec.svg";
+import { ReactComponent as weldon } from "assets/weldon.svg";
 const data = [
   {
     src: SQ,
@@ -60,6 +61,21 @@ const data = [
       { src: "https://github.com/desouzalab/scRNAClust", title: "Repository" },
     ],
     color: "#1DA1F2",
+  },{
+    src: weldon,
+    title: "Weldon Twitter Bot",
+    content: [
+      "Created a bot that tweets the amount of people currently at the Western's biggest library",
+     'Implmented using Beautiful Soup for data collection and Twitter api for tweet generation',
+     "Data retrival: https://www.lib.uwo.ca/taps/tapper?lib=wel"
+
+    ],
+
+    link: [
+      { src: "https://twitter.com/Weldon_Bot", title: "Account" },
+      { src: "https://github.com/Emilianopp/weldon-bot", title: "Repository" },
+    ],
+    color: "black",
   },
 ];
 
