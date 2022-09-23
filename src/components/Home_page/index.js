@@ -8,7 +8,7 @@ import Skills from "./Skills/Skills";
 import Contact from "components/Home_page/Contact/Contact.jsx";
 import { useMediaQuery } from 'react-responsive'
 import NavMobile from "components/Navigation/NavMobile";
-
+import content from "config/content.json"
 
 function Home_page() {
   const IsDesktopOrLaptop = useMediaQuery({
@@ -38,10 +38,18 @@ function Home_page() {
 
             <Row id="about">
               <Container className="project-cards">
+     
+
                 <Row className="Cards">
                   <div className="header-padder">
                     <h1 className="Projects-header">About</h1>
                   </div>
+                  {content.about.map((item) => 
+                  {
+                      return(<p className = "about-paragraph"> {item}</p>)
+
+                  })}
+             
                   <Col
                     xl={{ span: 6 }}
                     md={{ span: 6, offset: 0 }}
@@ -120,6 +128,12 @@ function Home_page() {
                   <div className="header-padder">
                     <h1 className="Projects-header">About</h1>
                   </div>
+                  
+                  {content.about.map((item) => 
+                  {
+                      return(<p className = "about-paragraph"> {item}</p>)
+
+                  })}
                   <Col
                     xl={{ span: 6 }}
                     md={{ span: 6, offset: 0 }}

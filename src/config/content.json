@@ -2,28 +2,45 @@
   "textColor": "#EEF1EF",
   "typewriter": [
     "I'm a",
-    " Data Science Student",
+    " Graduate Student",
     " Software Developer",
-    " Machine Learning Enthusiast"
+    " Machine Learning Researcher"
   ],
   "timeline": {
     "timelineContent": [
-      { "what": "Born Mexico", "when": "Feb, 1999" },
-      { "what": "Arrived in Canada", "when": "Aug, 2010" },
-      { "what": "Started Western University", "when": "Sept, 2017" },
-      { "what": "Sun Life Financial Co-op", "when": "May, 2020 - May 2021" }
+      { "what": "Sun Life Financial Co-op", "when": "May, 2020 - May 2021" },
+      
+      {
+        "what": "Data Science Research Intern (NSERC USRA)",
+        "when": "May 2021 - Sept 2021"
+      },
+      { "what": "Undergraduate Research Assistant", "when": "January, 2022 - April 2022" },
+
+      {
+        "what": "Graduated from Western, Honours Data Science",
+        "when": "May 2022"
+      }
+
     ],
-    "timelineLast": {
-      "what": "Data Science Research Intern (NSERC USRA)",
-      "when": "May 2021 - Sept 2021"
-    }
+    "timelineLast": { "what": "Undergraduate Student Research Intern (Statistics)", "when": "May, 2022 - August 2022" }
   },
+  "about": [
+   
+     "Hey I'm Emiliano, a masters graduate student at the University of Waterloo",
+
+       "My main research interest lies in the intersection of network science and deep learning",
+
+       "I am currently working under Cristian Bravo researching dynamic graph data"
+
+
+  ]
+  ,
   "Skills": [
     {
       "id": "1",
       "title": "Ml",
       "tools": [
-        { "name": "Pytorch", "rating": 3 },
+        { "name": "Pytorch", "rating": 4 },
         { "name": "Tensorflow", "rating": 3 },
         { "name": "Sklearn", "rating": 4 },
         { "name": "Pandas", "rating": 5 },
@@ -63,11 +80,12 @@
     { "name": "ABOUT", "ref": "#about" },
     { "name": "PROJECTS", "ref": "#proj" },
     { "name": "CONTACT", "ref": "#contact" },
-    { "name": "RESUME", "ref": "https://drive.google.com/file/d/1ajKPlPZhd5TCystHEnR85691BkY1t6TD/view?usp=sharing" },
-    { "name": "SKILLQUERY", "ref": "https://skillquery.com/" }
+    { "name": "RESUME", "ref": "https://drive.google.com/file/d/1PF2vnc9p3ZhsOFIGfANdglmSsFwRni3t/view?usp=sharing" },
+    { "name": "SKILLQUERY", "ref": "https://skillquery.com/" },
+    { "name": "WRITING SAMPLE", "ref": "https://drive.google.com/file/d/1OZTedamwImyNEaEUCMPj2DpSdKe_qfr7/view?usp=sharing" }
   ],
   "contact": [{ "name": "Github", "link": "https://github.com/Emilianopp" },{ "name": "LinkedIn", "link": "https://www.linkedin.com/in/emilianopenaloza-19176b15b/" }
     ],
-    "email" : "epenaloz@uwo.ca"
+    "email" : "epenaloz@uwaterloo.ca"
 
 }

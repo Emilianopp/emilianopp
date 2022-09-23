@@ -4,6 +4,7 @@ import { ReactComponent as rna } from "assets/Rna.svg";
 import { ReactComponent as ml } from "assets/ml.svg";
 import { ReactComponent as rec } from "assets/rec.svg";
 import { ReactComponent as weldon } from "assets/weldon.svg";
+import { ReactComponent as py } from "assets/py.svg";
 const data = [
   {
     src: SQ,
@@ -21,6 +22,49 @@ const data = [
     color: "#0CAA41",
   },
   {
+    src: ml,
+    title: "End-to-End Negotiator",
+    content: [
+      "Implemmented End-to-End negotiation by  Lewis & Yarats",
+      "Researched if transformers or monte-carlo tree search would improve performance", 
+      "Saw an overall improvement in Pareto Optimal negotiation scores"
+    ],
+
+    link: [
+      { src: "https://github.com/anthonyprinaldi/end-to-end-negotiator", title: "Repository" },
+      { src: "https://drive.google.com/file/d/1I3AYbXPK0UYAz3hkYdcP1Un8SdyKsyhu/view", title: "Final Paper" },
+      { src: "https://arxiv.org/abs/1712.05846", title: "End-end-negotiator" },
+    ],
+    color: "#EE4C2C",
+  },
+  {
+    src: py,
+    title: "MuLP",
+    content: [
+      "A Python implementation of the MultiLayer Personalized Page Rank Algorithm developed by Bravo and Óskarsdóttir (2020) "
+    ],
+
+    link: [
+      { src: "https://github.com/Banking-Analytics-Lab/MuLP", title: "Repository" },
+      { src: "https://arxiv.org/abs/2005.12418", title: "Paper" },
+    ],
+    color: "#FFE873",
+  },
+  {
+    src: SQ,
+    title: "EMP-PY",
+    content: [
+      "A Python implementation of Expected Maximum Profit metric developed by Verbraken et al (2013, 2014) "
+    ],
+
+    link: [
+      { src: "https://github.com/Banking-Analytics-Lab/EMP-Py", title: "Repository" },
+      { src: "https://www.sciencedirect.com/science/article/pii/S0377221714003105", title: "Paper 2013" },
+      { src: "https://www.sciencedirect.com/science/article/pii/S0377221714003105", title: "Paper 2014" },
+    ],
+    color: "#4B8BBE",
+  },
+  {
     src: rna,
     title: "scRNAClust",
     content: [
@@ -35,30 +79,15 @@ const data = [
     color: "#e1fcfc",
   },
   {
-    src: ml,
-    title: "ML Algorithms",
-    content: [
-      "Implementation of machine learning algorithms using numpy and pytorch",
-      "Completed: logistic/linear regression, decision trees, neural networks",
-      "In progress: recurrent neural networks",
-    ],
-
-    link: [
-      { src: "https://github.com/desouzalab/scRNAClust", title: "Repository" },
-    ],
-    color: "#EE4C2C",
-  },
-  {
     src: rec,
     title: "Rec Centre Traffic Analysis",
     content: [
       "Analyzed rec centre traffic tweets",
       "Uncovered traffic trends and built a LSTM RNN forecasting model",
-      "Hope to share forecasts through twitter's api once restrictiosn are lifted",
     ],
 
     link: [
-      { src: "https://github.com/desouzalab/scRNAClust", title: "Repository" },
+      { src: "https://github.com/Emilianopp/WeightRoomTraffic", title: "Repository" },
     ],
     color: "#1DA1F2",
   },{
@@ -66,9 +95,7 @@ const data = [
     title: "Weldon Twitter Bot",
     content: [
       "Created a bot that tweets the amount of people currently at the Western's biggest library",
-     'Implmented using Beautiful Soup for data collection and Twitter api for tweet generation',
-     "Data retrival: https://www.lib.uwo.ca/taps/tapper?lib=wel"
-
+      "Discontinued as data is no longer public"
     ],
 
     link: [

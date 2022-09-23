@@ -6,7 +6,7 @@ import particlesOptions from "config/particles.json";
 import "styles/Home/Intro.scss";
 import me from "assets/me.png";
 import Typewriter from "typewriter-effect";
-import background from "assets/wallpaper.jpg";
+import background from "assets/wallpaper.png";
 class Intro extends React.Component {
   render() {
     let [im, student, developer, ml] = content.typewriter;
