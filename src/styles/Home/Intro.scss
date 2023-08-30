@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .intro {
   min-width: 0;
-  max-width: 100%;
+  width: 100vw!important;
   height: 100vh;
   padding: 0% !important;
   background: $prim-green;
@@ -22,7 +22,7 @@
   padding: 0px;
   border-radius: 50%;
   border: 3px solid $prim-green;
-  width: 400px;
+  width: 25rem;
   height: auto;
   margin-left: 10%
   
@@ -32,6 +32,18 @@
   display: flex;
   position: relative;
 }
+
+@media (max-width: 1299px) {
+
+  
+  .typewritter-row {
+    padding-top: 10px;
+    display: flex;
+    position: relative;
+    justify-content: center; /* Add this line to horizontally center the content */
+  }
+}
+
 
 .name-row{
   margin: auto;
@@ -80,7 +92,7 @@
   font-weight: bold;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1299px) {
   .intro .img-row .intro-img {
     position: relative;
     padding: 0px;

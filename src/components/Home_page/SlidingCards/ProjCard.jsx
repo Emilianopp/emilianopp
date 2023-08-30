@@ -105,7 +105,7 @@ export default function ProjCard({ item }) {
         className={css({
           margin: "auto",
           width: "80%",
-          height:"80vh",
+          height:"50vh",
           paddingTop:"20px",
           position: "relative",
           transform: "skew(0deg)",

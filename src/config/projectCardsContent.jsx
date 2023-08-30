@@ -11,8 +11,8 @@ const data = [
     title: "SkillQuery",
     content: [
       "A web app to search role qualifications",
-      "Displays regional hotspots and needed education/technologies ",
-      "Built with Huggingface/Tensorflow, Flask, React.js and MongoDB",
+      "Displays regional hotspots ",
+      "Built with Huggingface / Tensorflow, Flask, React.js and MongoDB",
     ],
 
     link: [

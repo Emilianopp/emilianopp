@@ -18,8 +18,9 @@ class Intro extends React.Component {
             position: "absolute",
             backgroundImage: background,
           }}
-          width="auto"
+          // width="auto"
           height="100vh"
+          width="100vw"
           options={particlesOptions}
         />
         <img
@@ -33,11 +34,11 @@ class Intro extends React.Component {
           }}
         />
 
-        <Row xl={{ offset: 6 }} className="img-row">
-          <Col md = {6} xs={12}>
+        <Row xl={{ offset: 6 }}  className="img-row">
+          <Col xl = {6} md = {12} sm={12}>
             <img className="intro-img" src={me} />
           </Col>
-          <Col md = {6} xs = {12} className="type-col">
+          <Col xl = {6} md = {12} sm = {12} className="type-col">
             <div className="wrap">
               <Row className="name-row">
                 <h1 className="name">

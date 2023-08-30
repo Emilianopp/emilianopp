@@ -1,0 +1,22 @@
+[
+    {
+      "title": "Influencer Detection with Dynamic Graph Neural Networks",
+      "authors": "Elena Tiukhova, Emiliano Penaloza, María Óskarsdóttir, Hernan Garcia, Alejandro Correa Bahnsen, Bart Baesens, Monique Snoeck, Cristián Bravo",
+      "year": 2022,
+      "journal": "NeurIPS 2022 Temporal Graph Learning Workshop",
+      "links": {
+        "repo": "https://github.com/Banking-Analytics-Lab/DynamicGraphLearning",
+        "link": "https://arxiv.org/pdf/2211.09664.pdf"
+      }
+    },
+    {
+      "title": "INFLECT-DGNN: Influencer Prediction with Dynamic Graph Neural Networks",
+      "authors": "Elena Tiukhova, Emiliano Penaloza, María Óskarsdóttir, Bart Baesens, Monique Snoeck, Cristián Bravo",
+      "year": 2023,
+      "journal": "Preprint",
+      "links": {
+        "preprint": "https://arxiv.org/pdf/2307.08131.pdf"
+      }
+    }
+  ]
+  

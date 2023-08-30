@@ -2,7 +2,7 @@
   "textColor": "#EEF1EF",
   "typewriter": [
     "I'm a",
-    " Graduate Student",
+    " PhD Student",
     " Software Developer",
     " Machine Learning Researcher"
   ],
@@ -11,26 +11,33 @@
       { "what": "Sun Life Financial Co-op", "when": "May, 2020 - May 2021" },
       
       {
-        "what": "Data Science Research Intern (NSERC USRA)",
+        "what": "NSERC USRA research assistant under Camila De Souza",
         "when": "May 2021 - Sept 2021"
       },
-      { "what": "Undergraduate Research Assistant", "when": "January, 2022 - April 2022" },
+      { "what": "Undergraduate research assistant under Cristain Bravo", "when": "January, 2022 - December 2022" },
 
       {
         "what": "Graduated from Western, Honours Data Science",
-        "when": "May 2022"
+        "when": "April 2022"
+      },
+      {
+        "what": "Graduated from Waterloo, MMath Statistics",
+        "when": "August 2023"
       }
 
     ],
-    "timelineLast": { "what": "Undergraduate Student Research Intern (Statistics)", "when": "May, 2022 - August 2022" }
+    "timelineLast": { "what": "PhD student at Mila-Quebec under Luarent Charlin ", "when": "May, 2022 - August 2022" }
   },
   "about": [
    
-     "Hey I'm Emiliano, a masters graduate student at the University of Waterloo",
+     "Hey I'm Emiliano a PhD student at Mila-Quebec/Université de Montréal, currently under the supervision of Laurent Charlin",
+      "\nPrior to Mila I completed my MMath in Statistics at the University of Waterloo under the supervision of Nathaniel Stevens",
+      " While most of my work has focused on dynamic graph learning, I am broadly interested in solving real world problems through the use of intelligent systems, with a particular interest in recommendation systems and generative modeling"
 
-       "My main research interest lies in the intersection of network science and deep learning",
 
-       "I am currently working under Cristian Bravo researching dynamic graph data"
+
+
+
 
 
   ]
@@ -78,14 +85,14 @@
   ],
   "Navigation": [
     { "name": "ABOUT", "ref": "#about" },
+    { "name": "PUBLICATIONS", "ref": "#pubs" },
     { "name": "PROJECTS", "ref": "#proj" },
     { "name": "CONTACT", "ref": "#contact" },
     { "name": "RESUME", "ref": "https://drive.google.com/file/d/1PF2vnc9p3ZhsOFIGfANdglmSsFwRni3t/view?usp=sharing" },
-    { "name": "SKILLQUERY", "ref": "https://skillquery.com/" },
-    { "name": "WRITING SAMPLE", "ref": "https://drive.google.com/file/d/1OZTedamwImyNEaEUCMPj2DpSdKe_qfr7/view?usp=sharing" }
+    { "name": "SKILLQUERY", "ref": "https://skillquery.com/" }
   ],
   "contact": [{ "name": "Github", "link": "https://github.com/Emilianopp" },{ "name": "LinkedIn", "link": "https://www.linkedin.com/in/emilianopenaloza-19176b15b/" }
     ],
-    "email" : "epenaloz@uwaterloo.ca"
+    "email" : "emiliano.penaloza@mila.quebec"
 
 }

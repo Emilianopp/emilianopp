@@ -5,7 +5,7 @@ import "styles/Navigation/navMobile.scss"
 import content from "config/content.json"
 function NavMobile() {
   return (
-    <Navbar   expand={false} fixed="top">
+    <Navbar   expand={false} fixed="top" class = "navbar">
     <Container fluid>
      
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

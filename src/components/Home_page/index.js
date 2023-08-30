@@ -9,13 +9,14 @@ import Contact from "components/Home_page/Contact/Contact.jsx";
 import { useMediaQuery } from 'react-responsive'
 import NavMobile from "components/Navigation/NavMobile";
 import content from "config/content.json"
+import publications from 'config/pubs.json';
 
 function Home_page() {
   const IsDesktopOrLaptop = useMediaQuery({
-    query: '(min-width: 800px)'
+    query: '(min-width: 1200px)'
   })
   const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
-  const Mobile = useMediaQuery({ query: '(max-width: 800px)' })
+  const Mobile = useMediaQuery({ query: '(max-width: 1200px)' })
   const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
   const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
 
@@ -32,10 +33,11 @@ function Home_page() {
           </Col>
           {/* particles wrapper */}
           <Col xl={10} md={10} xs={12} id="page-content-wrapper">
+
             <Row>
               <Intro />
             </Row>
-
+            
             <Row id="about">
               <Container className="project-cards">
      
@@ -44,13 +46,29 @@ function Home_page() {
                   <div className="header-padder">
                     <h1 className="Projects-header">About</h1>
                   </div>
-                  {content.about.map((item) => 
+                  {/* {content.about.map((item) => 
                   {
                       return(<p className = "about-paragraph"> {item}</p>)
 
-                  })}
+                  })} */}
+                  <p className="about-paragraph">
+                  
+Hey I'm Emiliano a PhD student at Mila-Quebec/Université de Montréal, working under the supervision of <a href="http://www.cs.toronto.edu/~lcharlin/" className="about-href" target="_blank" rel="noopener noreferrer" >Laurent Charlin</a>
+<p>  </p>
+      Prior to Mila, I completed my MMath in Statistics at the University of Waterloo under the supervision of <a href="https://uwaterloo.ca/scholar/nstevens/home" className="about-href" target="_blank" rel="noopener noreferrer" >Nathaniel Stevens</a>
+      <p>  </p>
+     I obtained my Bachelors in Data Science from The University of Western Ontario, where I was a member of the <a href="https://thebal.ai/" className="about-href" target="_blank" rel="noopener noreferrer" >Banking Analytics Lab</a> led by Cristian Bravo 
+      <p>  </p>
+      While most of my work has focused on dynamic graph learning, I am broadly interested in solving real world problems through the use of intelligent systems, with a particular interest in recommendation systems and generative modeling
+      <p></p>
+      My free time is mostly consumed by a good <a href = 'https://www.goodreads.com/user/show/157603205-emiliano-penaloza' className="about-href">book</a> and training for my next <a href = "https://youtu.be/wCxhuR65iW0" className="about-href">powerlifting</a> meet
+      </p>
+
+      <p></p>
+
+      <p></p>
              
-                  <Col
+                  {/* <Col
                     xl={{ span: 6 }}
                     md={{ span: 6, offset: 0 }}
                     xs={{ span: 8, offset: 2 }}
@@ -64,11 +82,78 @@ function Home_page() {
                     xs={{ span: 8, offset: 2 }}
                   >
                     <Skills />
-                  </Col>
+                  </Col> */}
                 </Row>
               </Container>
             </Row>
+
+
+
+
+            <Row id="pubs">
+              <Container className="project-cards">
+                <Row className="pubs-row">
+                  <div className="header-padder">
+                    <h1 className="Projects-header">Publications</h1>
+                  </div>
+                  <p className="about-paragraph">
+                  <ul>
+          {publications.map((pub, index) => (
+            <li key={index}>
+              <div style={{ marginBottom: '1rem' }}>
+                <h3>{pub.title}</h3>
+                <p>
+                  {pub.authors}. ({pub.year}). {pub.title}. {pub.journal}.
+                  {pub.links && (
+                    <span>
+                      {pub.links.repo && (
+                        <span>
+                          {' '}
+                          [<a href={pub.links.repo} target="_blank" rel="noopener noreferrer">
+                            Code
+                          </a>
+                          ]
+                        </span>
+                      )}
+                      {pub.links.link && (
+                        <span>
+                          {' '}
+                          [<a href={pub.links.link} target="_blank" rel="noopener noreferrer">
+                            Link
+                          </a>
+                          ]
+                        </span>
+                      )}
+                      {pub.links.preprint && (
+                        <span>
+                          {' '}
+                          [<a href={pub.links.preprint} target="_blank" rel="noopener noreferrer">
+                            Preprint
+                          </a>
+                          ]
+                        </span>
+                      )}
+                    </span>
+                  )}
+                </p>
+                {pub.bibtex && (
+                  <pre style={{ backgroundColor: '#f5f5f5', padding: '10px' }}>
+                    {pub.bibtex}
+                  </pre>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
+        </p>
+                </Row>
+              </Container>
+            </Row>
+
             {/* project cards */}
+
+
+                
             <Row id="proj">
               <Container className="project-cards">
                 <Row className="Cards">
@@ -109,7 +194,7 @@ function Home_page() {
       </Container>
 }
 {Mobile &&
-      <Container className="home_page" fluid>
+      <Container className="home_page">
         <NavMobile/>
         {/* sidebar columns*/}
         <Row>
@@ -129,12 +214,19 @@ function Home_page() {
                     <h1 className="Projects-header">About</h1>
                   </div>
                   
-                  {content.about.map((item) => 
-                  {
-                      return(<p className = "about-paragraph"> {item}</p>)
-
-                  })}
-                  <Col
+                  <p className="about-paragraph">
+                  
+                  Hey I'm Emiliano a PhD student at Mila-Quebec/Université de Montréal, currently under the supervision of <a href="http://www.cs.toronto.edu/~lcharlin/" className="about-href" target="_blank" rel="noopener noreferrer" >Laurent Charlin</a>
+                  <p>  </p>
+                        Prior to Mila, I completed my MMath in Statistics at the University of Waterloo under the supervision of <a href="https://uwaterloo.ca/scholar/nstevens/home" className="about-href" target="_blank" rel="noopener noreferrer" >Nathaniel Stevens</a>
+                        <p>  </p>
+                       I obtained my Bachelors in Data Science from The University of Western Ontario, where I was a member of the <a href="https://thebal.ai/" className="about-href" target="_blank" rel="noopener noreferrer" >Banking Analytics Lab</a> led by Cristian Bravo 
+                        <p>  </p>
+                        While most of my work has focused on dynamic graph learning, I am broadly interested in solving real world problems through the use of intelligent systems, with a particular interest in recommendation systems and generative modeling
+                        </p>
+                        <p></p>
+                        <p></p>
+                  {/* <Col
                     xl={{ span: 6 }}
                     md={{ span: 6, offset: 0 }}
                     xs={{ span: 12 }}
@@ -148,7 +240,7 @@ function Home_page() {
                     xs={{ span: 12 }}
                   >
                     <Skills />
-                  </Col>
+                  </Col> */}
                 </Row>
               </Container>
             </Row>
@@ -171,6 +263,69 @@ function Home_page() {
               </Container>
             </Row>
 
+
+           
+
+
+            <Row id="pubs">
+              <Container className="project-cards">
+                <Row className="pubs-row">
+                  <div className="header-padder">
+                    <h1 className="Projects-header">Publications</h1>
+                  </div>
+                  <p className="about-paragraph">
+                  <ul>
+          {publications.map((pub, index) => (
+            <li key={index}>
+              <div style={{ marginBottom: '1rem' }}>
+                <h3>{pub.title}</h3>
+                <p>
+                  {pub.authors}. ({pub.year}). {pub.title}. {pub.journal}.
+                  {pub.links && (
+                    <span>
+                      {pub.links.repo && (
+                        <span>
+                          {' '}
+                          [<a href={pub.links.repo} target="_blank" rel="noopener noreferrer">
+                            Code
+                          </a>
+                          ]
+                        </span>
+                      )}
+                      {pub.links.link && (
+                        <span>
+                          {' '}
+                          [<a href={pub.links.link} target="_blank" rel="noopener noreferrer">
+                            Link
+                          </a>
+                          ]
+                        </span>
+                      )}
+                      {pub.links.preprint && (
+                        <span>
+                          {' '}
+                          [<a href={pub.links.preprint} target="_blank" rel="noopener noreferrer">
+                            Preprint
+                          </a>
+                          ]
+                        </span>
+                      )}
+                    </span>
+                  )}
+                </p>
+                {pub.bibtex && (
+                  <pre style={{ backgroundColor: '#f5f5f5', padding: '10px' }}>
+                    {pub.bibtex}
+                  </pre>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
+        </p>
+                </Row>
+              </Container>
+            </Row>
             <Row id="contact">
               <Container className="project-cards">
                 <Row className="Cards">
@@ -197,5 +352,4 @@ function Home_page() {
     </>
   );
 }
-
 export default Home_page;
