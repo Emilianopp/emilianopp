@@ -5,11 +5,11 @@ import "styles/Navigation/navMobile.scss"
 import content from "config/content.json"
 function NavMobile() {
   return (
-    <Navbar   expand={false} fixed="top" class = "navbar">
+    <Navbar   expand={false} fixed="top"    className= "navbar custom-navba" >
     <Container fluid>
      
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav"  >
+        <Navbar.Collapse id="basic-navbar-nav" >
           <Nav >
          
          

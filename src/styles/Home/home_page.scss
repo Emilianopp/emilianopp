@@ -1,6 +1,5 @@
-
-
 @import '/src/styles/master.scss';
+
 .home_page{
     max-width: 100%!important;
     padding: 0%!important;
@@ -30,6 +29,20 @@
   align-items: center;
   position: relative;
 }
+
+.project-cards-pubs{
+  min-width: 0;
+  max-width: 100%;
+  height: auto !important;
+
+  padding: 0% !important;
+  background: $prim-green;
+  color: var(--color-white);
+  font-family: Roboto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 .row{
     --bs-gutter-x: 0;
     padding: 0%!important;
@@ -41,8 +54,11 @@
 }
 .Projects-header{
     color: $prim-cultured;
-    padding-left: 30px;
-    font-size: 50px;
+    padding-left: 1rem;
+    font-size: 3rem;
+    margin-top: 4rem!important;
+
+
     position: relative;
     margin-bottom: 1rem;
     z-index: 2;
@@ -51,16 +67,16 @@
 @media (max-width: 1200px) { /*choose the width you prefer*/
   .Projects-header {
     margin-top: 0rem!important;
+    max-width: 90%;
+    padding-left: 2rem; /* Updated for mobile */
   }
 }
-
 
 .header-padder{
     padding-left: 30px;
     padding-bottom: 30px;
 }
 .Projects-header:after {
-
     content: "";
     position: absolute;
     left: 0;
@@ -68,49 +84,208 @@
     padding-left: 30px;
     height: 70%;
     z-index: 1;
+    
     border-radius: 1%;
     width: 18rem;
     border-left: 5px solid $prim-magenta;
     border-bottom: 5px solid $prim-magenta;
-    
-    
-  }
-  @media only screen and (max-width: 1200px) {
-    .Cards {
-      max-width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .Projects-header:after {
+  left: 1rem;
+  width: 16rem;
 
-    
-      // width: auto;
-    }
-    .project-cards{
-        height: 100%;
-    }
-    .row{
-      
+
+    // width: 10rem;
+  }
+  
+}
+
+@media only screen and (max-width: 1200px) {
+  .Cards {
+    max-width: 100%;
+  }
+  .project-cards{
+      height: 100%;
+      overflow-x: hidden; /* Added for mobile */
   }
   .header-padder{
-
     padding-left: 0px;
     padding-bottom: 0px;
-}
+  }
+  .row {
+    margin: 0; /* Added for mobile */
   }
   .about-paragraph{ 
-
-    width: 80vw;
-    color:$prim-cultured;
-    font-size: 1.5rem;
-    padding: 0;
-    margin:0;
-    width: 80%;
-    
-    margin-left: 30px;
+      width: 90%;
+      margin-left: 0; /* Updated for mobile */
   }
-  .about-href{
-    width: 80vw;
-    color:$prim-cultured;
-    text-decoration: underline!important;
-    font-size: 1.5rem;
-    padding: 0;
-    margin:0;
+  .pubs-row {
+    margin-left: 0; /* Updated for mobile */
+    height: 100%!important;
+  }
+  .pub-category {
+    margin-left: 0; /* Updated for mobile */
+  }
+  .pub-list {
+    padding-left: 0; /* Updated for mobile */
+  }
+  .pub-section h3{
+      width: 90%;
+      margin-left: 0; /* Updated for mobile */
+      font-size: 1.2rem;
+  }
+}
+
+.about-paragraph{ 
+  // width: 90vw;
+  color: $prim-cultured;
+  font-size: 1rem;
+  padding: 0;
+  padding-left: 1.75rem;
+  margin: 0;
+  width: 90%;
+  margin-left: 1.5rem;
+}
+@media screen and (max-width: 1200px) {
+  .about-paragraph {
+    font-size: 1rem;
+    padding-left: 1rem;
 
   }
+  
+}
+.about-href{
+  width: 90%;
+  color: $prim-cultured;
+  text-decoration: underline!important;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  text-decoration: underline!important;
+  text-decoration-thickness: .1rem!important;
+  text-decoration-color: rgba(255, 252, 92, 0.5);
+  text-decoration-style: solid;
+}
+@media screen and (max-width: 1200px) {
+  .about-href {
+    font-size: 1rem;
+
+    padding-left: 1rem;
+  }
+  
+}
+
+.pubs-row {
+  margin-top: 20px;
+  margin-left: 0rem;
+  width: 90%;
+}
+@media screen and (max-width: 1200px) {
+  .pubs-row {
+    margin-left: 0;
+  }
+}
+
+.pub-category {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+}
+@media screen and (max-width: 1200px) {
+  .pub-category {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+  
+}
+
+.pub-list {
+  padding-left: 3rem;
+}
+@media screen and (max-width: 1200px) {
+  .pub-list {
+    padding-left: 1rem;
+  }
+  
+}
+
+.pubList{
+  color: $prim-coral!important;
+}
+
+.pub-section h3 {
+  font-size: 1.2rem;
+}
+
+.pub-list li {
+  list-style-type: none;
+}
+
+.pub-link {
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration: underline!important;
+  text-decoration-thickness: .1rem!important;
+  text-decoration-color: rgba(255, 252, 92, 0.5);
+  
+  &:hover {
+    color: #fffc5cfa;
+  }
+}
+
+.me {
+  color: #fffc5cfa; 
+  font-weight: 1000!important;
+}
+
+.other {
+  color: $prim-cultured;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+// New styles for contact section
+.contact-container {
+  padding: 0rem 0;
+}
+
+.contact-text {
+  color: $prim-cultured;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  margin-bottom: 1rem;
+}
+
+.contact-link {
+  color: $prim-cultured;
+  text-decoration: none;
+  font-size: 1.1rem;
+  word-break: break-word;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: #fffc5cfa;
+  }
+}
+
+.email-link {
+  font-size: 1rem;
+  display: inline-block;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .contact-link {
+    font-size: 1rem;
+  }
+
+  .email-link {
+    font-size: 0.9rem;
+  }
+}

@@ -8,7 +8,7 @@ import {
 } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import "styles/Navigation/navigation.scss";
-import StickyBox from "react-sticky-box/dist/esnext";
+import StickyBox from "react-sticky-box";
 import { Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import content from "config/content.json";

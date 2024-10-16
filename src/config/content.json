@@ -1,10 +1,9 @@
 {
   "textColor": "#EEF1EF",
   "typewriter": [
-    "I'm a",
-    " PhD Student",
-    " Software Developer",
-    " Machine Learning Researcher"
+    "",
+    "I'm a Computer Science PhD Student",
+    "Currently at Mila-Québec"
   ],
   "timeline": {
     "timelineContent": [
@@ -84,11 +83,12 @@
     }
   ],
   "Navigation": [
+    { "name": "SCHOLAR", "ref": "https://scholar.google.ca/citations?user=v_bNCuYAAAAJ&hl=en" },
+    { "name": "CV", "ref": "https://drive.google.com/file/d/1PF2vnc9p3ZhsOFIGfANdglmSsFwRni3t/view?usp=sharing" },
     { "name": "ABOUT", "ref": "#about" },
-    { "name": "PUBLICATIONS", "ref": "#pubs" },
+    { "name": "RESEARCH", "ref": "#pubs" },
     { "name": "PROJECTS", "ref": "#proj" },
     { "name": "CONTACT", "ref": "#contact" },
-    { "name": "RESUME", "ref": "https://drive.google.com/file/d/1PF2vnc9p3ZhsOFIGfANdglmSsFwRni3t/view?usp=sharing" },
     { "name": "SKILLQUERY", "ref": "https://skillquery.com/" }
   ],
   "contact": [{ "name": "Github", "link": "https://github.com/Emilianopp" },{ "name": "LinkedIn", "link": "https://www.linkedin.com/in/emilianopenaloza-19176b15b/" }

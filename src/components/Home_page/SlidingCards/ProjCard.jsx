@@ -6,6 +6,17 @@ import "config/content.json";
 import { Link } from "@mui/material";
 import { css } from "@emotion/css";import { useMediaQuery } from 'react-responsive'
 
+const mediaStyles = css`
+  .media {
+    width: 100%;
+    height: 100%;
+  }
+  .media svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }`;
+
 export default function ProjCard({ item }) {
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-width: 800px)'
@@ -29,7 +40,7 @@ export default function ProjCard({ item }) {
       <div
         className={css({
           margin: "auto",
-          width: "80%",
+          width: "50vw",
           position: "relative",
           transform: "skew(-18deg)",
           paddingBottom: "12px",
@@ -66,16 +77,17 @@ export default function ProjCard({ item }) {
             backgroundColor:'#003041'
           }}
         >
-          <div className="media">
-            <item.src />
-          </div>{" "}
+         <div className={mediaStyles}>
+         <item.src />
+</div>
           <div className="unskew-Project-card-content">
             <CardContent className="card-content">
               <h1
                 style={{
                   color: item.color,
+                  paddingTop: "2rem",
                   fontWeight: "bold",
-                  fontSize: "35px",
+                  fontSize: "2rem",
                 }}
               >
                 {" "}
@@ -105,7 +117,7 @@ export default function ProjCard({ item }) {
         className={css({
           margin: "auto",
           width: "80%",
-          height:"50vh",
+          height:"70vh",
           paddingTop:"20px",
           position: "relative",
           transform: "skew(0deg)",
@@ -148,9 +160,9 @@ export default function ProjCard({ item }) {
             backgroundColor:'#003041'
           }}
         >
-          <div className="media">
+          {/* <div className="media">
             <item.src />
-          </div>{" "}
+          </div>{" "} */}
           <div className="unskew-Project-card-content">
             <CardContent className="card-content">
               <h1

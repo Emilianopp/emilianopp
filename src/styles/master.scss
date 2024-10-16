@@ -7,3 +7,17 @@ $prim-cultured:#EEF1EF;
 $prim-cultured-dark:#d1d4d2;
 $prim-magenta: #fffc5cfa;
  
+
+
+// Set global font styles
+body {
+  font-family: 'Roboto Mono', monospace; // Applies Roboto Mono to the entire body
+//   font-size: 16px; // Optional: Set a default font size for the body
+  line-height: 1.5; // Optional: Set line height for better readability
+}
+
+// If you want to ensure headings and other elements inherit the same font
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Roboto Mono', monospace; // Applies Roboto Mono to headings, paragraphs, and links
+  color: $prim-cultured; // Optional: Set a default text color
+}

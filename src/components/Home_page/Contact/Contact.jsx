@@ -1,57 +1,47 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import content from "config/content.json";
+
 function Contact() {
   return (
-    <Container>
-      <Row>
-        <div
-          className="contact-line"
-          style={{ color: content.textColor, fontSize: "23px" , paddingTop: "20px",paddingBottom: "20px"}}
-        >
-          If you enjoyed this website and/or want to collaborate please reach
-          out!
-        </div>
+    <Container className="contact-container">
+   
+      <Row className="mb-4">
+        <Col>
+          <p className="contact-text">
+            Thanks for taking a look!
+<br/>
+            If you enjoyed this website feel free to use the template which can be found on my <a className="pub-link" href="https://github.com/Emilianopp/emilianopp">GitHub</a>
+          </p>
+        </Col>
       </Row>
-      <Row>
-        <Col md={3}>
-          <div
-            style={{
-              color: content.textColor,
-              fontSize: "20px",
-              display: "flex",
-            }}
-          >
-            Email:
-            <u>
-              {" "}
-              <a
-                style={{ paddingLeft: "10px" }}
-                href={`  mailto:${content.email}`}
-              >
-                {content.email}
-              </a>
-            </u>
+      <Row className="mb-3">
+        <Col>
+          <div className="contact-text">
+            <span className="contact-label">Email:</span>
+            <a 
+              className="contact-link email-link" 
+              href={`mailto:${content.email}`}
+            >
+              {content.email}
+            </a>
           </div>
         </Col>
-        <Col md={3} style={{ color: "#fffc5cfa", fontSize: "20px" }}></Col>
       </Row>
-      {content.contact.map((item) => {
-        return (
-          <Row>
-            <Col className="contact-line" md={3}>
-              <u><a
-                style={{ fontSize: "20px" }}
+      {content.contact.map((item, index) => (
+        <Row key={index} className="mb-3">
+          <Col>
+            <div className="contact-item">
+              <a 
+                className="contact-link" 
                 href={item.link}
               >
-                {" "}
                 {item.name}
-              </a></u>
-            </Col>
-            <Col md={3}></Col>
-          </Row>
-        );
-      })}
+              </a>
+            </div>
+          </Col>
+        </Row>
+      ))}
     </Container>
   );
 }

@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './custom.css'
-import { HashRouter as Router,Route,Switch,Link,Redirect } from 'react-router-dom';
+import { HashRouter as Router,Route,Switch,Redirect } from 'react-router-dom';
 import Home_page from './components/Home_page';
 
 const App = () => {

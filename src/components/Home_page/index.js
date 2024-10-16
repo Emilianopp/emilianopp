@@ -3,13 +3,11 @@ import Navigation from "../Navigation";
 import "styles/Home/home_page.scss";
 import { Row, Col, Container } from "react-bootstrap";
 import SlidingCards from "./SlidingCards/SlidingCards";
-import PersonalTimeline from "./TimeLine/Timeline";
-import Skills from "./Skills/Skills";
 import Contact from "components/Home_page/Contact/Contact.jsx";
 import { useMediaQuery } from 'react-responsive'
 import NavMobile from "components/Navigation/NavMobile";
-import content from "config/content.json"
-import publications from 'config/pubs.json';
+import PublicationsComp from './bibtex/pubs';
+
 
 function Home_page() {
   const IsDesktopOrLaptop = useMediaQuery({
@@ -59,7 +57,7 @@ Hey I'm Emiliano a PhD student at Mila-Quebec/Université de Montréal, working 
       <p>  </p>
      I obtained my Bachelors in Data Science from The University of Western Ontario, where I was a member of the <a href="https://thebal.ai/" className="about-href" target="_blank" rel="noopener noreferrer" >Banking Analytics Lab</a> led by Cristian Bravo 
       <p>  </p>
-      While most of my work has focused on dynamic graph learning, I am broadly interested in solving real world problems through the use of intelligent systems, with a particular interest in recommendation systems and generative modeling
+      Currently my research focus is on enhancing user autonomy within intelligent systems, with applications in recommender systems and language models.
       <p></p>
       My free time is mostly consumed by a good <a href = 'https://www.goodreads.com/user/show/157603205-emiliano-penaloza' className="about-href">book</a> and training for my next <a href = "https://youtu.be/wCxhuR65iW0" className="about-href">powerlifting</a> meet
       </p>
@@ -90,71 +88,14 @@ Hey I'm Emiliano a PhD student at Mila-Quebec/Université de Montréal, working 
 
 
 
-            <Row id="pubs">
-              <Container className="project-cards">
-                <Row className="pubs-row">
-                  <div className="header-padder">
-                    <h1 className="Projects-header">Publications</h1>
-                  </div>
-                  <p className="about-paragraph">
-                  <ul>
-          {publications.map((pub, index) => (
-            <li key={index}>
-              <div style={{ marginBottom: '1rem' }}>
-                <h3>{pub.title}</h3>
-                <p>
-                  {pub.authors}. ({pub.year}). {pub.title}. {pub.journal}.
-                  {pub.links && (
-                    <span>
-                      {pub.links.repo && (
-                        <span>
-                          {' '}
-                          [<a href={pub.links.repo} target="_blank" rel="noopener noreferrer">
-                            Code
-                          </a>
-                          ]
-                        </span>
-                      )}
-                      {pub.links.link && (
-                        <span>
-                          {' '}
-                          [<a href={pub.links.link} target="_blank" rel="noopener noreferrer">
-                            Link
-                          </a>
-                          ]
-                        </span>
-                      )}
-                      {pub.links.preprint && (
-                        <span>
-                          {' '}
-                          [<a href={pub.links.preprint} target="_blank" rel="noopener noreferrer">
-                            Preprint
-                          </a>
-                          ]
-                        </span>
-                      )}
-                    </span>
-                  )}
-                </p>
-                {pub.bibtex && (
-                  <pre style={{ backgroundColor: '#f5f5f5', padding: '10px' }}>
-                    {pub.bibtex}
-                  </pre>
-                )}
-              </div>
-            </li>
-          ))}
-        </ul>
-        </p>
-                </Row>
-              </Container>
-            </Row>
 
-            {/* project cards */}
+      <PublicationsComp/>
+    
+
 
 
                 
-            <Row id="proj">
+             <Row id="proj">
               <Container className="project-cards">
                 <Row className="Cards">
                   <div className="header-padder">
@@ -171,7 +112,7 @@ Hey I'm Emiliano a PhD student at Mila-Quebec/Université de Montréal, working 
                 </Row>
               </Container>
             </Row>
-
+ 
             <Row id="contact">
               <Container className="project-cards">
                 <Row className="Cards">
@@ -216,13 +157,15 @@ Hey I'm Emiliano a PhD student at Mila-Quebec/Université de Montréal, working 
                   
                   <p className="about-paragraph">
                   
-                  Hey I'm Emiliano a PhD student at Mila-Quebec/Université de Montréal, currently under the supervision of <a href="http://www.cs.toronto.edu/~lcharlin/" className="about-href" target="_blank" rel="noopener noreferrer" >Laurent Charlin</a>
-                  <p>  </p>
-                        Prior to Mila, I completed my MMath in Statistics at the University of Waterloo under the supervision of <a href="https://uwaterloo.ca/scholar/nstevens/home" className="about-href" target="_blank" rel="noopener noreferrer" >Nathaniel Stevens</a>
-                        <p>  </p>
-                       I obtained my Bachelors in Data Science from The University of Western Ontario, where I was a member of the <a href="https://thebal.ai/" className="about-href" target="_blank" rel="noopener noreferrer" >Banking Analytics Lab</a> led by Cristian Bravo 
-                        <p>  </p>
-                        While most of my work has focused on dynamic graph learning, I am broadly interested in solving real world problems through the use of intelligent systems, with a particular interest in recommendation systems and generative modeling
+                  Hey I'm Emiliano a PhD student at Mila-Quebec/Université de Montréal, working under the supervision of <a href="http://www.cs.toronto.edu/~lcharlin/" className="about-href" target="_blank" rel="noopener noreferrer" >Laurent Charlin</a>
+<p>  </p>
+      Prior to Mila, I completed my MMath in Statistics at the University of Waterloo under the supervision of <a href="https://uwaterloo.ca/scholar/nstevens/home" className="about-href" target="_blank" rel="noopener noreferrer" >Nathaniel Stevens</a>
+      <p>  </p>
+     I obtained my Bachelors in Data Science from The University of Western Ontario, where I was a member of the <a href="https://thebal.ai/" className="about-href" target="_blank" rel="noopener noreferrer" >Banking Analytics Lab</a> led by Cristian Bravo 
+      <p>  </p>
+      While most of my work has focused on dynamic graph learning, I am broadly interested in solving real world problems through the use of intelligent systems, with a particular interest in recommendation systems and generative modeling
+      <p></p>
+      My free time is mostly consumed by a good <a href = 'https://www.goodreads.com/user/show/157603205-emiliano-penaloza' className="about-href">book</a> and training for my next <a href = "https://youtu.be/wCxhuR65iW0" className="about-href">powerlifting</a> meet
                         </p>
                         <p></p>
                         <p></p>
@@ -265,67 +208,11 @@ Hey I'm Emiliano a PhD student at Mila-Quebec/Université de Montréal, working 
 
 
            
+            <PublicationsComp/>
 
 
-            <Row id="pubs">
-              <Container className="project-cards">
-                <Row className="pubs-row">
-                  <div className="header-padder">
-                    <h1 className="Projects-header">Publications</h1>
-                  </div>
-                  <p className="about-paragraph">
-                  <ul>
-          {publications.map((pub, index) => (
-            <li key={index}>
-              <div style={{ marginBottom: '1rem' }}>
-                <h3>{pub.title}</h3>
-                <p>
-                  {pub.authors}. ({pub.year}). {pub.title}. {pub.journal}.
-                  {pub.links && (
-                    <span>
-                      {pub.links.repo && (
-                        <span>
-                          {' '}
-                          [<a href={pub.links.repo} target="_blank" rel="noopener noreferrer">
-                            Code
-                          </a>
-                          ]
-                        </span>
-                      )}
-                      {pub.links.link && (
-                        <span>
-                          {' '}
-                          [<a href={pub.links.link} target="_blank" rel="noopener noreferrer">
-                            Link
-                          </a>
-                          ]
-                        </span>
-                      )}
-                      {pub.links.preprint && (
-                        <span>
-                          {' '}
-                          [<a href={pub.links.preprint} target="_blank" rel="noopener noreferrer">
-                            Preprint
-                          </a>
-                          ]
-                        </span>
-                      )}
-                    </span>
-                  )}
-                </p>
-                {pub.bibtex && (
-                  <pre style={{ backgroundColor: '#f5f5f5', padding: '10px' }}>
-                    {pub.bibtex}
-                  </pre>
-                )}
-              </div>
-            </li>
-          ))}
-        </ul>
-        </p>
-                </Row>
-              </Container>
-            </Row>
+
+            
             <Row id="contact">
               <Container className="project-cards">
                 <Row className="Cards">

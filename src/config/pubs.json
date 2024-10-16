@@ -1,22 +1,62 @@
 [
-    {
-      "title": "Influencer Detection with Dynamic Graph Neural Networks",
-      "authors": "Elena Tiukhova, Emiliano Penaloza, María Óskarsdóttir, Hernan Garcia, Alejandro Correa Bahnsen, Bart Baesens, Monique Snoeck, Cristián Bravo",
-      "year": 2022,
-      "journal": "NeurIPS 2022 Temporal Graph Learning Workshop",
-      "links": {
-        "repo": "https://github.com/Banking-Analytics-Lab/DynamicGraphLearning",
-        "link": "https://arxiv.org/pdf/2211.09664.pdf"
-      }
-    },
-    {
-      "title": "INFLECT-DGNN: Influencer Prediction with Dynamic Graph Neural Networks",
-      "authors": "Elena Tiukhova, Emiliano Penaloza, María Óskarsdóttir, Bart Baesens, Monique Snoeck, Cristián Bravo",
-      "year": 2023,
-      "journal": "Preprint",
-      "links": {
-        "preprint": "https://arxiv.org/pdf/2307.08131.pdf"
-      }
-    }
-  ]
+  {
+    "title": "Influencer Detection with Dynamic Graph Neural Networks",
+    "authors": [
+      "Elena Tiukhova",
+      "Emiliano Penaloza",
+      "María Óskarsdóttir",
+      "Hernan Garcia",
+      "Alejandro Correa Bahnsen",
+      "Bart Baesens",
+      "Monique Snoeck",
+      "Cristián Bravo"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2211.09664",
+    "category": "conference",
+    "journal": "IEEE Access, vol. 12, pp. 115026-115041"
+  },
+  {
+    "title": "Changepoint Detection in Highly-Attributed Dynamic Graphs",
+    "authors": [
+      "Emiliano Penaloza",
+      "Nathaniel Stevens"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2407.06998",
+    "category": "workshop",
+    "journal": "Proceedings of the LatinX in AI Workshop ICML 2024"
+  },
+  {
+    "title": "Controllable and Transparent Textual Latents for Recommender Systems",
+    "authors": [
+      "Emiliano Penaloza",
+      "Haolun Wu",
+      "Olivier Gouvert",
+      "Laurent Charlin"
+    ],
+    "year": 2024,
+    "url": "https://docs.google.com/presentation/d/14kz8CPo6V8ayHbGMNKHQ20VibiLrW3a0x__kdF8Iy_8/edit?usp=sharing",
+    "category": "workshop",
+    "journal": "Presented at Workshop on Recommendation with Generative Models ACM Web Conference 2024"
+  },
+  {
+    "title": "Influencer Detection with Dynamic Graph Neural Networks",
+    "authors": [
+      "Elena Tiukhova",
+      "Emiliano Penaloza",
+      "María Óskarsdóttir",
+      "Hernan Garcia",
+      "Alejandro Correa Bahnsen",
+      "Bart Baesens",
+      "Monique Snoeck",
+      "Cristián Bravo"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2211.09664",
+    "category": "workshop",
+    "journal": "Poster at Temporal Graph Learning Workshop NeurIPS 2022"
+  }
+
   
+]
