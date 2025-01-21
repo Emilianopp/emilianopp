@@ -18,7 +18,7 @@ function Contact() {
       <Row className="mb-3">
         <Col>
           <div className="contact-text">
-            <span className="contact-label">Email:</span>
+            <span className="contact-label">Email: </span>
             <a 
               className="contact-link email-link" 
               href={`mailto:${content.email}`}

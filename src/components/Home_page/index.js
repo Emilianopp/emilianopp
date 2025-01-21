@@ -11,10 +11,10 @@ import PublicationsComp from './bibtex/pubs';
 
 function Home_page() {
   const IsDesktopOrLaptop = useMediaQuery({
-    query: '(min-width: 1200px)'
+    query: '(min-width: 1300px)'
   })
   const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
-  const Mobile = useMediaQuery({ query: '(max-width: 1200px)' })
+  const Mobile = useMediaQuery({ query: '(max-width: 1300px)' })
   const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
   const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
 

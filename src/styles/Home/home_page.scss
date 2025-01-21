@@ -171,7 +171,7 @@
   .about-href {
     font-size: 1rem;
 
-    padding-left: 1rem;
+    padding-left: 0rem;
   }
   
 }
@@ -253,8 +253,10 @@
 
 .contact-text {
   color: $prim-cultured;
+  
   font-size: 1.2rem;
   line-height: 1.6;
+  font-family: Roboto;
   margin-bottom: 2rem;
 }
 

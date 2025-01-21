@@ -1,4 +1,18 @@
 [
+
+  {
+    "title": "TEARS: Textual Representations for Scrutable Recommendations",
+    "authors": [
+      "Emiliano Penaloza",
+      "Olivier Gouvert",
+      "Haolun Wu",
+      "Laurent Charlin"
+    ],
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2410.19302",
+    "category": "conference",
+    "journal": "The ACM Web Conference"
+  },
   {
     "title": "Influencer Detection with Dynamic Graph Neural Networks",
     "authors": [
@@ -16,6 +30,7 @@
     "category": "conference",
     "journal": "IEEE Access, vol. 12, pp. 115026-115041"
   },
+  
   {
     "title": "Changepoint Detection in Highly-Attributed Dynamic Graphs",
     "authors": [
@@ -23,7 +38,7 @@
       "Nathaniel Stevens"
     ],
     "year": 2024,
-    "url": "https://arxiv.org/abs/2407.06998",
+    "url": "https://research.latinxinai.org/papers/icml/2024/pdf/Emiliano_Penaloza.pdf",
     "category": "workshop",
     "journal": "Proceedings of the LatinX in AI Workshop ICML 2024"
   },
