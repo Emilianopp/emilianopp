@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.d7820024.css",
-    "main.js": "/static/js/main.ee475038.js",
-    "static/js/845.56076789.chunk.js": "/static/js/845.56076789.chunk.js",
-    "static/media/wallpaper.png": "/static/media/wallpaper.133457fb2eb92b6eabf9.png",
-    "static/media/py.svg": "/static/media/py.a1eae8ebb98fed00c21121d529a99043.svg",
-    "static/media/sq.svg": "/static/media/sq.a95362513c91dbdac18b7093023542b4.svg",
-    "static/media/ml.svg": "/static/media/ml.351a7e5489a98cf4d00f71f32d5700df.svg",
-    "static/media/rec.svg": "/static/media/rec.45ec3701e12620d641843c80fd64e39f.svg",
-    "static/media/weldon.svg": "/static/media/weldon.aef4b6cfb8861e83d5cd864d2c486343.svg",
-    "static/media/me.png": "/static/media/me.6bfee898d508c4cdf551.png",
-    "static/media/Rna.svg": "/static/media/Rna.764ec3e1b4a96e7c5824e9d0ca1bf13f.svg",
-    "static/media/elephant.svg": "/static/media/elephant.a5849ea88dd6738b0af58cb2f2f30aab.svg",
-    "index.html": "/index.html",
-    "main.d7820024.css.map": "/static/css/main.d7820024.css.map",
-    "main.ee475038.js.map": "/static/js/main.ee475038.js.map",
-    "845.56076789.chunk.js.map": "/static/js/845.56076789.chunk.js.map"
+    "main.css": "/emilianopp/static/css/main.d15b6577.css",
+    "main.js": "/emilianopp/static/js/main.2762e4f2.js",
+    "static/js/845.56076789.chunk.js": "/emilianopp/static/js/845.56076789.chunk.js",
+    "static/media/wallpaper.png": "/emilianopp/static/media/wallpaper.133457fb2eb92b6eabf9.png",
+    "static/media/py.svg": "/emilianopp/static/media/py.a1eae8ebb98fed00c21121d529a99043.svg",
+    "static/media/sq.svg": "/emilianopp/static/media/sq.a95362513c91dbdac18b7093023542b4.svg",
+    "static/media/ml.svg": "/emilianopp/static/media/ml.351a7e5489a98cf4d00f71f32d5700df.svg",
+    "static/media/rec.svg": "/emilianopp/static/media/rec.45ec3701e12620d641843c80fd64e39f.svg",
+    "static/media/weldon.svg": "/emilianopp/static/media/weldon.aef4b6cfb8861e83d5cd864d2c486343.svg",
+    "static/media/me.png": "/emilianopp/static/media/me.6bfee898d508c4cdf551.png",
+    "static/media/Rna.svg": "/emilianopp/static/media/Rna.764ec3e1b4a96e7c5824e9d0ca1bf13f.svg",
+    "static/media/elephant.svg": "/emilianopp/static/media/elephant.a5849ea88dd6738b0af58cb2f2f30aab.svg",
+    "index.html": "/emilianopp/index.html",
+    "main.d15b6577.css.map": "/emilianopp/static/css/main.d15b6577.css.map",
+    "main.2762e4f2.js.map": "/emilianopp/static/js/main.2762e4f2.js.map",
+    "845.56076789.chunk.js.map": "/emilianopp/static/js/845.56076789.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7820024.css",
-    "static/js/main.ee475038.js"
+    "static/css/main.d15b6577.css",
+    "static/js/main.2762e4f2.js"
   ]
 }
