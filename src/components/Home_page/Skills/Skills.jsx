@@ -8,7 +8,7 @@ import content from "config/content.json";
 import { Container,Col, Row } from "react-bootstrap";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import "styles/Home/skills.scss";
-
+// test
 const theme = createTheme({
   palette: {
     primary: {
@@ -76,7 +76,7 @@ export default function Skills() {
                         return b.rating - a.rating;
                       })
                       .map((tech) => (
-                        
+
                           <Row style = {{padding: "0px"}}>
                             <Col style = {{margin: "0px"} } xs={6} xl={6} md={6} style={{color: `${content.textColor}`}}>
                               {tech.name}
