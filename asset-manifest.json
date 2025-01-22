@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/emilianopp/static/css/main.d15b6577.css",
-    "main.js": "/emilianopp/static/js/main.2762e4f2.js",
+    "main.js": "/emilianopp/static/js/main.0f98323b.js",
     "static/js/845.56076789.chunk.js": "/emilianopp/static/js/845.56076789.chunk.js",
     "static/media/wallpaper.png": "/emilianopp/static/media/wallpaper.133457fb2eb92b6eabf9.png",
     "static/media/py.svg": "/emilianopp/static/media/py.a1eae8ebb98fed00c21121d529a99043.svg",
@@ -14,11 +14,11 @@
     "static/media/elephant.svg": "/emilianopp/static/media/elephant.a5849ea88dd6738b0af58cb2f2f30aab.svg",
     "index.html": "/emilianopp/index.html",
     "main.d15b6577.css.map": "/emilianopp/static/css/main.d15b6577.css.map",
-    "main.2762e4f2.js.map": "/emilianopp/static/js/main.2762e4f2.js.map",
+    "main.0f98323b.js.map": "/emilianopp/static/js/main.0f98323b.js.map",
     "845.56076789.chunk.js.map": "/emilianopp/static/js/845.56076789.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d15b6577.css",
-    "static/js/main.2762e4f2.js"
+    "static/js/main.0f98323b.js"
   ]
 }
