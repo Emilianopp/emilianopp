@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g1" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffc5c" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#004a63" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#001f2b" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Soft geometric prism shapes -->
+  <polygon points="0,0 1200,0 900,400" fill="url(#g1)" />
+  <polygon points="0,0 0,800 400,500" fill="#fffc5c" fill-opacity="0.03" />
+  <polygon points="1200,800 800,600 1200,300" fill="#004a63" fill-opacity="0.025" />
+  <polygon points="600,0 1000,200 700,400" fill="#ffffff" fill-opacity="0.02" />
+
+  <!-- subtle grain overlay -->
+  <rect width="1200" height="800" fill="black" fill-opacity="0" />
+</svg>
