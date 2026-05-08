@@ -8,7 +8,7 @@ import content from "config/content.json";
 import { Container,Col, Row } from "react-bootstrap";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import "styles/Home/skills.scss";
-// test
+// new skill new stuff lalala 
 const theme = createTheme({
   palette: {
     primary: {

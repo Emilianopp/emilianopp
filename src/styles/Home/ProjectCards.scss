@@ -1,165 +1,200 @@
 @import "styles/master.scss";
+
 .Project-card-content {
   width: 100%;
-  height: 100%;
-  background-color:  $prim-green!important;
+  /* fixed card height to keep grid tidy — choose a comfortable max that fits content */
+  height: 420px;
+  /* dark surface matching site palette to replace default white */
+  background: linear-gradient(180deg, rgba($prim-green-dark, 0.98) 0%, rgba($prim-green, 0.95) 100%);
   color: $prim-grey !important;
-  border-radius: 20px;
+  border-radius: $border-radius-lg;
   position: relative;
-  border: 3px solid black;
+  border: 1px solid rgba($prim-cultured, 0.06);
+  z-index: 1;
+  transition: transform 260ms cubic-bezier(.2,.8,.2,1), box-shadow 260ms cubic-bezier(.2,.8,.2,1), border-color $transition-base;
+  box-shadow: $shadow-md;
+  overflow: hidden; /* prevent content overflow */
+  padding: $space-sm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   
-  z-index: 10000;
-  
-  transition: all 500ms ease;
-  
+  &:hover {
+    transform: translateY(-6px);
+    border-color: rgba($prim-accent, 0.18);
+    box-shadow: $shadow-lg, 0 10px 40px rgba($prim-accent, 0.08);
+  }
 }
-.MuiTab-textColorPrimary.Mui-selected{
-  color: $prim-magenta!important;
+
+.MuiTab-textColorPrimary.Mui-selected {
+  color: $prim-accent !important;
 }
 
 .media {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  display: block;
+  position: relative;
+  height: 220px;
+  margin: 0 0 $space-md 0;
+  border-radius: $border-radius-md;
+  overflow: hidden;
 }
 
 .media img {
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
-  object-fit: cover;
+  display: block;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  transform: none; /* remove skewing */
+  transition: transform 520ms cubic-bezier(.2,.8,.2,1), filter 420ms ease;
 }
-.proj-content{ 
-  padding: 0%;
-  margin: auto;
-  font-size: 1rem;
-  color: $prim-cultured;
-}
-.media{
-  transform: skew(18deg);
-  position: relative;
-  z-index: -1;
-  height: 25vh;
-  margin: 10px;
-}
-.card-content{ 
-  margin: 10px;
-  position: relative;
-  z-index: 999;
-  height: 150px;
 
+.Project-card-content:hover .media img {
+  transform: scale(1.06);
 }
-.link-button{
+
+/* Content area: allow scrolling if overflow while keeping card height fixed */
+.card-content { 
+  margin: 0;
   position: relative;
-  z-index: 99999;
+  z-index: 2;
+  min-height: 140px;
+  max-height: calc(420px - 220px - #{$space-sm}*2); /* total minus media and paddings */
+  overflow: auto;
 }
-  
+
+/* hide scrollbars but keep accessible scrolling */
+.card-content::-webkit-scrollbar { width: 8px; height: 8px; }
+.card-content::-webkit-scrollbar-thumb { background: rgba($prim-cultured, 0.06); border-radius: 8px; }
+.card-content { scrollbar-width: thin; scrollbar-color: rgba($prim-cultured, 0.06) transparent; }
+
+.proj-content { 
+  padding: $space-sm 0 0 0;
+  margin: 0;
+  font-size: $fluid-base;
+  font-family: $font-family-sans;
+  color: $prim-cultured;
+  line-height: $line-height-relaxed;
+}
+
+.proj-title {
+  font-weight: $font-weight-semibold;
+  font-size: $fluid-lg;
+  color: $prim-cultured;
+  margin: 0 0 $space-xs 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.proj-meta {
+  color: $prim-coral;
+  font-size: $fluid-sm;
+  margin-top: $space-xs;
+}
+
+.proj-image-container {
+  margin-top: $space-sm;
+  max-height: 160px;
+  overflow: hidden;
+  border-radius: $border-radius-sm;
+}
+
+.link-button {
+  position: relative;
+  z-index: 3;
+  margin-top: $space-sm;
+}
 
 .Outer-Project-card-content {
   margin: auto;
   width: 100%;
   z-index: -1;
-  position:relative;
-  transform: skew(-18deg);
-  padding-bottom: 10px;
-  padding-right: 10px;
   position: relative;
+  padding-bottom: $space-sm;
+  padding-right: $space-sm;
   z-index: 99999;
- 
 }
 
-
-.content-container{ 
-
+.content-container { 
   padding: 0; 
-
 }
 
-.header-row{ 
-
+.header-row { 
   padding: 0;
 }
-.Outer-Project-card-content:after {
 
+.Outer-Project-card-content::after {
   content: "";
-  
   position: absolute;
-  left: 0;
-  bottom: 0;
-  border-bottom-right-radius: 8px;
-  height: 92%;
-  width: 100%;
-
-  z-index: 1;
-
-  // border-bottom: 2px solid $prim-magenta;
-  border-right: 2px solid $prim-magenta;
-
-  
+  right: -20%;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba($prim-accent, 0.06), rgba($prim-blue, 0.02));
+  transform: skewX(-12deg);
+  pointer-events: none;
+  border-radius: 0 0 $border-radius-md 0;
+  z-index: 0;
+  mix-blend-mode: overlay;
 }
 
-.slides{
+.slides {
   display: inline;
 }
 
-
 .unskew-Project-card-content {
-  padding-left: 10px;
+  padding-left: $space-sm;
   transform: skew(0deg);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: $breakpoint-md) {
+  .media {
+    height: 180px;
+  }
+  .Project-card-content {
+    padding: $space-md;
+    height: auto; /* allow natural flow on smaller screens */
+  }
+  .proj-title {
+    font-size: $fluid-base;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
   .unskew-Project-card-content {
     padding-left: 0px;
     transform: skew(0deg);
   }
 
-  .media{
-    transform: skew(0deg);
-    position: relative;
-    z-index: -1;
-    height: auto;
-    width: 100%;
-    
+  .media {
+    height: 140px;
   }
-  .card-content{ 
-    margin: 10px;
+
+  .proj-title {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-content { 
+    margin: $space-sm;
     position: relative;
     z-index: 999;
-    height: 100%;
-  
+    height: auto;
   }
+  
   .Outer-Project-card-content {
     margin: auto;
     width: 80%;
     z-index: -1;
-    position:relative;
-    transform: skew(0deg);
-    padding-bottom: 10px;
-    padding-right: 10px;
     position: relative;
+    padding-bottom: $space-sm;
+    padding-right: $space-sm;
     z-index: 99999;
-
-   
   }
-
-  .Outer-Project-card-content:after {
-
-    content: "";
-    
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    border-bottom-right-radius: 8px;
-    height: 80%;
-    width: 90%;
-    z-index: 1;
-  
-    // border-bottom: 2px solid $prim-magenta;
-    border-right: 2px solid $prim-magenta;
-    
-  }
-
 }
 

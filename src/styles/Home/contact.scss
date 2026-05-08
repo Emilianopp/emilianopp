@@ -1,10 +1,108 @@
 @import "styles/master.scss";
 
-// .contact-line{
+/* Reset all font styles to match the site standard */
+.contact-text, 
+.contact-label,
+.contact-link,
+.contact-item,
+.email-link,
+.pub-link,
+.pubList {
+  font-family: 'Roboto Mono', monospace !important;
+  font-size: 1rem;
+  line-height: 1.5;
+}
 
-//     color: $prim-cultured!important;
+/* Email link specific styles */
+.email-link {
+  font-size: 1rem;
+  font-family: 'Roboto Mono', monospace !important;
+  word-break: break-word;
+  color: $prim-cultured;
+}
 
-// }
-// a{ 
-//     color: $prim-cultured!important;
-// }
+/* Link styling to match publications */
+.contact-link, 
+.pub-link {
+  color: $prim-cultured;
+  
+  &:hover {
+    color: $prim-coral;
+    text-decoration: none;
+  }
+}
+
+/* Compact contact badge for intro */
+.contact-badge {
+  position: absolute;
+  left: $space-md;
+  bottom: $space-md;
+  z-index: 5;
+  background: linear-gradient(180deg, rgba($prim-green-dark, 0.65), rgba($prim-green, 0.45));
+  padding: $space-sm $space-md;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-md;
+  border: 1px solid rgba($prim-cultured, 0.06);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.contact-badge-inner {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+}
+
+.contact-email {
+  color: $prim-cultured;
+  font-weight: $font-weight-semibold;
+  text-decoration: none;
+  font-family: $font-family-mono;
+  font-size: $fluid-sm;
+}
+
+.contact-links {
+  display: flex;
+  gap: $space-xs;
+}
+
+.contact-link {
+  color: rgba($prim-cultured, 0.9);
+  text-decoration: none;
+  font-size: $fluid-sm;
+  padding: $space-xs $space-sm;
+  border-radius: $border-radius-sm;
+  background: rgba($prim-cultured, 0.02);
+  transition: background $transition-fast, color $transition-fast;
+}
+
+.contact-link:hover {
+  background: rgba($prim-accent, 0.08);
+  color: $prim-accent;
+}
+
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .contact-text, 
+  .contact-label,
+  .contact-link,
+  .contact-item,
+  .pub-link {
+    font-family: 'Roboto Mono', monospace !important;
+    font-size: 0.95rem;
+  }
+  
+  /* Reduce email font size slightly more on mobile */
+  .email-link {
+    font-family: 'Roboto Mono', monospace !important;
+    font-size: 0.85rem;
+    word-break: break-word;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .contact-badge { left: $space-sm; bottom: $space-sm; padding: $space-xs $space-sm; }
+  .contact-badge-inner { gap: $space-xs; }
+  .contact-email { font-size: $fluid-base; }
+}

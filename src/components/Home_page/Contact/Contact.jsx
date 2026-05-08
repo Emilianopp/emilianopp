@@ -1,6 +1,6 @@
-import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import content from "config/content.json";
+import "styles/Home/contact.scss";
 
 function Contact() {
   return (

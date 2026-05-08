@@ -1,9 +1,46 @@
-import React from 'react';
-import { Container, Row } from 'react-bootstrap';
-import publications from '../../../config/pubs.json'; // Importing the JSON file directly
+import { Container, Row, Collapse } from 'react-bootstrap';
+import { useState, useEffect } from 'react';
+import publications from '../../../config/pubs.json';
 
-{console.log(publications)}
+// Dynamic image imports
+const importAll = (r) => {
+  const images = {};
+  r.keys().forEach((item) => {
+    // Get the file name without extension
+    const fileName = item.replace('./', '');
+    images[fileName] = r(item);
+  });
+  return images;
+};
+
+// Import all images from assets folder
+const images = importAll(require.context('../../../assets', false, /\.(png|jpe?g|svg)$/));
+
 const PublicationsComp = () => {
+  // State to track which publications are expanded
+  const [expandedPubs, setExpandedPubs] = useState({});
+
+  // Function to toggle the expanded state of a publication
+  const toggleExpand = (id) => {
+    setExpandedPubs(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+
+    // Ensure expanded content scrolls into view when opening
+    if (!expandedPubs[id]) {
+      setTimeout(() => {
+        const el = document.getElementById(`collapse-${id}`);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 250);
+    }
+  };
+
+  // Function to get the correct image source
+  const getImageSrc = (imagePath) => {
+    return images[imagePath] || null;
+  };
+
   return (
     <Row id="pubs">
       <Container className="project-cards-pubs ">
@@ -12,43 +49,70 @@ const PublicationsComp = () => {
             <h1 className="Projects-header">Research</h1>
           </div>
     
-
           {/* Conference Publications */}
           <div className="pub-section">
             <h2 className="pub-category">Publications</h2>
-            <ul className="pub-list">{console.log(publications)}
+            <ul className="pub-list">
             {publications
   .filter(pub => pub.category === 'conference')
   .map((pub, index) => {
+      const pubId = `conf-${index}`;
       return (
-      <li className = 'pubList' key={index} >
+      <li className="pubList" key={index}>
         <h3 style={{ fontWeight: 'bold' }}>
-          {pub.url ? (
-            <a href={pub.url} className="pub-link" >
+          <span className="pub-title-container">
+            <button
+              className={`dropdown-icon ${expandedPubs[pubId] ? 'expanded' : ''}`}
+              aria-expanded={!!expandedPubs[pubId]}
+              aria-controls={`collapse-${pubId}`}
+              onClick={() => toggleExpand(pubId)}
+              title={expandedPubs[pubId] ? 'Collapse details' : 'Expand details'}
+            >
+              ▶
+            </button>
+            <span className="pub-title-text" onClick={() => toggleExpand(pubId)} style={{ cursor: 'pointer' }}>
               {pub.title}
-            </a>
-          ) : (
-            <span>{pub.title}</span> // Fallback if URL is missing
-          )}
+            </span>
+          </span>
         </h3>
-        <p >
-          {pub.authors.map(author => (
-            <span key={author}>
-              {author === 'Emiliano Penaloza' ? (
-                  <h className='me'> {author}</h> // Bold if the author is Emiliano Penaloza
-
+        <p>
+          {pub.authors.map((author, authorIndex) => (
+            <span key={authorIndex}>
+              {(author === 'Emiliano Penaloza' || author.startsWith('Emiliano Penaloza')) ? (
+                <span className='me'>{author}</span>
               ) : (
-                <h className='other'> {author}</h> // Bold if the author is Emiliano Penaloza
-
+                <span className='other'>{author}</span>
               )}
-              {', '} {/* Add a comma between authors */}
+              {authorIndex < pub.authors.length - 1 && ', '}
             </span>
           ))}
-          <h className='other'> ({pub.year}).</h> 
-           <br />
-            <span className='other'>{pub.journal}</span>
-
+          <span className='other'> ({pub.year}).</span> 
+          <br />
+          <span className='other'>{pub.journal}</span>
         </p>
+        
+        <Collapse in={expandedPubs[pubId]}>
+          <div id={`collapse-${pubId}`} className="pub-details">
+            <div className="pub-description">
+              <p>{pub.description}</p>
+            </div>
+            {/* explicit link/button to open the paper */}
+            {pub.url && (
+              <div className="pub-open-row">
+                <a href={pub.url} className="pub-open-btn" onClick={(e) => { e.stopPropagation(); }} target="_blank" rel="noopener noreferrer">Open paper</a>
+              </div>
+            )}
+            {pub.imagePath && getImageSrc(pub.imagePath) && (
+              <div className="pub-image-container">
+                <img 
+                  src={getImageSrc(pub.imagePath)} 
+                  alt={`Visual for ${pub.title}`} 
+                  className="pub-image"
+                />
+              </div>
+            )}
+          </div>
+        </Collapse>
       </li>
     );
   })}        
@@ -62,35 +126,64 @@ const PublicationsComp = () => {
               {publications
                 .filter(pub => pub.category === 'workshop')
                 .map((pub, index) => {
+                  const pubId = `workshop-${index}`;
                   return (
-                  <li className = 'pubList' key={index} >
+                  <li className="pubList" key={index}>
                     <h3 style={{ fontWeight: 'bold' }}>
-                      {pub.url ? (
-                        <a href={pub.url} className="pub-link" >
+                      <span className="pub-title-container">
+                        <button
+                          className={`dropdown-icon ${expandedPubs[pubId] ? 'expanded' : ''}`}
+                          aria-expanded={!!expandedPubs[pubId]}
+                          aria-controls={`collapse-${pubId}`}
+                          onClick={() => toggleExpand(pubId)}
+                          title={expandedPubs[pubId] ? 'Collapse details' : 'Expand details'}
+                        >
+                          ▶
+                        </button>
+                        <span className="pub-title-text" onClick={() => toggleExpand(pubId)} style={{ cursor: 'pointer' }}>
                           {pub.title}
-                        </a>
-                      ) : (
-                        <span>{pub.title}</span> // Fallback if URL is missing
-                      )}
+                        </span>
+                      </span>
                     </h3>
-                    <p >
-                      {pub.authors.map(author => (
-                        <span key={author}>
-                          {author === 'Emiliano Penaloza' ? (
-                              <h className='me'> {author}</h> // Bold if the author is Emiliano Penaloza
-            
+                    <p>
+                      {pub.authors.map((author, authorIndex) => (
+                        <span key={authorIndex}>
+                      {(author === 'Emiliano Penaloza' || author.startsWith('Emiliano Penaloza')) ? (
+
+                            <span className='me'>{author}</span>
                           ) : (
-                            <h className='other'> {author}</h> // Bold if the author is Emiliano Penaloza
-            
+                            <span className='other'>{author}</span>
                           )}
-                          {', '} {/* Add a comma between authors */}
+                          {authorIndex < pub.authors.length - 1 && ', '}
                         </span>
                       ))}
-                      <h className='other'> ({pub.year}).</h> 
-                       <br />
-                        <span className='other'>{pub.journal}</span>
-            
+                      <span className='other'> ({pub.year}).</span> 
+                      <br />
+                      <span className='other'>{pub.journal}</span>
                     </p>
+                    
+                    <Collapse in={expandedPubs[pubId]}>
+                      <div id={`collapse-${pubId}`} className="pub-details">
+                        <div className="pub-description">
+                          <p>{pub.description}</p>
+                        </div>
+                        {/* explicit link/button to open the paper */}
+                        {pub.url && (
+                          <div className="pub-open-row">
+                            <a href={pub.url} className="pub-open-btn" onClick={(e) => { e.stopPropagation(); }} target="_blank" rel="noopener noreferrer">Open paper</a>
+                          </div>
+                        )}
+                        {pub.imagePath && getImageSrc(pub.imagePath) && (
+                          <div className="pub-image-container">
+                            <img 
+                              src={getImageSrc(pub.imagePath)} 
+                              alt={`Visual for ${pub.title}`} 
+                              className="pub-image"
+                            />
+                          </div>
+                        )}
+                      </div>
+                    </Collapse>
                   </li>
                 );
               })}   

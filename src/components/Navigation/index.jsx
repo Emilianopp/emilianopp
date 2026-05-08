@@ -1,11 +1,3 @@
-import {
-  ProSidebar,
-  SidebarHeader,
-  Menu,
-  MenuItem,
-  SubMenu,
-  SidebarContent,
-} from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import "styles/Navigation/navigation.scss";
 import StickyBox from "react-sticky-box";

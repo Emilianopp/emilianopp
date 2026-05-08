@@ -1,57 +1,111 @@
 @import "/src/styles/master.scss";
+
 $sidebar-width: 100% !default;
-$sidebar-bg-color: #05455c;
+$sidebar-bg-color: $prim-green-dark;
+
 .sticky-container {
   height: 100vh;
-  z-index: 5;
-  border-top: 2px solid black;
-  border-right: 2px solid black;
+  z-index: $z-sticky;
+  border-right: 1px solid rgba($prim-cultured, 0.1);
+  background: $sidebar-bg-color;  // solid sidebar color (no decorative gradient)
+  max-width: 180px;  // Tighter sidebar width
 }
+
 .sidebar {
   align-items: center;
-
-  background-color: #05455c;
+  background: transparent;
   width: 100%;
   height: 100vh;
-  
+  padding: $space-md 0;
+  display: flex;
+  flex-direction: column;
 }
+
 .header-side {
-  height: 30vh;
+  height: auto;
+  padding: $space-xl 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: $space-lg;
 }
-.elephant{ 
 
-
-    width: 25vh;
+.elephant { 
+  width: 100px;  // Slightly smaller logo
+  height: auto;
+  transition: transform $transition-base;
+  filter: drop-shadow($shadow-md);
+  
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .links-side {
   justify-content: center;
   align-items: center;
-  height: 8vh;
+  width: 100%;
+  padding: $space-xs 0;
+  margin: $space-xs 0;
 }
+
 .text-inner {
   position: relative;
-  padding-left: 30px;
-  float: left;
+  padding: $space-xs $space-md;
   color: $prim-cultured;
-  font-size: 1.8rem;
-}
-a {
-  color: $prim-cultured;
+  font-size: 1.25rem;  // Slightly smaller to fit tighter sidebar
+  font-weight: $font-weight-medium;
+  letter-spacing: 0.3px;
+  transition: all $transition-base;
+  border-radius: $border-radius-md;
+  
   &:hover {
-    color: $prim-magenta;
-    
-    
+    background: $prim-accent-subtle;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) scaleY(0);
+    width: 3px;
+    height: 60%;
+    background: $prim-accent;
+    border-radius: $border-radius-full;
+    transition: transform $transition-base;
+  }
+  
+  &:hover::before {
+    transform: translateY(-50%) scaleY(1);
   }
 }
+
+a {
+  color: $prim-cultured;
+  font-weight: $font-weight-medium;
+  transition: color $transition-fast;
+  
+  &:hover {
+    color: $prim-accent;
+  }
+}
+
 a:link {
   text-decoration: none;
 }
-a:hover{
-    
+
+// Active state for current section
+.text-inner.active {
+  background: $prim-accent-subtle;
+  
+  &::before {
+    transform: translateY(-50%) scaleY(1);
+  }
+  
+  a {
+    color: $prim-accent;
+  }
 }
 
 @import "~react-pro-sidebar/dist/scss/styles.scss";

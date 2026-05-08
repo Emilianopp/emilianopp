@@ -1,13 +1,13 @@
 {
   "background": {
       "color": {
-          "value": ""
+          "value": "transparent"
       },
     
       "position": "",
       "repeat": "",
       "size": "",
-      "opacity": ".5"
+      "opacity": 0
   },
   "backgroundMask": {
       "cover": {

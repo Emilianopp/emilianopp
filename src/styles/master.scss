@@ -1,23 +1,189 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-$prim-green: #003041;
-$prim-blue: #007465;
-$prim-grey:#0067AC;
-$prim-coral:#A9B4C2;
-$prim-cultured:#EEF1EF;
-$prim-cultured-dark:#d1d4d2;
-$prim-magenta: #fffc5cfa;
- 
+// ============================================
+// DESIGN SYSTEM - Design Tokens
+// ============================================
 
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+// ============================================
+// COLOR PALETTE
+// ============================================
+
+// Primary Colors
+$prim-green: #003041;        // Deep navy - main background
+$prim-green-light: #004a63;  // Lighter variant for hover states
+$prim-green-dark: #001f2b;   // Darker variant for depth
+
+// Accent Colors
+$prim-accent: #fffc5c;       // Vibrant yellow - primary accent
+$prim-accent-muted: rgba(255, 252, 92, 0.7);  // Muted accent for subtle highlights
+$prim-accent-subtle: rgba(255, 252, 92, 0.15); // Very subtle for backgrounds
+
+// Secondary Colors
+$prim-blue: #007465;         // Teal - secondary accent
+$prim-grey: #0067AC;         // Blue - tertiary accent
+
+// Neutral Colors
+$prim-coral: #A9B4C2;        // Light grey-blue - muted text
+$prim-cultured: #EEF1EF;     // Off-white - primary text
+$prim-cultured-dark: #d1d4d2; // Darker off-white
+$prim-white: #ffffff;
+
+// Legacy alias (keeping for backward compatibility)
+$prim-magenta: $prim-accent;
+
+// ============================================
+// SPACING SCALE (8px base unit)
+// ============================================
+$space-xs: 0.25rem;   // 4px
+$space-sm: 0.5rem;    // 8px
+$space-md: 1rem;      // 16px
+$space-lg: 1.5rem;    // 24px
+$space-xl: 2rem;      // 32px
+$space-2xl: 3rem;     // 48px
+$space-3xl: 4rem;     // 64px
+$space-4xl: 6rem;     // 96px
+
+// ============================================
+// TYPOGRAPHY SCALE
+// ============================================
+$font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-family-mono: 'JetBrains Mono', 'Roboto Mono', monospace;
+
+// Static font sizes (for Bootstrap compatibility and Sass math)
+$font-size-base: 1rem;        // 16px - Bootstrap needs this
+$font-size-lg: 1.15rem;       // ~18px - Bootstrap uses this
+$font-size-sm: 0.875rem;      // 14px - Bootstrap uses this
+
+// Fluid font sizes for custom use: clamp(min, preferred, max)
+// Use these in your custom styles for responsive scaling
+$fluid-xs: clamp(0.8rem, 0.75rem + 0.2vw, 0.9rem);         // ~13-14px
+$fluid-sm: clamp(0.9rem, 0.85rem + 0.25vw, 1rem);          // ~14-16px
+$fluid-base: clamp(1rem, 0.95rem + 0.3vw, 1.1rem);         // ~16-18px
+$fluid-lg: clamp(1.1rem, 1rem + 0.4vw, 1.25rem);           // ~18-20px
+$fluid-xl: clamp(1.25rem, 1.1rem + 0.5vw, 1.4rem);         // ~20-22px
+$fluid-2xl: clamp(1.5rem, 1.3rem + 0.8vw, 1.85rem);        // ~24-30px
+$fluid-3xl: clamp(1.85rem, 1.5rem + 1.2vw, 2.5rem);        // ~30-40px
+$fluid-4xl: clamp(2.25rem, 1.8rem + 1.5vw, 3rem);          // ~36-48px
+$fluid-5xl: clamp(2.75rem, 2.2rem + 2vw, 3.5rem);          // ~44-56px
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$line-height-tight: 1.25;
+$line-height-base: 1.5;
+$line-height-relaxed: 1.75;
+
+// ============================================
+// SHADOWS & EFFECTS
+// ============================================
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.2);
+$shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.25);
+$shadow-glow: 0 0 20px rgba(255, 252, 92, 0.3);
+
+// ============================================
+// BORDERS & RADIUS
+// ============================================
+$border-width: 1px;
+$border-width-thick: 2px;
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+$border-radius-full: 9999px;
+
+// ============================================
+// TRANSITIONS
+// ============================================
+$transition-fast: 150ms ease;
+$transition-base: 250ms ease;
+$transition-slow: 400ms ease;
+$transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// ============================================
+// BREAKPOINTS
+// ============================================
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1300px;
+$breakpoint-2xl: 1536px;
+
+// ============================================
+// Z-INDEX SCALE
+// ============================================
+$z-dropdown: 100;
+$z-sticky: 200;
+$z-fixed: 300;
+$z-modal: 400;
+$z-tooltip: 500;
+
+// ============================================
+// GLOBAL STYLES
+// ============================================
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
 
 // Set global font styles
 body {
-  font-family: 'Roboto Mono', monospace; // Applies Roboto Mono to the entire body
-//   font-size: 16px; // Optional: Set a default font size for the body
-  line-height: 1.5; // Optional: Set line height for better readability
+  font-family: $font-family-sans;
+  font-size: $fluid-base;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-base;
+  color: $prim-cultured;
+  background-color: $prim-green;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-// If you want to ensure headings and other elements inherit the same font
-h1, h2, h3, h4, h5, h6, p, a {
-  font-family: 'Roboto Mono', monospace; // Applies Roboto Mono to headings, paragraphs, and links
-  color: $prim-cultured; // Optional: Set a default text color
+// Typography hierarchy - using fluid sizes
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans;
+  color: $prim-cultured;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+  margin-bottom: $space-md;
+}
+
+h1 { font-size: $fluid-4xl; }
+h2 { font-size: $fluid-3xl; }
+h3 { font-size: $fluid-2xl; }
+h4 { font-size: $fluid-xl; }
+h5 { font-size: $fluid-lg; }
+h6 { font-size: $fluid-base; }
+
+p {
+  font-family: $font-family-sans;
+  color: $prim-cultured;
+  margin-bottom: $space-md;
+}
+
+a {
+  font-family: $font-family-sans;
+  color: $prim-cultured;
+  text-decoration: none;
+  transition: color $transition-fast;
+  
+  &:hover {
+    color: $prim-accent;
+  }
+}
+
+// Code/mono text
+code, pre, .mono {
+  font-family: $font-family-mono;
+}
+
+// Selection styles
+::selection {
+  background-color: $prim-accent;
+  color: $prim-green;
 }

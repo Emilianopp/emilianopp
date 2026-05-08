@@ -1,5 +1,108 @@
 [
+  
+   {
+    "title": "Privileged Information Distillation for Language Models",
+    "authors": [
+      "Emiliano Penaloza",
+      "Dheeraj Vattikonda",
+      "Nicolas Gontier",
+      "Alexandre Lacoste",
+      "Laurent Charlin",
+      "Massimo Caccia"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2602.04942",
+    "category": "conference",
+    "journal": "ICML 2026",
+    "description": "Training-time privileged information (PI) can enable language models to succeed on tasks they would otherwise fail, making it a powerful tool for reinforcement learning in hard, long-horizon settings. However, transferring capabilities learned with PI to policies that must act without it at inference time remains a fundamental challenge. We study this problem in the context of distilling frontier models for multi-turn agentic environments, where closed-source systems typically hide their internal reasoning and expose only action trajectories. This breaks standard distillation pipelines, since successful behavior is observable but the reasoning process is not. For this, we introduce π-Distill, a joint teacher-student objective that trains a PI-conditioned teacher and an unconditioned student simultaneously using the same model. Additionally, we also introduce On-Policy Self-Distillation (OPSD), an alternative approach that trains using Reinforcement Learning (RL) with a reverse KL-penalty between the student and the PI-conditioned teacher. We show that both of these algorithms effectively distill frontier agents using action-only PI. Specifically we find that π-Distill and in some cases OPSD, outperform industry standard practices (Supervised finetuning followed by RL) that assume access to full Chain-of-Thought supervision across multiple agentic benchmarks, models, and forms of PI. We complement our results with extensive analysis that characterizes the factors enabling effective learning with PI, focusing primarily on π-Distill and characterizing when OPSD is competitive.",
+    "imagePath": "pi-distill.png"
 
+  },
+  {
+    "title": "Optimizing User Profiles via Contextual Bandits for Retrieval-Augmented LLM Personalization",
+    "authors": [
+      "Linfeng Du",
+      "Ye Yuan",
+      "Zichen Zhao",
+      "Fuyuan Lyu",
+      "Emiliano Penaloza",
+      "Xiuying Chen",
+      "Zipeng Sun",
+      "Jikun Kang",
+      "Laurent Charlin",
+      "Xue Liu",
+      "Haolun Wu"
+    ],
+    "year": 2026,
+    "url": "",
+    "category": "conference",
+    "journal": "ACL 2026",
+    "description": "Large Language Models (LLMs) excel at general-purpose tasks, yet adapting their responses to individual users remains challenging. Retrieval augmentation provides a lightweight alternative to fine-tuning by conditioning LLMs on user history records, and existing approaches typically select these records based on semantic relevance. We argue that relevance serves as an unreliable proxy for utility: a record may be semantically similar to a query yet fail to improve generation quality or even degrade it due to redundancy or conflicting information. To bridge this gap, we propose PURPLE, a contextual bandit framework that oPtimizes UseR Profiles for Llm pErsonalization. In contrast to a greedy selection of the most relevant records, PURPLE treats profile construction as a set generation process and utilizes a Plackett-Luce ranking model to capture complex inter-record dependencies. By training with dense feedback provided by the likelihood of the reference response, our method aligns retrieval directly with generation quality. Extensive experiments on nine personalization tasks demonstrate that PURPLE consistently outperforms strong heuristic and retrieval-augmented baselines in both effectiveness and efficiency, establishing a principled and scalable solution for optimizing user profiles.",
+    "imagePath": "users.png"
+  },
+  {
+  "title": "Audio Prototypical Network For Controllable Music Recommendation",
+  "authors": [
+    "Fırat Öncel",
+    "Emiliano Penaloza",
+    "Haolun Wu",
+    "Shubham Gupta",
+    "Mirco Ravanelli",
+    "Laurent Charlin",
+    "Cem Subakan"
+  ],
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2508.00194",
+  "category": "conference",
+  "journal": "IEEE MLSP (Oral)",
+  "description": "Traditional recommendation systems represent user preferences in dense representations obtained through black-box encoder models. While these models often provide strong recommendation performance, they lack interpretability for users, leaving users unable to understand or control the system's modeling of their preferences. This limitation is especially challenging in music recommendation, where user preferences are highly personal and often evolve based on nuanced qualities like mood, genre, tempo, or instrumentation. In this paper, we propose an audio prototypical network for controllable music recommendation. This network expresses user preferences in terms of prototypes representative of semantically meaningful features pertaining to musical qualities. We show that the model obtains competitive recommendation performance compared to popular baseline models while also providing interpretable and controllable user profiles.",
+  "imagePath": "music_rec.png"
+},
+  {
+
+
+    "title": "How to Train Your LLM Web Agent: A Statistical Diagnosis",
+    "authors": [
+  "Dheeraj Vattikonda*",
+  "Santhoshi Ravichandran*",
+  "Emiliano Penaloza*",
+  "Hadi Nekoei",
+  "Megh Thakkar",
+  "Thibault Le Sellier de Chezelles",
+  "Nicolas Gontier",
+  "Miguel Muñoz-Mármol",
+  "Sahar Omidi Shayegan",
+  "Stefania Raimondo",
+  "Xue Liu",
+  "Alexandre Drouin",
+  "Laurent Charlin",
+  "Alexandre Piché",
+  "Alexandre Lacoste",
+  "Massimo Caccia"
+]
+,
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2507.04103",
+    "category": "conference",
+    "journal": "NeurIPS 2025, Oral at Computer Use Agent Workshop ICML 2025",
+    "description": "We ran the first large-scale study of compute–performance tradeoffs for open-source LLM web agents. We show that combining supervised fine-tuning (SFT) with reinforcement learning (RL) is the only strategy that closes the gap with closed-source agents like GPT-4o. Our work offers a compute-efficient, statistically grounded blueprint for training open web agents that can actually reason through multi-step tasks",
+    "imagePath": "scale_agents.png"
+  },
+  {
+    "title": "Addressing Concept Mislabeling in Concept Bottleneck Models Through Preference Optimization",
+    "authors": [
+      "Emiliano Penaloza",
+      "Tianyue H Zhang",
+      "Laurent Charlin",
+      "Mateo Espinosa Zarlenga"
+    ],
+    "journal": "ICML 2025, ICLR 2025 Bi-Align Workshop (Oral)",
+    "category": "conference",
+    "url": "https://openreview.net/pdf?id=tRDXAoCrmF",
+    "year": 2025,
+    "description": "Concept Bottleneck Models (CBMs) propose to enhance the trustworthiness of AI systems by constraining their decisions on a set of humanunderstandable concepts. However, CBMs typically assume that datasets contains accurate concept labels—an assumption often violated in practice, which we show can significantly degrade performance (by 25% in some cases). To address this, we introduce the Concept Preference Optimization (CPO) objective, a new loss function based on Direct Preference Optimization, which effectively mitigates the negative impact of concept mislabeling on CBM performance. We provide an analysis on some key properties of the CPO objective showing it directly optimizes for the concept's posterior distribution, and contrast it against Binary Cross Entropy (BCE) where we show CPO is inherently less sensitive to concept noise. We empirically confirm our analysis finding that CPO consistently outperforms BCE in three real-world datasets with and without added label noise.",
+    "imagePath": "concepts.png"
+  },  
   {
     "title": "TEARS: Textual Representations for Scrutable Recommendations",
     "authors": [
@@ -11,7 +114,9 @@
     "year": 2025,
     "url": "https://arxiv.org/abs/2410.19302",
     "category": "conference",
-    "journal": "The ACM Web Conference"
+    "journal": "The ACM Web Conference 2025",
+    "description": "Traditional recommender systems rely on high-dimensional (latent) embeddings for modeling user-item interactions, often resulting in opaque representations that lack interpretability. Moreover, these systems offer limited control to users over their recommendations. Inspired by recent work, we introduce TExtuAl Representations for Scrutable recommendations (TEARS) to address these challenges. Instead of representing a user's interests through a latent embedding, TEARS encodes them in natural text, providing transparency and allowing users to edit them. To do so, TEARS uses a modern LLM to generate user summaries based on user preferences. We find the summaries capture user preferences uniquely. Using these summaries, we take a hybrid approach where we use an optimal transport procedure to align the summaries' representation with the learned representation of a standard VAE for collaborative filtering. We find this approach can surpass the performance of three popular VAE models while providing user-controllable recommendations. We also analyze the controllability of TEARS through three simulated user tasks to evaluate the effectiveness of a user editing its summary.",
+    "imagePath": "tears.png"
   },
   {
     "title": "Influencer Detection with Dynamic Graph Neural Networks",
@@ -28,9 +133,11 @@
     "year": 2024,
     "url": "https://arxiv.org/abs/2211.09664",
     "category": "conference",
-    "journal": "IEEE Access, vol. 12, pp. 115026-115041"
+    "journal": "IEEE Access, vol. 12, pp. 115026-115041",
+    "description": "Leveraging network information for prediction tasks has become a common practice in many domains. Being an important part of targeted marketing, influencer detection can potentially benefit from incorporating dynamic network representation. In this work, we investigate different dynamic Graph Neural Networks (GNNs) configurations for influencer detection and evaluate their prediction performance using Rappi's (one of latin-americas largest technology companies) unique financial data set. We show that using deep multi-head attention in GNN and encoding temporal attributes significantly improves performance. Furthermore, our empirical evaluation illustrates that capturing neighborhood representation is more beneficial that using network centrality measures.",
+    "imagePath": "influencer.png"
   },
-  
+
   {
     "title": "Changepoint Detection in Highly-Attributed Dynamic Graphs",
     "authors": [
@@ -40,8 +147,11 @@
     "year": 2024,
     "url": "https://research.latinxinai.org/papers/icml/2024/pdf/Emiliano_Penaloza.pdf",
     "category": "workshop",
-    "journal": "Proceedings of the LatinX in AI Workshop ICML 2024"
+    "journal": "Proceedings of the LatinX in AI Workshop ICML 2024",
+    "description": "Detecting anomalous behavior in dynamic networks remains a constant challenge. This problem is further exacerbated when the underlying topology of these networks is affected by individual highly-dimensional node attributes. We address this issue by tracking a network’s modularity as a proxy of its community structure. We leverage Graph Neural Networks (GNNs) to estimate each snapshot’s modularity. GNNs can account for both network structure and highdimensional node attributes, providing a comprehensive approach for estimating network statistics. Our method is validated through simulations that demonstrate its ability to detect changes in highly-attributed networks by analyzing shifts in modularity. Moreover, we find our method is able to detect a real-world event within the #Iran Twitter reply network, where each node has highdimensional textual attributes",
+    "imagePath": "gnn_seq.png"
   },
+  
   {
     "title": "Controllable and Transparent Textual Latents for Recommender Systems",
     "authors": [
@@ -53,7 +163,9 @@
     "year": 2024,
     "url": "https://docs.google.com/presentation/d/14kz8CPo6V8ayHbGMNKHQ20VibiLrW3a0x__kdF8Iy_8/edit?usp=sharing",
     "category": "workshop",
-    "journal": "Presented at Workshop on Recommendation with Generative Models ACM Web Conference 2024"
+    "journal": "Presented at Workshop on Recommendation with Generative Models ACM Web Conference 2024",
+    "description": "Traditional recommender systems rely on high-dimensional (latent) embeddings for modeling user-item interactions, often resulting in opaque representations that lack interpretability. Moreover, these systems offer limited control to users over their recommendations. Inspired by recent work, we introduce TExtuAl Representations for Scrutable recommendations (TEARS) to address these challenges. Instead of representing a user's interests through a latent embedding, TEARS encodes them in natural text, providing transparency and allowing users to edit them. To do so, TEARS uses a modern LLM to generate user summaries based on user preferences. We find the summaries capture user preferences uniquely. Using these summaries, we take a hybrid approach where we use an optimal transport procedure to align the summaries' representation with the learned representation of a standard VAE for collaborative filtering. We find this approach can surpass the performance of three popular VAE models while providing user-controllable recommendations. We also analyze the controllability of TEARS through three simulated user tasks to evaluate the effectiveness of a user editing its summary.",
+    "imagePath": "tears.png"
   },
   {
     "title": "Influencer Detection with Dynamic Graph Neural Networks",
@@ -70,7 +182,9 @@
     "year": 2022,
     "url": "https://arxiv.org/abs/2211.09664",
     "category": "workshop",
-    "journal": "Poster at Temporal Graph Learning Workshop NeurIPS 2022"
+    "journal": "Poster at Temporal Graph Learning Workshop NeurIPS 2022",
+    "description": "Leveraging network information for prediction tasks has become a common practice in many domains. Being an important part of targeted marketing, influencer detection can potentially benefit from incorporating dynamic network representation. In this work, we investigate different dynamic Graph Neural Networks (GNNs) configurations for influencer detection and evaluate their prediction performance using a unique corporate data set. We show that using deep multi-head attention in GNNs and encoding temporal attributes significantly improves performance. Furthermore, our empirical evaluation illustrates that capturing neighborhood representation is more beneficial that using network centrality measures.",
+    "imagePath": "gnn.png"
   }
 
   

@@ -2,134 +2,211 @@
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 .intro {
   min-width: 0;
-  width: 100vw!important;
+  width: 100% !important;
   height: 100vh;
   padding: 0% !important;
-  background: $prim-green;
-  color: var(--color-white);
-  font-family: 'Open Sans', sans-serif!important;
+  /* richer layered gradient for more depth */
+  background: linear-gradient(135deg, $prim-green-dark 0%, $prim-green 45%, rgba($prim-blue, 0.08) 100%);
+  color: $prim-cultured;
+  font-family: $font-family-sans;
   display: flex;
   align-items: center;
   overflow: hidden;
   position: relative;
-  
-}
-.intro .img-row .intro-img {
-  position: relative;
-  padding: 0px;
-  border-radius: 50%;
-  border: 3px solid $prim-green;
-  width: 25rem;
-  height: auto;
-  margin-left: 10%
-  
-}
-.typewritter-row{
-  padding-top: 10px;
-  display: flex;
-  position: relative;
-}
 
-@media (max-width: 1299px) {
+  /* SVG pattern behind the gradient for the first panel */
+  background-image: url('../../assets/liquid_cheese.svg');
+  background-repeat: no-repeat;
+  /* shift art right so it sits behind the photo and leaves space near the sidebar */
+  background-position: 65% 10%;
+  background-size: cover;
 
-  
-  .typewritter-row {
-    padding-top: 10px;
-    display: flex;
-    position: relative;
-    justify-content: center; /* Add this line to horizontally center the content */
+  /* subtle accent/radial overlay to break up empty space */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    /* Left-edge mask: match sidebar color at left to make the artwork flow into the sidebar */
+    /* order: left mask on top, then tint+radials beneath */
+    background-image: 
+      linear-gradient(to right, rgba($prim-green-dark, 1) 0%, rgba($prim-green-dark, 0.95) 6%, rgba($prim-green-dark, 0.6) 12%, rgba($prim-green-dark, 0) 28%),
+      linear-gradient(rgba($prim-green-dark, 0.45), rgba($prim-green-dark, 0.45)),
+      radial-gradient(circle at 10% 20%, rgba($prim-accent, 0.04) 0%, transparent 30%),
+      radial-gradient(circle at 85% 75%, rgba($prim-accent-muted, 0.03) 0%, transparent 25%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%, cover, cover, cover;
+    mix-blend-mode: normal;
+    z-index: 0; /* behind content (intro img has z-index:1) */
+  }
+
+  /* bottom fade to smoothly transition into later sections (which use $prim-green) */
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30vh;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba($prim-green, 1) 100%);
+    z-index: 0;
   }
 }
 
+.intro .img-row .intro-img {
+  position: relative;
+  z-index: 1;
+  padding: 0px;
+  border-radius: 50%;
+  border: 3px solid $prim-accent;
+  width: 25rem;
+  height: auto;
+  object-fit: cover;
+  margin-left: 10%;
+  box-shadow: 
+    0 0 0 6px rgba($prim-accent, 0.1),
+    $shadow-lg;
+  transition: transform $transition-base, box-shadow $transition-base;
+  
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 
+      0 0 0 10px rgba($prim-accent, 0.15),
+      $shadow-lg,
+      $shadow-glow;
+  }
+}
 
-.name-row{
+.typewritter-row {
+  padding-top: $space-md;
+  display: flex;
+  position: relative;
+}
+
+@media (max-width: $breakpoint-xl) {
+  .typewritter-row {
+    padding-top: $space-md;
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+}
+
+.name-row {
   margin: auto;
   width: 100%;
-  
 }
 
-.lastname{
-  padding-left: 15px;
-  color: $prim-magenta;
+.lastname {
+  padding-left: $space-md;
+  color: $prim-accent;
+  text-shadow: 0 0 30px rgba($prim-accent, 0.3);
 }
 
-.name{ 
+.name { 
   display: flex;
   float: left;
   text-align: left;
-  font-size: 40px;
+  font-size: 40px;  // Fixed size like original
   position: relative;
   color: $prim-cultured;
-  font-weight: bold;
-  
+  font-weight: $font-weight-bold;
+  font-family: $font-family-sans;
+  letter-spacing: -1px;
+  line-height: $line-height-tight;
 }
 
-.type-col{
+.type-col {
   display: flex;
-
   align-items: center;
 }
+
 .img-row {
   text-align: center;
   width: 100%;
   position: relative;
   margin: auto;
+  z-index: 1;
 }
+
+.wrap {
+  padding: $space-lg;
+}
+
 .typewriter {
-  color: $prim-cultured;
-  font-size: 25px;
-  opacity: .7;
-
-  font-weight: bold;
+  color: $prim-coral;
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.4rem);  // ~18-22px
+  font-family: $font-family-mono;
+  font-weight: $font-weight-medium;
+  opacity: 0.85;
 }
+
 .cursor {
-  color: $prim-grey;
-  font-size: 25px;
-
-  font-weight: bold;
+  color: $prim-accent;
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.4rem);  // Match typewriter
+  font-weight: $font-weight-bold;
 }
 
-@media only screen and (max-width: 1299px) {
+// Mobile Responsive Styles
+@media only screen and (max-width: $breakpoint-xl) {
   .intro .img-row .intro-img {
     position: relative;
     padding: 0px;
     border-radius: 50%;
-    border: 3px solid $prim-green;
-    max-width: 250px;
-    height: auto;
-    margin-left: 0%
-    
+    border: 3px solid $prim-accent;
+    width: 200px;
+    height: 200px;
+    margin-left: 0%;
+    margin: 0 auto;
   }
-  .name{ 
-    display:unset;
-    float:none;
+  
+  .name { 
+    display: flex;
+    flex-direction: column;
+    float: none;
     text-align: center;
-    font-size: 30px;
-    
-    position:relative;
+    font-size: $fluid-3xl;
+    position: relative;
     color: $prim-cultured;
-    font-weight: bold;
+    font-weight: $font-weight-bold;
+    align-items: center;
   }
-  .name-row{
-    
+  
+  .name-row {
+    display: flex;
+    justify-content: center;
   }
-  .typewritter-row{
-    padding-top: 10px;
+  
+  .typewritter-row {
+    padding-top: $space-md;
     display: flex;
     position: relative;
     width: 100%;
+    justify-content: center;
   }
 
-.type-col{
-  display:inline;
-
-  align-items: center;
-}
-.lastname{
-  padding-left: 0px;
-  color: $prim-magenta;
-}
+  .type-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .lastname {
+    padding-left: 0px;
+    color: $prim-accent;
+  }
+  
+  .wrap {
+    padding: $space-md;
+    text-align: center;
+  }
+  
+  .typewriter {
+    font-size: $fluid-lg;
+  }
 }

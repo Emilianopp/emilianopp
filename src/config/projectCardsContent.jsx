@@ -1,10 +1,11 @@
-import React from "react";
 import { ReactComponent as SQ } from "assets/sq.svg";
 import { ReactComponent as rna } from "assets/Rna.svg";
 import { ReactComponent as ml } from "assets/ml.svg";
 import { ReactComponent as rec } from "assets/rec.svg";
 import { ReactComponent as weldon } from "assets/weldon.svg";
 import { ReactComponent as py } from "assets/py.svg";
+// test
+
 const data = [
   {
     src: SQ,

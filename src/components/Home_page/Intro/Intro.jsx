@@ -6,7 +6,7 @@ import particlesOptions from "config/particles.json";
 import "styles/Home/Intro.scss";
 import me from "assets/me.png";
 import Typewriter from "typewriter-effect";
-import background from "assets/wallpaper.png";
+// wallpaper image removed — using CSS gradient background instead
 class Intro extends React.Component {
   render() {
     let [im, student, developer, ml] = content.typewriter;
@@ -16,23 +16,29 @@ class Intro extends React.Component {
           id="tsparticles"
           style={{
             position: "absolute",
-            backgroundImage: background,
+            inset: 0,
+            background: "transparent",
+            zIndex: 0,
+            pointerEvents: "none",
           }}
           // width="auto"
           height="100vh"
           width="100vw"
           options={particlesOptions}
         />
-        <img
-          src={background}
-          style={{
-            zIndex: 0,
-            position: "absolute",
-            opacity: ".2",
-            height: "100vh",
-            width: '100vw',
-          }}
-        />
+        {/* background image removed; SCSS provides gradient background */}
+
+        {/* Compact contact badge in bottom-left */}
+        <div className="contact-badge" aria-hidden={false}>
+          <div className="contact-badge-inner">
+            <a className="contact-email" href={`mailto:${content.email}`}>{content.email}</a>
+            <div className="contact-links">
+              {content.contact.map((c, i) => (
+                <a key={i} className="contact-link" href={c.link} target="_blank" rel="noopener noreferrer">{c.name}</a>
+              ))}
+            </div>
+          </div>
+        </div>
 
         <Row xl={{ offset: 6 }}  className="img-row">
           <Col xl = {6} md = {12} sm={12}>

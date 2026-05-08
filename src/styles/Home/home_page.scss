@@ -1,293 +1,635 @@
 @import '/src/styles/master.scss';
 
-.home_page{
-    max-width: 100%!important;
-    padding: 0%!important;
-    
-}
-#page-content-wrapper {
-   padding: 0%;
-   max-width: 100vw;
+.home_page {
+  max-width: 100% !important;
+  padding: 0% !important;
 }
 
-@media (max-width: 1299px) {
+#page-content-wrapper {
+  padding: 0%;
+  max-width: 100vw;
+}
+
+@media (max-width: $breakpoint-xl) {
   #page-content-wrapper {
     padding: 0;
     min-width: 100vw;
   }
 }
 
-.project-cards{
+// ============================================
+// SECTION CARDS (About, Publications, Projects, Contact)
+// ============================================
+.project-cards {
   min-width: 0;
   max-width: 100%;
-  height: 80vh;
-  padding: 0% !important;
+  min-height: auto;
+  height: auto;
+  padding: $space-lg 0 !important;
   background: $prim-green;
-  color: var(--color-white);
-  font-family: Roboto;
+  color: $prim-cultured;
+  font-family: $font-family-sans;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
+  
+  // Subtle top border for section separation
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba($prim-cultured, 0.1) 20%,
+      rgba($prim-cultured, 0.1) 80%,
+      transparent 100%
+    );
+  }
 }
 
-.project-cards-pubs{
+.project-cards-pubs {
   min-width: 0;
   max-width: 100%;
   height: auto !important;
-
-  padding: 0% !important;
+  padding: $space-lg 0 !important;
   background: $prim-green;
-  color: var(--color-white);
-  font-family: Roboto;
+  color: $prim-cultured;
+  font-family: $font-family-sans;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
-}
-.row{
-    --bs-gutter-x: 0;
-    padding: 0%!important;
-}
-.Cards{
-    position: relative;
-    width: 100%;
-   
-}
-.Projects-header{
-    color: $prim-cultured;
-    padding-left: 1rem;
-    font-size: 3rem;
-    margin-top: 4rem!important;
-
-
-    position: relative;
-    margin-bottom: 1rem;
-    z-index: 2;
-    
-}
-@media (max-width: 1200px) { /*choose the width you prefer*/
-  .Projects-header {
-    margin-top: 0rem!important;
-    max-width: 90%;
-    padding-left: 2rem; /* Updated for mobile */
-  }
-}
-
-.header-padder{
-    padding-left: 30px;
-    padding-bottom: 30px;
-}
-.Projects-header:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding-left: 30px;
-    height: 70%;
-    z-index: 1;
-    
-    border-radius: 1%;
-    width: 18rem;
-    border-left: 5px solid $prim-magenta;
-    border-bottom: 5px solid $prim-magenta;
-}
-@media screen and (max-width: 1200px) {
-  .Projects-header:after {
-  left: 1rem;
-  width: 16rem;
-
-
-    // width: 10rem;
-  }
   
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba($prim-cultured, 0.1) 20%,
+      rgba($prim-cultured, 0.1) 80%,
+      transparent 100%
+    );
+  }
 }
 
-@media only screen and (max-width: 1200px) {
+.row {
+  --bs-gutter-x: 0;
+  padding: 0% !important;
+}
+
+.Cards {
+  position: relative;
+  width: 100%;
+}
+
+// ============================================
+// SECTION HEADERS
+// ============================================
+.Projects-header {
+  color: $prim-cultured;
+  padding-left: $space-md;
+  font-size: $fluid-4xl;
+  font-weight: $font-weight-bold;
+  font-family: $font-family-sans;
+  margin-top: $space-lg !important;
+  margin-bottom: $space-md;
+  position: relative;
+  z-index: 2;
+  letter-spacing: -0.5px;
+  display: inline-block;  // Makes width match text content
+}
+
+@media (max-width: $breakpoint-lg) {
+  .Projects-header {
+    margin-top: $space-md !important;
+    max-width: 90%;
+    padding-left: $space-lg;
+    font-size: $fluid-3xl;
+  }
+}
+
+.header-padder {
+  padding-left: $space-xl;
+  padding-bottom: $space-md;
+}
+
+// Accent underline for headers - matches text width
+.Projects-header::after {
+  content: "";
+  position: absolute;
+  left: $space-md;
+  bottom: -8px;
+  height: 3px;
+  z-index: 1;
+  border-radius: $border-radius-full;
+  width: calc(100% - #{$space-md});  // Full width minus padding
+  background: linear-gradient(90deg, $prim-accent 0%, $prim-accent 70%, rgba($prim-accent, 0.3) 100%);
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  .Projects-header::after {
+    left: $space-lg;
+    width: calc(100% - #{$space-lg});
+  }
+}
+
+@media only screen and (max-width: $breakpoint-lg) {
   .Cards {
     max-width: 100%;
   }
-  .project-cards{
-      height: 100%;
-      overflow-x: hidden; /* Added for mobile */
+  
+  .project-cards {
+    min-height: auto;
+    padding: $space-2xl 0 !important;
+    overflow-x: hidden;
   }
-  .header-padder{
+  
+  .header-padder {
     padding-left: 0px;
-    padding-bottom: 0px;
+    padding-bottom: $space-md;
   }
+  
   .row {
-    margin: 0; /* Added for mobile */
+    margin: 0;
   }
-  .about-paragraph{ 
-      width: 90%;
-      margin-left: 0; /* Updated for mobile */
+  
+  .about-paragraph { 
+    width: 90%;
+    margin-left: 0;
   }
+  
   .pubs-row {
-    margin-left: 0; /* Updated for mobile */
-    height: 100%!important;
+    margin-left: 0;
+    height: 100% !important;
   }
+  
   .pub-category {
-    margin-left: 0; /* Updated for mobile */
+    margin-left: 0;
   }
+  
   .pub-list {
-    padding-left: 0; /* Updated for mobile */
+    padding-left: 0;
   }
-  .pub-section h3{
-      width: 90%;
-      margin-left: 0; /* Updated for mobile */
-      font-size: 1.2rem;
+  
+  .pub-section h3 {
+    width: 90%;
+    margin-left: 0;
+    font-size: $fluid-lg;
   }
 }
 
-.about-paragraph{ 
-  // width: 90vw;
+// ============================================
+// ABOUT SECTION
+// ============================================
+.about-paragraph { 
   color: $prim-cultured;
-  font-size: 1rem;
+  font-size: clamp(1rem, 0.95rem + 0.4vw, 1.15rem);  // Fluid: 16-18.4px
+  font-family: $font-family-sans;
+  line-height: $line-height-relaxed;
   padding: 0;
-  padding-left: 1.75rem;
+  padding-left: $space-lg;
   margin: 0;
-  width: 90%;
-  margin-left: 1.5rem;
+  width: 85%;
+  margin-left: $space-lg;
+  
+  // Better paragraph spacing
+  p {
+    margin-bottom: $space-md;
+  }
 }
-@media screen and (max-width: 1200px) {
+
+@media screen and (max-width: $breakpoint-lg) {
   .about-paragraph {
-    font-size: 1rem;
-    padding-left: 1rem;
-
+    padding-left: $space-md;
+    width: 90%;
+    margin-left: $space-sm;
   }
-  
 }
-.about-href{
-  width: 90%;
+
+// ============================================
+// ABOUT LINKS
+// ============================================
+.about-href {
   color: $prim-cultured;
-  text-decoration: underline!important;
-  font-size: 1rem;
+  text-decoration: underline !important;
+  font-size: $fluid-base;
   padding: 0;
   margin: 0;
-  text-decoration: underline!important;
-  text-decoration-thickness: .1rem!important;
-  text-decoration-color: rgba(255, 252, 92, 0.5);
+  text-decoration-thickness: 2px !important;
+  text-decoration-color: rgba($prim-accent, 0.5);
   text-decoration-style: solid;
-}
-@media screen and (max-width: 1200px) {
-  .about-href {
-    font-size: 1rem;
-
-    padding-left: 0rem;
-  }
+  transition: all $transition-fast;
   
+  &:hover {
+    color: $prim-accent;
+    text-decoration-color: $prim-accent;
+  }
 }
 
+@media screen and (max-width: $breakpoint-lg) {
+  .about-href {
+    font-size: $fluid-base;
+    padding-left: 0;
+  }
+}
+
+// ============================================
+// PUBLICATIONS SECTION
+// ============================================
 .pubs-row {
-  margin-top: 20px;
-  margin-left: 0rem;
+  margin-top: $space-md;
+  margin-left: 0;
   width: 90%;
 }
-@media screen and (max-width: 1200px) {
+
+@media screen and (max-width: $breakpoint-lg) {
   .pubs-row {
     margin-left: 0;
   }
 }
 
 .pub-category {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-top: 1.5rem;
-  margin-left: 2rem;
-}
-@media screen and (max-width: 1200px) {
-  .pub-category {
-    font-size: 1.5rem;
-    margin-left: 1rem;
-  }
+  font-size: 1.5rem;
+  font-weight: $font-weight-semibold;
+  font-family: $font-family-sans;
+  margin-top: $space-lg;
+  margin-bottom: $space-md;
+  margin-left: $space-xl;
+  color: $prim-cultured;
+  position: relative;
+  display: inline-block;
   
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba($prim-accent, 0.5) 0%, transparent 100%);
+    border-radius: $border-radius-full;
+  }
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  .pub-category {
+    font-size: $fluid-xl;
+    margin-left: $space-md;
+  }
 }
 
 .pub-list {
-  padding-left: 3rem;
-}
-@media screen and (max-width: 1200px) {
-  .pub-list {
-    padding-left: 1rem;
-  }
-  
+  padding-left: $space-2xl;
 }
 
-.pubList{
-  color: $prim-coral!important;
+@media screen and (max-width: $breakpoint-lg) {
+  .pub-list {
+    padding-left: $space-md;
+  }
+}
+
+.pubList {
+  color: $prim-coral !important;
+  margin-bottom: $space-xl;
+  padding-bottom: $space-md;
+  border-bottom: 1px solid rgba($prim-cultured, 0.08);
+  
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .pub-section h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: $font-weight-semibold;
+  font-family: $font-family-sans;
+  line-height: 1.4;
+  margin-bottom: $space-xs;
 }
 
 .pub-list li {
   list-style-type: none;
+  margin-bottom: $space-sm;
 }
 
-.pub-link {
-  text-decoration: none;
-  font-weight: bold;
-  text-decoration: underline!important;
-  text-decoration-thickness: .1rem!important;
-  text-decoration-color: rgba(255, 252, 92, 0.5);
+// Styles for triangle dropdown icon
+.pub-title-container {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  padding: $space-xs 0;
+  border-radius: $border-radius-sm;
+  transition: background $transition-fast;
+  gap: $space-sm;
   
   &:hover {
-    color: #fffc5cfa;
+    background: rgba($prim-cultured, 0.03);
+  }
+  
+  button.dropdown-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: $prim-accent;
+    font-size: 0.95rem;
+    transition: transform $transition-fast, background $transition-fast;
+    border-radius: $border-radius-full;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      background: rgba($prim-accent, 0.08);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($prim-accent, 0.06);
+    }
   }
 }
 
+.dropdown-icon {
+  display: inline-block;
+  font-size: 0.7rem;
+  margin-right: $space-sm;
+  margin-top: 0.35rem;
+  color: $prim-accent;
+  transition: transform $transition-fast;
+  flex-shrink: 0;
+  
+  @media (max-width: $breakpoint-md) {
+    font-size: 0.8rem;
+    margin-right: $space-sm;
+    margin-top: $space-xs;
+  }
+}
+
+.dropdown-icon.expanded {
+  transform: rotate(90deg);
+}
+
+.pub-open-row {
+  margin-top: $space-sm;
+}
+
+.pub-open-btn {
+  display: inline-block;
+  background: rgba($prim-accent, 0.08);
+  color: $prim-cultured;
+  padding: $space-xs $space-sm;
+  border-radius: $border-radius-sm;
+  font-weight: $font-weight-semibold;
+  text-decoration: none !important;
+  transition: background $transition-fast, color $transition-fast;
+
+  &:hover {
+    background: $prim-accent;
+    color: $prim-green-dark;
+  }
+}
+
+// Publication link styles
+.pub-link {
+  text-decoration: none !important;
+  font-weight: $font-weight-semibold;
+  font-family: $font-family-sans;
+  color: $prim-cultured;
+  cursor: pointer;
+  transition: all $transition-fast;
+  border-bottom: 2px solid rgba($prim-accent, 0.4);
+  padding-bottom: 2px;
+  
+  &:hover {
+    color: $prim-accent;
+    border-bottom-color: $prim-accent;
+    text-decoration-color: $prim-accent;
+  }
+}
+
+// Author highlighting
 .me {
-  color: #fffc5cfa; 
-  font-weight: 1000!important;
+  color: $prim-accent; 
+  font-weight: $font-weight-semibold !important;
+  font-family: $font-family-sans;
 }
 
 .other {
-  color: $prim-cultured;
-  font-weight: 100;
+  color: $prim-coral;
+  font-weight: $font-weight-regular;
+  font-family: $font-family-sans;
   text-decoration: none;
 }
 
-// New styles for contact section
+// Publication metadata (authors, year, journal)
+.pub-section p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: $prim-coral;
+  margin-top: $space-xs;
+  font-family: $font-family-sans;
+}
+
+// ============================================
+// CONTACT SECTION
+// ============================================
 .contact-container {
-  padding: 0rem 0;
+  padding: $space-lg 0;
 }
 
 .contact-text {
   color: $prim-cultured;
-  
-  font-size: 1.2rem;
-  line-height: 1.6;
-  font-family: Roboto;
-  margin-bottom: 2rem;
+  font-size: $fluid-lg;
+  line-height: $line-height-relaxed;
+  font-family: $font-family-sans;
+  margin-bottom: $space-xl;
 }
 
 .contact-item {
-  margin-bottom: 1rem;
+  margin-bottom: $space-md;
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
 }
 
 .contact-link {
   color: $prim-cultured;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: $fluid-lg;
+  font-family: $font-family-sans;
   word-break: break-word;
-  transition: color 0.3s ease;
+  transition: all $transition-fast;
+  padding: $space-xs $space-sm;
+  border-radius: $border-radius-sm;
   
   &:hover {
-    color: #fffc5cfa;
+    color: $prim-accent;
+    background: rgba($prim-accent, 0.1);
   }
 }
 
 .email-link {
-  font-size: 1rem;
+  font-size: $fluid-base;
   display: inline-block;
   max-width: 100%;
+  font-family: $font-family-mono;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-md) {
   .contact-link {
-    font-size: 1rem;
+    font-size: $fluid-base;
   }
 
   .email-link {
-    font-size: 0.9rem;
+    font-size: $fluid-sm;
+  }
+}
+
+// ============================================
+// PUBLICATION DETAILS DROPDOWN
+// ============================================
+.pub-expand-btn {
+  color: $prim-accent;
+  padding: $space-xs $space-sm;
+  margin-left: -$space-sm;
+  text-decoration: none;
+  font-size: $fluid-sm;
+  font-family: $font-family-sans;
+  border: none;
+  background: transparent;
+  transition: all $transition-fast;
+  
+  &:hover, &:focus {
+    color: $prim-accent;
+    text-decoration: underline;
+  }
+}
+
+.pub-details {
+  background: rgba($prim-green-dark, 0.5);
+  border-radius: $border-radius-md;
+  border-left: 3px solid $prim-accent;
+  padding: $space-lg;
+  margin: $space-sm 0 $space-lg;
+  max-width: 90%;
+  backdrop-filter: blur(4px);
+}
+
+.pub-description {
+  color: $prim-cultured;
+  font-size: $fluid-base;
+  font-family: $font-family-sans;
+  line-height: $line-height-relaxed;
+  margin-bottom: $space-md;
+}
+
+.pub-image-container {
+  margin-top: $space-md;
+  text-align: center;
+}
+
+.pub-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: $border-radius-md;
+  border: 1px solid rgba($prim-cultured, 0.15);
+  box-shadow: $shadow-lg;
+}
+
+@media (max-width: $breakpoint-md) {
+  .pubList {
+    margin-bottom: $space-lg;
+  }
+  
+  .pub-section h3 {
+    font-size: $fluid-base;
+    margin-bottom: $space-sm;
+    padding-right: $space-md;
+    line-height: $line-height-base;
+  }
+  
+  .pub-details {
+    max-width: 100%;
+    margin-top: $space-md;
+    margin-bottom: $space-lg;
+  }
+  
+  .pub-list {
+    padding-left: $space-sm;
+    padding-right: $space-sm;
+  }
+  
+  .pub-description {
+    font-size: $fluid-sm;
+  }
+  
+  .pub-image {
+    height: auto;
+  }
+  
+  .pub-expand-btn {
+    font-size: $fluid-sm;
+  }
+}
+
+// Mobile-specific styles for publications
+@media (max-width: 767px) {
+  .pub-title-container {
+    padding: 0.5rem 0;
+    margin-right: 0.5rem;
+  }
+  
+  .dropdown-icon {
+    font-size: 1.1rem;
+    margin-right: 0.75rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+  }
+  
+  .pubList {
+    margin-bottom: 2rem;
+    padding-right: 0.5rem;
+  }
+  
+  .pub-section h3 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    padding-left: 0;
+    display: flex;
+  }
+  
+  .pub-section p {
+    margin-left: 1.85rem;
+    line-height: 1.5;
+  }
+  
+  .pub-list {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .pub-details {
+    margin-left: 1.85rem;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .pub-image {
+    height: auto;
+  }
+  
+  .pub-description p {
+    margin-left: 0;
   }
 }

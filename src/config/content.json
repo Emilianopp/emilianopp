@@ -30,10 +30,8 @@
   "about": [
    
      "Hey I'm Emiliano a PhD student at Mila-Quebec/Université de Montréal, currently under the supervision of Laurent Charlin",
-      "\nPrior to Mila I completed my MMath in Statistics at the University of Waterloo under the supervision of Nathaniel Stevens",
-      " While most of my work has focused on dynamic graph learning, I am broadly interested in solving real world problems through the use of intelligent systems, with a particular interest in recommendation systems and generative modeling"
 
-
+      "My current work focuses on enhancing the capabilities and alignment of LLM agents in complex multi-step environments. Unlike other ML systems, LMs can converse—an exciting capability that comes with many benefits as well as risks. My research explores how to leverage this property to improve both capabilities and alignment, specifically at the user level."
 
 
 
@@ -86,13 +84,16 @@
     { "name": "SCHOLAR", "ref": "https://scholar.google.ca/citations?user=v_bNCuYAAAAJ&hl=en" },
     { "name": "CV", "ref": "https://drive.google.com/file/d/1PF2vnc9p3ZhsOFIGfANdglmSsFwRni3t/view?usp=sharing" },
     { "name": "ABOUT", "ref": "#about" },
+    { "name": "BLOG", "ref": "#blog" },
     { "name": "RESEARCH", "ref": "#pubs" },
     { "name": "PROJECTS", "ref": "#proj" },
     { "name": "CONTACT", "ref": "#contact" },
     { "name": "SKILLQUERY", "ref": "https://skillquery.com/" }
   ],
-  "contact": [{ "name": "Github", "link": "https://github.com/Emilianopp" },{ "name": "LinkedIn", "link": "https://www.linkedin.com/in/emilianopenaloza-19176b15b/" }
-    ],
-    "email" : "emiliano.penaloza@mila.quebec"
-
+  "contact": [
+    { "name": "Github", "link": "https://github.com/Emilianopp" },
+    { "name": "LinkedIn", "link": "https://www.linkedin.com/in/emilianopenaloza-19176b15b/" },
+    { "name": "X", "link": "https://x.com/emilianopp_" }
+  ],
+  "email" : "emiliano.penaloza@mila.quebec"
 }

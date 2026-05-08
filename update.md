@@ -17,6 +17,16 @@ Finally we need to go to
 
 `https://github.com/Emilianopp/emilianopp/settings/pages`
 
+
 enter emilianopp.com into the custom domain
 
 and update the url wait a couple of minutes and should be good to go
+
+If you cannot deploy maybe something like this:
+
+`git config --global http.postBuffer 157286400`
+
+this worked last time... 
+
+https://stackoverflow.com/questions/77856025/git-error-rpc-failed-http-400-curl-22-the-requested-url-returned-error-400-se
+
