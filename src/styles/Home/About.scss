@@ -1,15 +1,152 @@
 @import "../master.scss";
-@import "bootstrap/scss/functions"; 
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins";
 
-.about{ 
+.about-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: $space-xl;
+  padding: 0 $space-xl 0 ($space-xl + $space-md); // line up with the section header text
+  width: 100%;
 
-    display: block;
-    background-color: $prim-green;
-	position: absolute;
-	top: var(--bodyPaddingTop);
-	left: 0;
-	right: 0;
+  @media (min-width: 1200px) {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 400px);
+    gap: $space-2xl;
+    align-items: start;
+    max-width: 1280px;
+  }
 
+  // Wide screens: text | experience | education
+  @media (min-width: 1700px) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 780px);
+    max-width: 1680px;
+  }
+
+  @media (max-width: #{$breakpoint-lg - 0.02px}) {
+    padding: 0 $space-lg;
+  }
+}
+
+.about-text {
+  max-width: 75ch;
+
+  p {
+    color: $prim-cultured;
+    font-size: clamp(1rem, 0.95rem + 0.3vw, 1.1rem);
+    line-height: $line-height-relaxed;
+    margin-bottom: $space-lg;
+  }
+
+  .about-lead {
+    font-size: $fluid-xl;
+    font-weight: $font-weight-medium;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+  }
+
+  .about-aside {
+    color: $prim-coral;
+    margin-bottom: 0;
+  }
+
+  .about-href {
+    font-size: inherit;
+  }
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: $space-md;
+  align-items: start;
+
+  // side by side when there's room: tablets (cards below text) and wide desktops
+  @media (min-width: 640px) and (max-width: 1199.98px), (min-width: 1700px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.about-card {
+  padding: $space-lg;
+  border-radius: $border-radius-lg;
+  background: rgba($prim-green-dark, 0.5);
+  border: 1px solid rgba($prim-cultured, 0.08);
+}
+
+.about-card-title {
+  font-size: $fluid-sm;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $prim-coral;
+  margin: 0 0 $space-md;
+  padding-bottom: $space-sm;
+  border-bottom: 1px solid rgba($prim-cultured, 0.08);
+}
+
+.about-fact-sub {
+  display: block;
+  color: $prim-coral;
+}
+
+.about-fact-with {
+  display: block;
+  margin-top: 2px;
+  font-size: $fluid-xs;
+  color: rgba($prim-cultured, 0.8);
+}
+
+.about-facts {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.about-history {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+
+  li + li {
+    padding-top: $space-sm;
+    border-top: 1px solid rgba($prim-cultured, 0.06);
+  }
+}
+
+.about-fact {
+  display: grid;
+  grid-template-columns: 4.75rem minmax(0, 1fr);
+  gap: $space-md;
+
+  dt {
+    color: $prim-accent;
+    font-family: $font-family-mono;
+    font-size: $fluid-xs;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding-top: 0.2rem;
+  }
+
+  dd {
+    margin: 0;
+    color: $prim-cultured;
+    font-size: $fluid-sm;
+    line-height: $line-height-base;
+
+    strong {
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  .about-href {
+    font-size: inherit;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: $space-xs;
+  }
 }

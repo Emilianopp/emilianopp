@@ -2,10 +2,8 @@
 
 .Project-card-content {
   width: 100%;
-  /* fixed card height to keep grid tidy — choose a comfortable max that fits content */
-  height: 420px;
-  /* dark surface matching site palette to replace default white */
-  background: linear-gradient(180deg, rgba($prim-green-dark, 0.98) 0%, rgba($prim-green, 0.95) 100%);
+  /* opaque dark surface so cards don't bleed through each other during the fade */
+  background: linear-gradient(180deg, $prim-green-dark 0%, mix($prim-green-dark, $prim-green, 40%) 100%);
   color: $prim-grey !important;
   border-radius: $border-radius-lg;
   position: relative;
@@ -14,11 +12,10 @@
   transition: transform 260ms cubic-bezier(.2,.8,.2,1), box-shadow 260ms cubic-bezier(.2,.8,.2,1), border-color $transition-base;
   box-shadow: $shadow-md;
   overflow: hidden; /* prevent content overflow */
-  padding: $space-sm;
+  padding: $space-md;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  
+
   &:hover {
     transform: translateY(-6px);
     border-color: rgba($prim-accent, 0.18);
@@ -52,20 +49,33 @@
   transform: scale(1.06);
 }
 
-/* Content area: allow scrolling if overflow while keeping card height fixed */
-.card-content { 
+.card-content {
   margin: 0;
   position: relative;
   z-index: 2;
-  min-height: 140px;
-  max-height: calc(420px - 220px - #{$space-sm}*2); /* total minus media and paddings */
-  overflow: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-/* hide scrollbars but keep accessible scrolling */
-.card-content::-webkit-scrollbar { width: 8px; height: 8px; }
-.card-content::-webkit-scrollbar-thumb { background: rgba($prim-cultured, 0.06); border-radius: 8px; }
-.card-content { scrollbar-width: thin; scrollbar-color: rgba($prim-cultured, 0.06) transparent; }
+.slides-wrapper {
+  position: relative;
+}
+
+.slides-measurer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  visibility: hidden;
+  pointer-events: none;
+
+  > * {
+    grid-area: 1 / 1;
+  }
+}
 
 .proj-content { 
   padding: $space-sm 0 0 0;
@@ -73,7 +83,7 @@
   font-size: $fluid-base;
   font-family: $font-family-sans;
   color: $prim-cultured;
-  line-height: $line-height-relaxed;
+  line-height: $line-height-base;
 }
 
 .proj-title {
@@ -102,17 +112,35 @@
 .link-button {
   position: relative;
   z-index: 3;
-  margin-top: $space-sm;
+  margin-top: auto;
+  padding-top: $space-md;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-sm;
+
+  .pub-open-btn {
+    color: $prim-cultured;
+    background: rgba($prim-accent, 0.1);
+    font-family: $font-family-sans;
+    font-weight: $font-weight-semibold;
+    text-transform: none;
+    font-size: $fluid-sm;
+    padding: $space-xs $space-md;
+    min-width: 0;
+
+    &:hover {
+      background: $prim-accent;
+      color: $prim-green-dark;
+    }
+  }
 }
 
 .Outer-Project-card-content {
   margin: auto;
   width: 100%;
-  z-index: -1;
   position: relative;
+  z-index: 1;
   padding-bottom: $space-sm;
-  padding-right: $space-sm;
-  z-index: 99999;
 }
 
 .content-container { 
@@ -121,21 +149,6 @@
 
 .header-row { 
   padding: 0;
-}
-
-.Outer-Project-card-content::after {
-  content: "";
-  position: absolute;
-  right: -20%;
-  top: 0;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(120deg, rgba($prim-accent, 0.06), rgba($prim-blue, 0.02));
-  transform: skewX(-12deg);
-  pointer-events: none;
-  border-radius: 0 0 $border-radius-md 0;
-  z-index: 0;
-  mix-blend-mode: overlay;
 }
 
 .slides {
@@ -153,7 +166,6 @@
   }
   .Project-card-content {
     padding: $space-md;
-    height: auto; /* allow natural flow on smaller screens */
   }
   .proj-title {
     font-size: $fluid-base;
@@ -180,21 +192,8 @@
     text-overflow: ellipsis;
   }
 
-  .card-content { 
-    margin: $space-sm;
-    position: relative;
-    z-index: 999;
-    height: auto;
-  }
-  
-  .Outer-Project-card-content {
-    margin: auto;
-    width: 80%;
-    z-index: -1;
-    position: relative;
-    padding-bottom: $space-sm;
-    padding-right: $space-sm;
-    z-index: 99999;
+  .proj-content {
+    font-size: $fluid-sm;
   }
 }
 

@@ -87,7 +87,7 @@
   position: relative;
 }
 
-@media (max-width: $breakpoint-xl) {
+@media (max-width: 1199.98px) {
   .typewritter-row {
     padding-top: $space-md;
     display: flex;
@@ -139,6 +139,7 @@
 
 .typewriter {
   color: $prim-coral;
+  text-align: center;
   font-size: clamp(1.1rem, 1rem + 0.5vw, 1.4rem);  // ~18-22px
   font-family: $font-family-mono;
   font-weight: $font-weight-medium;
@@ -152,7 +153,7 @@
 }
 
 // Mobile Responsive Styles
-@media only screen and (max-width: $breakpoint-xl) {
+@media only screen and (max-width: 1199.98px) {
   .intro .img-row .intro-img {
     position: relative;
     padding: 0px;
@@ -208,5 +209,11 @@
   
   .typewriter {
     font-size: $fluid-lg;
+  }
+}
+// Long lines wrap to two rows on phones; reserve the space so the hero doesn't jump
+@media (max-width: $breakpoint-md) {
+  .typewritter-row {
+    min-height: calc(2 * 1.5em + #{$space-md});
   }
 }

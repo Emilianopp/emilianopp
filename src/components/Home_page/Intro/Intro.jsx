@@ -71,6 +71,7 @@ class Intro extends React.Component {
                       .pauseFor(900)
                       .deleteChars(developer.length)
                       .typeString(ml)
+                      .pauseFor(1500)
                       .deleteAll()
                       .start();
                   }}

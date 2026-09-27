@@ -5,7 +5,6 @@ import "styles/Home/ProjectCards.scss";
 import "config/content.json";
 import { Link } from "@mui/material";
 import { css } from "@emotion/css";
-import { useMediaQuery } from 'react-responsive';
 
 const mediaStyles = css`
   .media {
@@ -19,16 +18,12 @@ const mediaStyles = css`
   }
 `;
 
-export default function ProjCard({ item }) {
-  const isDesktop = useMediaQuery({ query: '(min-width: 800px)' });
-
-  const containerStyle = isDesktop
-    ? { margin: 'auto', width: '50vw', position: 'relative' }
-    : { margin: 'auto', width: '80%', position: 'relative' };
+export default function ProjCard({ item, minHeight }) {
+  const containerStyle = { margin: 'auto', width: '100%', maxWidth: '720px', position: 'relative' };
 
   return (
     <div className="Outer-Project-card-content" style={containerStyle}>
-      <Card className="Project-card-content" style={{ borderLeft: `4px solid ${item.color}` }}>
+      <Card className="Project-card-content" style={{ borderLeft: `4px solid ${item.color}`, minHeight }}>
         <div className="media">
           {/* SVG or image component provided in item.src */}
           <item.src />

@@ -106,3 +106,17 @@
   .contact-badge-inner { gap: $space-xs; }
   .contact-email { font-size: $fluid-base; }
 }
+/* Hero content is centered below the xl breakpoint, so center the badge too */
+@media (max-width: 1199.98px) {
+  .contact-badge {
+    left: 50%;
+    right: auto;
+    bottom: $space-lg;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: calc(100% - #{$space-xl});
+  }
+  .contact-badge-inner { align-items: center; }
+  .contact-links { justify-content: center; }
+  .contact-email { font-size: $fluid-sm; text-align: center; }
+}

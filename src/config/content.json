@@ -3,7 +3,8 @@
   "typewriter": [
     "",
     "I'm a Computer Science PhD Student",
-    "Currently at Mila-Québec"
+    "Currently at Mila-Québec",
+    "Student Researcher at Google DeepMind"
   ],
   "timeline": {
     "timelineContent": [
@@ -86,9 +87,7 @@
     { "name": "ABOUT", "ref": "#about" },
     { "name": "BLOG", "ref": "#blog" },
     { "name": "RESEARCH", "ref": "#pubs" },
-    { "name": "PROJECTS", "ref": "#proj" },
-    { "name": "CONTACT", "ref": "#contact" },
-    { "name": "SKILLQUERY", "ref": "https://skillquery.com/" }
+    { "name": "PROJECTS", "ref": "#proj" }
   ],
   "contact": [
     { "name": "Github", "link": "https://github.com/Emilianopp" },

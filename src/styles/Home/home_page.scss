@@ -10,7 +10,7 @@
   max-width: 100vw;
 }
 
-@media (max-width: $breakpoint-xl) {
+@media (max-width: #{$breakpoint-lg - 0.02px}) {
   #page-content-wrapper {
     padding: 0;
     min-width: 100vw;
@@ -176,13 +176,17 @@
   }
   
   .pub-list {
-    padding-left: 0;
+    padding-left: $space-lg;
+    padding-right: $space-lg;
   }
-  
+
   .pub-section h3 {
-    width: 90%;
     margin-left: 0;
     font-size: $fluid-lg;
+  }
+
+  .section-col {
+    padding: 0 $space-lg !important;
   }
 }
 
@@ -262,7 +266,7 @@
   font-family: $font-family-sans;
   margin-top: $space-lg;
   margin-bottom: $space-md;
-  margin-left: $space-xl;
+  margin-left: $space-xl + $space-md;
   color: $prim-cultured;
   position: relative;
   display: inline-block;
@@ -280,9 +284,13 @@
 }
 
 @media screen and (max-width: $breakpoint-lg) {
+  .pubs-row {
+    width: 100%;
+  }
+
   .pub-category {
     font-size: $fluid-xl;
-    margin-left: $space-md;
+    margin-left: $space-lg;
   }
 }
 
@@ -290,11 +298,7 @@
   padding-left: $space-2xl;
 }
 
-@media screen and (max-width: $breakpoint-lg) {
-  .pub-list {
-    padding-left: $space-md;
-  }
-}
+
 
 .pubList {
   color: $prim-coral !important;
@@ -562,11 +566,6 @@
     margin-bottom: $space-lg;
   }
   
-  .pub-list {
-    padding-left: $space-sm;
-    padding-right: $space-sm;
-  }
-  
   .pub-description {
     font-size: $fluid-sm;
   }
@@ -583,46 +582,49 @@
 // Mobile-specific styles for publications
 @media (max-width: 767px) {
   .pub-title-container {
-    padding: 0.5rem 0;
-    margin-right: 0.5rem;
+    padding: 0.25rem 0;
+    gap: 0;
   }
-  
+
+  .pub-title-container button.dropdown-icon {
+    margin-left: -6px;
+  }
+
   .dropdown-icon {
-    font-size: 1.1rem;
-    margin-right: 0.75rem;
-    margin-top: 0.2rem;
+    font-size: 0.85rem;
+    margin-right: 0.25rem;
+    margin-top: 0;
     flex-shrink: 0;
   }
-  
+
   .pubList {
-    margin-bottom: 2rem;
-    padding-right: 0.5rem;
+    margin-bottom: $space-lg;
   }
-  
+
   .pub-section h3 {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 0.75rem;
-    padding-left: 0;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    margin-bottom: $space-xs;
+    padding: 0;
     display: flex;
   }
-  
+
   .pub-section p {
-    margin-left: 1.85rem;
-    line-height: 1.5;
+    margin-left: 0;
+    font-size: 0.9rem;
   }
-  
+
   .pub-list {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: $space-lg;
+    padding-right: $space-lg;
   }
-  
+
   .pub-details {
-    margin-left: 1.85rem;
-    margin-right: 0.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: $space-sm;
+    margin-bottom: $space-md;
+    padding: $space-md;
   }
   
   .pub-image {
@@ -631,5 +633,39 @@
   
   .pub-description p {
     margin-left: 0;
+  }
+}
+// ============================================
+// BLOG CARD
+// ============================================
+.blog-card {
+  max-width: 100%;
+  margin: 0;
+  cursor: pointer;
+  transition: transform $transition-smooth, box-shadow $transition-smooth, background $transition-smooth;
+
+  &:hover {
+    transform: translateY(-4px);
+    background: rgba($prim-green-dark, 0.8);
+    box-shadow: $shadow-lg, 0 10px 40px rgba($prim-accent, 0.06);
+  }
+}
+
+.blog-title {
+  color: $prim-cultured;
+  font-size: $fluid-xl;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+  margin-bottom: $space-md;
+  transition: color $transition-fast;
+
+  .blog-card:hover & {
+    color: $prim-accent;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .blog-title {
+    font-size: $fluid-lg;
   }
 }

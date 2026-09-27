@@ -1,4 +1,49 @@
 [
+  {
+    "title": "FrogNano: Training a 4B Coding Agent via Online Task Synthesis",
+    "authors": [
+      "Minseon Kim",
+      "Zhengyan Shi",
+      "Emiliano Penaloza",
+      "Christopher Cui",
+      "Roger Creus Castanyer",
+      "Maryam Hashemzadeh",
+      "Isadora White",
+      "Jonathan Light",
+      "Jeonghye Kim",
+      "Matheus Pereira",
+      "Darya Moldavskaya",
+      "Chinmay Singh",
+      "Fabio Vera",
+      "Baolin Peng",
+      "Xingdi Yuan",
+      "Marc-Alexandre Côté",
+      "Alessandro Sordoni"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.07925",
+    "category": "conference",
+    "journal": "Technical Report (arXiv)",
+    "description": "We present FrogNano, a 4B coding agent designed to tackle software engineering (SWE) tasks efficiently and effectively, even under resource-constrained environments. It is post-trained exclusively via RL on around 1,500 SWE environments with synthetic tasks. A key ingredient for improving performance is an online task synthesis pipeline that creates tasks calibrated to the frontier of learnability for the current checkpoint. This report provides evidence that competitive small coding agents can be trained with synthetic tasks alone, without traditional distillation from larger models, and that generating tasks at the learnability frontier of the current agent is important. We report details on the training methodology, evaluations across diverse environments, and in-depth analyses, serving as a foundation for our ongoing exploration of lightweight yet capable coding agents that can run on minimal hardware.",
+    "imagePath": "frognano.png"
+  },
+  {
+    "title": "Controllable and Content-Based Recommendations",
+    "authors": [
+      "Fırat Öncel",
+      "Jihoon Jeong",
+      "Emiliano Penaloza",
+      "Mirco Ravanelli",
+      "Laurent Charlin",
+      "Cem Subakan"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2607.20938",
+    "category": "conference",
+    "journal": "NeurIPS 2026",
+    "description": "Traditional recommendation systems rely on latent (dense) representations, making them difficult to interpret and control. We propose the Controllable and Content-Based Recommendations (CCBR) framework, which builds its recommendations from textual user profile representations. CCBR plugs into collaborative filtering models and introduces controllability via text bottlenecks. We show that CCBR enables text-based and multimodal interventions, allowing users to steer the model towards the directions they prefer. Different from existing controllable recommendation systems, CCBR infers the text summaries directly from item contents (images, audio or video). Across image-, audio-, and video-based datasets, we demonstrate that the proposed framework obtains competitive model performance with standard (latent-representation) models while providing controllable model summaries via text. The model also outperforms TEARS, a recent baseline for controllable recommendation systems. Through systematic interventions, we demonstrate the efficacy of the user steering mechanism.",
+    "imagePath": "ccbr.png"
+  },
   
    {
     "title": "Privileged Information Distillation for Language Models",

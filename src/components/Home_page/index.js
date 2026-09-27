@@ -9,13 +9,14 @@ import NavMobile from "components/Navigation/NavMobile";
 import PublicationsComp from './bibtex/pubs';
 import { Helmet } from 'react-helmet-async';
 import blogImg from 'assets/blog.png';
+import About from "./About/About";
 
 
 function Home_page() {
   const IsDesktopOrLaptop = useMediaQuery({
-    query: '(min-width: 1300px)'
+    query: '(min-width: 1024px)'
   })
-  const Mobile = useMediaQuery({ query: '(max-width: 1300px)' })
+  const Mobile = useMediaQuery({ query: '(max-width: 1023.98px)' })
   // unused media queries removed to avoid lint warnings
 
 
@@ -76,16 +77,7 @@ function Home_page() {
                       return(<p className = "about-paragraph"> {item}</p>)
 
                   })} */}
-                  <p className="about-paragraph">
-                  
- Hey, I'm Emiliano, a PhD student at Mila-Quebec/Universit&eacute; de Montr&eacute;al, working under the supervision of <a href="http://www.cs.toronto.edu/~lcharlin/" className="about-href" target="_blank" rel="noopener noreferrer">Laurent Charlin</a>. I am currently an intern at Microsoft Research working on post-training for coding agents with <a href="https://scholar.google.com/citations?user=fuvIITUAAAAJ&hl=en" className="about-href" target="_blank" rel="noopener noreferrer">Lucas Caccia</a>. Previously I was a visiting researcher at ServiceNow Montreal working with <a href="https://optimass.github.io/" className="about-href" target="_blank" rel="noopener noreferrer">Massimo Caccia</a> on LLM reasoning applied to agentic tasks.
-<p>  </p>
-      My work focuses on long-horizon LLM post-training (RL/Distillation) applied to tool-using domains (e.g. computer use, coding, service tasks). I am also broadly interested in leveraging the unique properties of language models to design better algorithms (e.g. <a href="https://arxiv.org/abs/2602.04942" className="about-href" target="_blank" rel="noopener noreferrer">Privileged Information Distillation</a>) and improve user alignment (e.g. <a href="https://arxiv.org/abs/2410.19302" className="about-href" target="_blank" rel="noopener noreferrer">TEARS</a>).
-      <p>  </p>
-      I am thankful that my research is funded by the NSERC PGS-D award.
-      <p>  </p>
-      My free time is mostly consumed by a good <a href="https://www.goodreads.com/user/show/157603205-emiliano-penaloza" className="about-href" target="_blank" rel="noopener noreferrer">book</a> and training for my next <a href="https://youtu.be/wCxhuR65iW0" className="about-href" target="_blank" rel="noopener noreferrer">powerlifting</a> meet.
-      </p>
+                  <About />
              
                   {/* <Col
                     xl={{ span: 6 }}
@@ -118,8 +110,8 @@ function Home_page() {
                   </div>
                   <Col xl={{ span: 8, offset: 2 }} md={{ span: 8, offset: 2 }} xs={{ span: 10, offset: 1 }}>
                     <a href="https://emilianopp.github.io/Privileged-Information-Distillation-and-Self-Distillation/" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
-                      <div className="pub-details" style={{cursor: 'pointer'}}>
-                        <h3 className="pub-section" style={{color: '#F5F5F5', marginBottom: '1rem'}}>Understanding Self-Distillation and Privileged Information Distillation</h3>
+                      <div className="pub-details blog-card">
+                        <h3 className="blog-title">Understanding Self-Distillation and Privileged Information Distillation</h3>
                         <div className="pub-image-container">
                           <img src={blogImg} alt="Self-Distillation and Privileged Information Distillation" className="pub-image" />
                         </div>
@@ -175,17 +167,7 @@ function Home_page() {
                   <div className="header-padder">
                     <h1 className="Projects-header">About</h1>
                   </div>
-                  
-                  <p className="about-paragraph">
-                  
-                  Hey, I'm Emiliano, a PhD student at Mila-Quebec/Universit&eacute; de Montr&eacute;al, working under the supervision of <a href="http://www.cs.toronto.edu/~lcharlin/" className="about-href" target="_blank" rel="noopener noreferrer">Laurent Charlin</a>. I am currently an intern at Microsoft Research working on post-training for coding agents with <a href="https://scholar.google.com/citations?user=fuvIITUAAAAJ&hl=en" className="about-href" target="_blank" rel="noopener noreferrer">Lucas Caccia</a>. Previously I was a visiting researcher at ServiceNow Montreal working with <a href="https://optimass.github.io/" className="about-href" target="_blank" rel="noopener noreferrer">Massimo Caccia</a> on LLM reasoning applied to agentic tasks.
-<p>  </p>
-      My work focuses on long-horizon LLM post-training (RL/Distillation) applied to tool-using domains (e.g. computer use, coding, service tasks). I am also broadly interested in leveraging the unique properties of language models to design better algorithms (e.g. <a href="https://arxiv.org/abs/2602.04942" className="about-href" target="_blank" rel="noopener noreferrer">Privileged Information Distillation</a>) and improve user alignment (e.g. <a href="https://arxiv.org/abs/2410.19302" className="about-href" target="_blank" rel="noopener noreferrer">TEARS</a>).
-      <p>  </p>
-      I am thankful that my research is funded by the NSERC PGS-D award.
-      <p>  </p>
-      My free time is mostly consumed by a good <a href="https://www.goodreads.com/user/show/157603205-emiliano-penaloza" className="about-href" target="_blank" rel="noopener noreferrer">book</a> and training for my next <a href="https://youtu.be/wCxhuR65iW0" className="about-href" target="_blank" rel="noopener noreferrer">powerlifting</a> meet.
-      </p>
+                  <About />
                 </Row>
               </Container>
             </Row>
@@ -196,10 +178,10 @@ function Home_page() {
                   <div className="header-padder">
                     <h1 className="Projects-header">Blog Posts</h1>
                   </div>
-                  <Col xl={{ span: 8, offset: 2 }} md={{ span: 8, offset: 2 }} xs={{ span: 10, offset: 1 }}>
+                  <Col xl={{ span: 8, offset: 2 }} md={{ span: 8, offset: 2 }} xs={12} className="section-col">
                     <a href="https://emilianopp.github.io/Privileged-Information-Distillation-and-Self-Distillation/" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
-                      <div className="pub-details" style={{cursor: 'pointer'}}>
-                        <h3 className="pub-section" style={{color: '#F5F5F5', marginBottom: '1rem'}}>Understanding Self-Distillation and Privileged Information Distillation</h3>
+                      <div className="pub-details blog-card">
+                        <h3 className="blog-title">Understanding Self-Distillation and Privileged Information Distillation</h3>
                         <div className="pub-image-container">
                           <img src={blogImg} alt="Self-Distillation and Privileged Information Distillation" className="pub-image" />
                         </div>
@@ -224,7 +206,7 @@ function Home_page() {
                   <Col
                     xl={{ span: 8, offset: 2 }}
                     md={{ span: 8, offset: 2 }}
-                    xs={{ span: 10, offset: 1 }}
+                    xs={12} className="section-col"
                   >
                     <SlidingCards />
                   </Col>
