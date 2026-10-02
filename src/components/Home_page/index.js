@@ -102,6 +102,8 @@ function Home_page() {
 
 
 
+      <PublicationsComp/>
+
             <Row id="blog">
               <Container className="project-cards">
                 <Row className="Cards">
@@ -121,8 +123,6 @@ function Home_page() {
                 </Row>
               </Container>
             </Row>
-
-      <PublicationsComp/>
 
              <Row id="proj">
               <Container className="project-cards">
@@ -172,6 +172,9 @@ function Home_page() {
               </Container>
             </Row>
             
+            {/* Publications */}
+            <PublicationsComp/>
+
             <Row id="blog">
               <Container className="project-cards">
                 <Row className="Cards">
@@ -191,9 +194,6 @@ function Home_page() {
                 </Row>
               </Container>
             </Row>
-
-            {/* Publications */}
-            <PublicationsComp/>
 
             {/* project cards */}
             <Row id="proj">

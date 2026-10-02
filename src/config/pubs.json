@@ -1,12 +1,62 @@
 [
   {
+    "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
+    "authors": [
+      "Emiliano Penaloza",
+      "Dane Malenfant",
+      "Dheeraj Vattikonda",
+      "Roger Creus Castanyer",
+      "Siddarth Venkatraman",
+      "Abhay Puri",
+      "Jonathan Light",
+      "Matthew James Sargent",
+      "Augustine N. Mavor-Parker",
+      "Massimo Caccia",
+      "Lucas Caccia",
+      "Glen Berseth",
+      "Esmeralda S. Whitammer",
+      "Alessandro Sordoni",
+      "Minseon Kim",
+      "Marc-Alexandre Côté",
+      "Laurent Charlin",
+      "Guillaume Lajoie"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.35750",
+    "category": "conference",
+    "journal": "Preprint (arXiv)",
+    "description": "Scaling the horizon of agentic LLMs is bottlenecked by the need to fit ever longer context traces in GPU memory. Context compaction has been the most popular mechanism to alleviate this issue, keeping GPU memory constant for a given trace. Unfortunately, most compaction strategies rely on prefilling the LLM context many times over, hindering training throughput. To alleviate this bottleneck and enable efficient trainable compaction, we propose KV-streams, a plug-and-play strategy compatible with any compaction strategy that substantially increases throughput while showing no evidence of hindering performance. KV-streams enable scalable compaction by streaming the KV cache forward rather than flushing it after each compaction. We show that KV-streams enable three different compaction strategies, achieving a 2.6 to 5x wall-clock speedup in training. Beyond efficiency, we find that the streamed KV cache can act as a recurrent state, carrying forward information that has long since disappeared from the context. Specifically, in a controlled setting we show that, contrary to prior work, RL alone is all that is needed for this behavior to emerge. Overall, we show KV-streams to be an efficient and lightweight plug-and-play addition to any post-training pipeline.",
+    "imagePath": "kv-streams.png"
+  },
+  {
+    "title": "Shockingly Simple Self-retrospection Improves Agentic Models Without RL",
+    "authors": [
+      "Jonathan Light",
+      "Christopher Zhang Cui",
+      "Jeonghye Kim",
+      "Roger Creus Castanyer",
+      "Emiliano Penaloza",
+      "Zhengyan Shi",
+      "Alessandro Sordoni",
+      "Marc-Alexandre Côté",
+      "Xingdi Yuan",
+      "Minseon Kim"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.35741",
+    "category": "conference",
+    "journal": "Preprint (arXiv)",
+    "description": "People learn not only by repeating successful actions, but also by recounting and explaining their experiences, revising their understanding to guide future behavior. Can a language-model agent improve its future actions by training only on explanations of its own experience? We investigate this question by studying Retrospection-Only Fine-Tuning (ROFT), a minimal online procedure designed to isolate the effect of explanation-only training on subsequent behavior. The agent attempts a task, observes available feedback, generates a retrospective explanation, and is fine-tuned with a next-token prediction loss on the explanation tokens alone. The procedure uses neither an external teacher nor a reward-based policy update. In software-engineering experiments with Qwen3.5-4B, ROFT is trained on problems with mixed successful and unsuccessful base-model attempts. On held-out SWE-bench Verified and Pro, it reaches 49.2% and 26.8% solve rates after 20 updates without using a verifier, compared with GRPO's 48.0% and 25.3% after 40 updates in the evaluated runs, and makes faster early progress in training time and sampled attempts. It also learns to solve individual tasks on which all 64 sampled base-model attempts failed, showing that learning can begin without any initially successful trajectories. Behavioral analyses find that ROFT indirectly assigns credit to actions, encouraging good actions and discouraging incorrect ones. Moreover, prompting retrospections to emphasize more direct solutions yields shorter subsequent attempts even without an explicit length penalty. Together, these findings show that learning to explain can also improve learning to do, establishing self-generated retrospections as useful training targets and motivating further study of explanation-to-action transfer.",
+    "imagePath": "roft.png"
+  },
+  {
     "title": "FrogNano: Training a 4B Coding Agent via Online Task Synthesis",
     "authors": [
-      "Minseon Kim",
-      "Zhengyan Shi",
-      "Emiliano Penaloza",
-      "Christopher Cui",
-      "Roger Creus Castanyer",
+      "Minseon Kim*",
+      "Zhengyan Shi*",
+      "Emiliano Penaloza*",
+      "Christopher Cui*",
+      "Roger Creus Castanyer*",
       "Maryam Hashemzadeh",
       "Isadora White",
       "Jonathan Light",
@@ -163,6 +213,7 @@
     "description": "Traditional recommender systems rely on high-dimensional (latent) embeddings for modeling user-item interactions, often resulting in opaque representations that lack interpretability. Moreover, these systems offer limited control to users over their recommendations. Inspired by recent work, we introduce TExtuAl Representations for Scrutable recommendations (TEARS) to address these challenges. Instead of representing a user's interests through a latent embedding, TEARS encodes them in natural text, providing transparency and allowing users to edit them. To do so, TEARS uses a modern LLM to generate user summaries based on user preferences. We find the summaries capture user preferences uniquely. Using these summaries, we take a hybrid approach where we use an optimal transport procedure to align the summaries' representation with the learned representation of a standard VAE for collaborative filtering. We find this approach can surpass the performance of three popular VAE models while providing user-controllable recommendations. We also analyze the controllability of TEARS through three simulated user tasks to evaluate the effectiveness of a user editing its summary.",
     "imagePath": "tears.png"
   },
+
   {
     "title": "Influencer Detection with Dynamic Graph Neural Networks",
     "authors": [
@@ -182,7 +233,7 @@
     "description": "Leveraging network information for prediction tasks has become a common practice in many domains. Being an important part of targeted marketing, influencer detection can potentially benefit from incorporating dynamic network representation. In this work, we investigate different dynamic Graph Neural Networks (GNNs) configurations for influencer detection and evaluate their prediction performance using Rappi's (one of latin-americas largest technology companies) unique financial data set. We show that using deep multi-head attention in GNN and encoding temporal attributes significantly improves performance. Furthermore, our empirical evaluation illustrates that capturing neighborhood representation is more beneficial that using network centrality measures.",
     "imagePath": "influencer.png"
   },
-
+  
   {
     "title": "Changepoint Detection in Highly-Attributed Dynamic Graphs",
     "authors": [
@@ -191,45 +242,10 @@
     ],
     "year": 2024,
     "url": "https://research.latinxinai.org/papers/icml/2024/pdf/Emiliano_Penaloza.pdf",
-    "category": "workshop",
+    "category": "conference",
     "journal": "Proceedings of the LatinX in AI Workshop ICML 2024",
     "description": "Detecting anomalous behavior in dynamic networks remains a constant challenge. This problem is further exacerbated when the underlying topology of these networks is affected by individual highly-dimensional node attributes. We address this issue by tracking a network’s modularity as a proxy of its community structure. We leverage Graph Neural Networks (GNNs) to estimate each snapshot’s modularity. GNNs can account for both network structure and highdimensional node attributes, providing a comprehensive approach for estimating network statistics. Our method is validated through simulations that demonstrate its ability to detect changes in highly-attributed networks by analyzing shifts in modularity. Moreover, we find our method is able to detect a real-world event within the #Iran Twitter reply network, where each node has highdimensional textual attributes",
     "imagePath": "gnn_seq.png"
-  },
-  
-  {
-    "title": "Controllable and Transparent Textual Latents for Recommender Systems",
-    "authors": [
-      "Emiliano Penaloza",
-      "Haolun Wu",
-      "Olivier Gouvert",
-      "Laurent Charlin"
-    ],
-    "year": 2024,
-    "url": "https://docs.google.com/presentation/d/14kz8CPo6V8ayHbGMNKHQ20VibiLrW3a0x__kdF8Iy_8/edit?usp=sharing",
-    "category": "workshop",
-    "journal": "Presented at Workshop on Recommendation with Generative Models ACM Web Conference 2024",
-    "description": "Traditional recommender systems rely on high-dimensional (latent) embeddings for modeling user-item interactions, often resulting in opaque representations that lack interpretability. Moreover, these systems offer limited control to users over their recommendations. Inspired by recent work, we introduce TExtuAl Representations for Scrutable recommendations (TEARS) to address these challenges. Instead of representing a user's interests through a latent embedding, TEARS encodes them in natural text, providing transparency and allowing users to edit them. To do so, TEARS uses a modern LLM to generate user summaries based on user preferences. We find the summaries capture user preferences uniquely. Using these summaries, we take a hybrid approach where we use an optimal transport procedure to align the summaries' representation with the learned representation of a standard VAE for collaborative filtering. We find this approach can surpass the performance of three popular VAE models while providing user-controllable recommendations. We also analyze the controllability of TEARS through three simulated user tasks to evaluate the effectiveness of a user editing its summary.",
-    "imagePath": "tears.png"
-  },
-  {
-    "title": "Influencer Detection with Dynamic Graph Neural Networks",
-    "authors": [
-      "Elena Tiukhova",
-      "Emiliano Penaloza",
-      "María Óskarsdóttir",
-      "Hernan Garcia",
-      "Alejandro Correa Bahnsen",
-      "Bart Baesens",
-      "Monique Snoeck",
-      "Cristián Bravo"
-    ],
-    "year": 2022,
-    "url": "https://arxiv.org/abs/2211.09664",
-    "category": "workshop",
-    "journal": "Poster at Temporal Graph Learning Workshop NeurIPS 2022",
-    "description": "Leveraging network information for prediction tasks has become a common practice in many domains. Being an important part of targeted marketing, influencer detection can potentially benefit from incorporating dynamic network representation. In this work, we investigate different dynamic Graph Neural Networks (GNNs) configurations for influencer detection and evaluate their prediction performance using a unique corporate data set. We show that using deep multi-head attention in GNNs and encoding temporal attributes significantly improves performance. Furthermore, our empirical evaluation illustrates that capturing neighborhood representation is more beneficial that using network centrality measures.",
-    "imagePath": "gnn.png"
   }
 
   

@@ -51,7 +51,7 @@ const PublicationsComp = () => {
     
           {/* Conference Publications */}
           <div className="pub-section">
-            <h2 className="pub-category">Publications</h2>
+            <h2 className="pub-category">Publications &amp; Preprints</h2>
             <ul className="pub-list">
             {publications
   .filter(pub => pub.category === 'conference')
@@ -119,76 +119,6 @@ const PublicationsComp = () => {
       </ul>
           </div>
     
-          {/* Workshop Publications */}
-          <div className="pub-section">
-            <h2 className="pub-category">Workshops & Talks</h2>
-            <ul className="pub-list">
-              {publications
-                .filter(pub => pub.category === 'workshop')
-                .map((pub, index) => {
-                  const pubId = `workshop-${index}`;
-                  return (
-                  <li className="pubList" key={index}>
-                    <h3 style={{ fontWeight: 'bold' }}>
-                      <span className="pub-title-container">
-                        <button
-                          className={`dropdown-icon ${expandedPubs[pubId] ? 'expanded' : ''}`}
-                          aria-expanded={!!expandedPubs[pubId]}
-                          aria-controls={`collapse-${pubId}`}
-                          onClick={() => toggleExpand(pubId)}
-                          title={expandedPubs[pubId] ? 'Collapse details' : 'Expand details'}
-                        >
-                          ▶
-                        </button>
-                        <span className="pub-title-text" onClick={() => toggleExpand(pubId)} style={{ cursor: 'pointer' }}>
-                          {pub.title}
-                        </span>
-                      </span>
-                    </h3>
-                    <p>
-                      {pub.authors.map((author, authorIndex) => (
-                        <span key={authorIndex}>
-                      {(author === 'Emiliano Penaloza' || author.startsWith('Emiliano Penaloza')) ? (
-
-                            <span className='me'>{author}</span>
-                          ) : (
-                            <span className='other'>{author}</span>
-                          )}
-                          {authorIndex < pub.authors.length - 1 && ', '}
-                        </span>
-                      ))}
-                      <span className='other'> ({pub.year}).</span> 
-                      <br />
-                      <span className='other'>{pub.journal}</span>
-                    </p>
-                    
-                    <Collapse in={expandedPubs[pubId]}>
-                      <div id={`collapse-${pubId}`} className="pub-details">
-                        <div className="pub-description">
-                          <p>{pub.description}</p>
-                        </div>
-                        {/* explicit link/button to open the paper */}
-                        {pub.url && (
-                          <div className="pub-open-row">
-                            <a href={pub.url} className="pub-open-btn" onClick={(e) => { e.stopPropagation(); }} target="_blank" rel="noopener noreferrer">Open paper</a>
-                          </div>
-                        )}
-                        {pub.imagePath && getImageSrc(pub.imagePath) && (
-                          <div className="pub-image-container">
-                            <img 
-                              src={getImageSrc(pub.imagePath)} 
-                              alt={`Visual for ${pub.title}`} 
-                              className="pub-image"
-                            />
-                          </div>
-                        )}
-                      </div>
-                    </Collapse>
-                  </li>
-                );
-              })}   
-            </ul>
-          </div>
         </Row>
       </Container>
     </Row>

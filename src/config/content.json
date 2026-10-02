@@ -85,8 +85,8 @@
     { "name": "SCHOLAR", "ref": "https://scholar.google.ca/citations?user=v_bNCuYAAAAJ&hl=en" },
     { "name": "CV", "ref": "https://drive.google.com/file/d/1PF2vnc9p3ZhsOFIGfANdglmSsFwRni3t/view?usp=sharing" },
     { "name": "ABOUT", "ref": "#about" },
-    { "name": "BLOG", "ref": "#blog" },
     { "name": "RESEARCH", "ref": "#pubs" },
+    { "name": "BLOG", "ref": "#blog" },
     { "name": "PROJECTS", "ref": "#proj" }
   ],
   "contact": [
